@@ -270,7 +270,7 @@ annexing_countries = {
 	game_data = {
 		category = country
 	}
-	monthly_diplomats = -0.1
+	monthly_diplomats = -0.5
 	subject_opinions = -25
 	antagonism_monthly_change_modifier = -0.01
 }
@@ -293,11 +293,7 @@ is_great_power = {
 	monthly_prestige = 0.1
 	mercenary_range_modifier = 0.5
 	
-	
-	allowed_enforce_peace = yes
-	allowed_intervene_in_war = yes
-	allowed_threaten_war = yes
-}
+	}
 
 
 num_embraced_institutions = {

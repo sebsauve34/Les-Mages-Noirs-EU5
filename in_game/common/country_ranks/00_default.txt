@@ -15,7 +15,8 @@
 		government_size = 1
 		
 		diplomatic_capacity = 3
-		
+		allowed_threaten_war = yes
+
 		allowed_alliance = yes
 		allowed_guarantee = yes
 		allowed_support_rebels = yes
@@ -58,7 +59,8 @@ rank_kingdom = {
 		num_possible_rivals = 3
 
 		fort_limit = 1
-		
+		allowed_threaten_war = yes
+
 		num_possible_artists = 1 
 		cultures_capacity = 1
 
@@ -97,6 +99,7 @@ rank_duchy = {
 
 		allowed_alliance = yes
 		allowed_guarantee = yes
+		allowed_threaten_war = yes
 
 		mercenary_range_modifier = 0.25
 	}
