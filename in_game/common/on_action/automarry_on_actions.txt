@@ -1,0 +1,123 @@
+monthly_country_pulse  = {
+	on_actions = {
+		noble_auto_marry_on_action
+	}
+}
+noble_auto_marry_on_action = {
+	events = {
+		noble_auto_marry.1
+		noble_auto_marry.3
+		delay = { days = 1 }
+		noble_auto_marry.5
+		delay = { days = 2 }
+		noble_auto_marry.7
+		delay = { days = 3 }
+		noble_auto_marry.9
+		delay = { days = 4 }
+		noble_auto_marry.11
+		delay = { days = 5 }
+		noble_auto_marry.13
+		delay = { days = 6 }
+		noble_auto_marry.15
+		delay = { days = 7 }
+		noble_auto_marry.17
+		delay = { days = 8 }
+		noble_auto_marry.19
+		delay = { days = 9 }
+		noble_auto_marry.21
+		delay = { days = 10 }
+		noble_auto_marry.23
+		delay = { days = 11 }
+		noble_auto_marry.25
+		delay = { days = 12 }
+		noble_auto_marry.27
+		delay = { days = 13 }
+		noble_auto_marry.29
+		delay = { days = 14 }
+		noble_auto_marry.31
+		delay = { days = 15 }
+		noble_auto_marry.33
+		delay = { days = 16 }
+		noble_auto_marry.35
+		delay = { days = 17 }
+		noble_auto_marry.37
+		delay = { days = 18 }
+		noble_auto_marry.39
+		delay = { days = 19 }
+		noble_auto_marry.41
+		delay = { days = 20 }
+		noble_auto_marry.43
+		delay = { days = 21 }
+		noble_auto_marry.45
+		delay = { days = 22 }
+		noble_auto_marry.47
+		delay = { days = 23 }
+		noble_auto_marry.49
+		delay = { days = 24 }
+		noble_auto_marry.51
+		delay = { days = 25 }
+		noble_auto_marry.53
+		delay = { days = 26 }
+		noble_auto_marry.55
+		delay = { days = 27 }
+		noble_auto_marry.2
+		noble_auto_marry.4
+		delay = { days = 1 }
+		noble_auto_marry.6
+		delay = { days = 2 }
+		noble_auto_marry.8
+		delay = { days = 3 }
+		noble_auto_marry.10
+		delay = { days = 4 }
+		noble_auto_marry.12
+		delay = { days = 5 }
+		noble_auto_marry.14
+		delay = { days = 6 }
+		noble_auto_marry.16
+		delay = { days = 7 }
+		noble_auto_marry.18
+		delay = { days = 8 }
+		noble_auto_marry.20
+		delay = { days = 9 }
+		noble_auto_marry.22
+		delay = { days = 10 }
+		noble_auto_marry.24
+		delay = { days = 11 }
+		noble_auto_marry.26
+		delay = { days = 12 }
+		noble_auto_marry.28
+		delay = { days = 13 }
+		noble_auto_marry.30
+		delay = { days = 14 }
+		noble_auto_marry.32
+		delay = { days = 15 }
+		noble_auto_marry.34
+		delay = { days = 16 }
+		noble_auto_marry.36
+		delay = { days = 17 }
+		noble_auto_marry.38
+		delay = { days = 18 }
+		noble_auto_marry.40
+		delay = { days = 19 }
+		noble_auto_marry.42
+		delay = { days = 20 }
+		noble_auto_marry.44
+		delay = { days = 21 }
+		noble_auto_marry.46
+		delay = { days = 22 }
+		noble_auto_marry.48
+		delay = { days = 23 }
+		noble_auto_marry.50
+		delay = { days = 24 }
+		noble_auto_marry.52
+		delay = { days = 25 }
+		noble_auto_marry.54
+		delay = { days = 26 }
+		noble_auto_marry.56
+		delay = { days = 27 }
+		noble_auto_marry.57
+		noble_auto_marry.60
+		noble_auto_marry.61
+		noble_auto_marry.62
+	}
+}

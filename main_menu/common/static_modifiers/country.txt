@@ -10869,5 +10869,25 @@ coins_in_our_name_modifier = {
 
 	minting_inflation_threshold = 0.05
 	monthly_legitimacy = 0.25
+}
 
+absolutist_influences_government_modifier = {
+	game_data = { 
+		category = country
+		decaying = yes
+	}
+
+	monthly_towards_absolutism = societal_value_large_monthly_move
+	global_estate_target_satisfaction = larger_permanent_target_satisfaction_penalty
+}
+
+liberal_influences_government_modifier = {
+	game_data = { 
+		category = country
+		decaying = yes
+	}
+
+	monthly_towards_liberalism = societal_value_large_monthly_move
+	global_estate_satisfaction_recovery = 0.001
+	}
 }

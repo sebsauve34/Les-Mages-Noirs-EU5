@@ -1,0 +1,16 @@
+﻿l_english:
+ noble_auto_marry.1.t: "[target_male.GetNameWithNoTooltip] marries [target_female.GetNameWithNoTooltip]
+ noble_auto_marry.1.d: "After months of planning and courtship, [target_male.GetName] has married [target_female.GetName], building another bridge between the noble houses of [target_male.GetDynasty.GetName] and [target_female.GetDynasty.GetName]. It is expected that the two will continue on their noble line, raising the next generation in a way worthy of their lineage."
+ noble_auto_marry.1.a: "Our Congratulations to the Bride and Groom"
+ noble_auto_marry.1.b: "Let us leave the nobility to their festivites"
+ hide_marriage_events.tt: "You will no longer recieve events of nobles marrying one another"
+ noble_auto_marry.2.t: "[unmarried_royal.GetNameWithNoTooltip] awaits [unmarried_royal.GetHerHis] Match"
+ noble_auto_marry.2.d: "[unmarried_royal.GetName] has raised the issue with [ROOT.GetCountry.GetGovernment.GetRuler.GetName] that they are still yet to marry, and have expressed their worries over this seeming indecision"
+ noble_auto_marry.2.a: "We shall find a match for [unmarried_royal.GetNameWithNoTooltip] yet"
+ noble_auto_marry.2.b: "[unmarried_royal.GetNameWithNoTooltip] can choose their heart's desire from the ranks our nobility"
+ unmarried_royal_will_find_suitable_spouse.tt: "[unmarried_royal.GetName] will choose their own partner, and will marry a local noble sometime in the next year"
+ noble_auto_marry.3.t: "[unmarried_royal.GetNameWithNoTooltip] marries [target_suitor.GetNameWithNoTooltip]
+ noble_auto_marry.3.d: "After months of planning and courtship, [unmarried_royal.GetName] has married [target_suitor.GetName], building another bridge between the noble houses of [unmarried_royal.GetDynasty.GetName] and [target_suitor.GetDynasty.GetName]. It is expected that the two will continue on their noble line, raising the next generation in a way worthy of their lineage."
+ noble_auto_marry.3.a: "Our Congratulations to the Bride and Groom"
+ auto_marry_reminder_sent: "Enquired about Marriage"
+ auto_marry_reminder_sent_desc: "This character previously approached the ruler asking about their marriage prospects"

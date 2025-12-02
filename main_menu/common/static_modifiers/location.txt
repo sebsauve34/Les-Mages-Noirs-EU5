@@ -288,7 +288,7 @@ development = {
 	
 	local_monthly_food_modifier = 0.01
 	
-	free_building_levels = 2
+	free_building_levels = 1
 	
 	local_max_rgo_size = 0.1
 	

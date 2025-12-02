@@ -1,0 +1,19 @@
+﻿l_turkish:
+ noble_auto_marry.1.t: "[target_male.GetNameWithNoTooltip], [target_female.GetNameWithNoTooltip] ile Evleniyor"
+ noble_auto_marry.1.d: "Aylar süren hazırlıklar ve kur yapma döneminin ardından, [target_male.GetName], [target_female.GetName] ile evlendi. Böylece [target_male.GetDynasty.GetName] ile [target_female.GetDynasty.GetName] hanedanları arasında yeni bir köprü daha kurulmuş oldu. Soylarını onurlandıracak şekilde, gelecek nesli yetiştirmeleri bekleniyor."
+ noble_auto_marry.1.a: "Gelin ve Damada Tebriklerimizi Sunuyoruz"
+ noble_auto_marry.1.b: "Soyluları kendi eğlencelerine bırakalım"
+ hide_marriage_events.tt: "Artık soyluların birbiriyle evlenmesine dair etkinlikleri almayacaksınız"
+
+ noble_auto_marry.2.t: "[unmarried_royal.GetNameWithNoTooltip], Eşini Bekliyor"
+ noble_auto_marry.2.d: "[unmarried_royal.GetName], hâlâ evlenmemiş olması konusunu [ROOT.GetCountry.GetGovernment.GetRuler.GetName] ile gündeme getirdi ve bu kararsızlık görünümünden duyduğu endişeleri ifade etti."
+ noble_auto_marry.2.a: "[unmarried_royal.GetNameWithNoTooltip] için uygun bir eş elbet bulacağız"
+ noble_auto_marry.2.b: "[unmarried_royal.GetNameWithNoTooltip], soylularımız arasından gönlünün arzu ettiği kişiyi seçebilir"
+ unmarried_royal_will_find_suitable_spouse.tt: "[unmarried_royal.GetName], kendi eşini seçecek ve önümüzdeki yıl içinde bir yerel soyluyla evlenecek"
+
+ noble_auto_marry.3.t: "[unmarried_royal.GetNameWithNoTooltip], [target_suitor.GetNameWithNoTooltip] ile Evleniyor"
+ noble_auto_marry.3.d: "Aylar süren hazırlıklar ve kur yapma döneminin ardından, [unmarried_royal.GetName], [target_suitor.GetName] ile evlendi. Böylece [unmarried_royal.GetDynasty.GetName] ile [target_suitor.GetDynasty.GetName] hanedanları arasında yeni bir köprü daha kurulmuş oldu. Soylarını onurlandıracak şekilde, gelecek nesli yetiştirmeleri bekleniyor."
+ noble_auto_marry.3.a: "Gelin ve Damada Tebriklerimizi Sunuyoruz"
+
+ auto_marry_reminder_sent: "Evlilik Hakkında Soru Sordu"
+ auto_marry_reminder_sent_desc: "Bu karakter daha önce hükümdara evlilik ihtimalleri hakkında danışmıştı."

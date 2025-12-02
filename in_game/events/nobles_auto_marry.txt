@@ -1,0 +1,6448 @@
+namespace = noble_auto_marry
+
+noble_auto_marry.1 = {
+	type = country_event
+	title = noble_auto_marry.1.t
+	desc = noble_auto_marry.1.d
+	
+	trigger = {
+		is_ai = no
+		NOT = { has_variable = hide_marriage_events }
+		any_character = {
+			is_married = no
+			is_female = no
+			OR = {
+				has_estate = estate_type:nobles_estate 
+				AND = {
+					has_estate = estate_type:crown_estate 
+					NOT = { is_eligible_heir_baseline = root }
+				}
+			}
+			age_in_years > 18
+			age_in_years < 25
+		}
+		any_character = {
+			is_married = no
+			is_female = yes
+			OR = {
+				has_estate = estate_type:nobles_estate 
+				AND = {
+					has_estate = estate_type:crown_estate 
+					NOT = { is_eligible_heir_baseline = root }
+				}
+			}
+			age_in_years > 18
+			age_in_years < 25
+		}
+	}
+	
+	immediate = {
+		random_character = {
+			limit = {
+				is_married = no
+				is_female = no
+				OR = {
+					has_estate = estate_type:nobles_estate 
+					AND = {
+						has_estate = estate_type:crown_estate 
+						NOT = { is_eligible_heir_baseline = root }
+					}
+				}
+				age_in_years > 18
+				age_in_years < 25
+			}
+			save_scope_as = target_male
+		}
+		random_character = {
+			limit = {
+				is_married = no
+				is_female = yes
+				NOT = {
+					is_close_relative = scope:target_male
+				}		
+				OR = {
+					has_estate = estate_type:nobles_estate 
+					AND = {
+						has_estate = estate_type:crown_estate 
+						NOT = { is_eligible_heir_baseline = root }
+					}
+				}
+				age_in_years > 18
+				age_in_years < 25
+			}
+			save_scope_as = target_female
+		}
+	}
+	option = {
+		name = noble_auto_marry.1.a
+		scope:target_male ?= { marry_character = scope:target_female }
+	}
+	option = {
+		name = noble_auto_marry.1.b
+		scope:target_male ?= { marry_character = scope:target_female }
+		custom_tooltip =  { text = hide_marriage_events.tt }
+		set_variable = hide_marriage_events
+	}
+}
+		
+noble_auto_marry.2 = {
+	type = country_event
+	title = noble_auto_marry.1.t
+	desc = noble_auto_marry.1.d
+	
+	trigger = {
+		has_variable = hide_marriage_events
+		is_ai = no
+		any_character = {
+			is_married = no
+			is_female = no
+			OR = {
+				has_estate = estate_type:nobles_estate 
+				AND = {
+					has_estate = estate_type:crown_estate 
+					NOT = { is_eligible_heir_baseline = root }
+				}
+			}
+			age_in_years > 18
+			age_in_years < 25
+		}
+		any_character = {
+			is_married = no
+			is_female = yes
+			OR = {
+				has_estate = estate_type:nobles_estate 
+				AND = {
+					has_estate = estate_type:crown_estate 
+					NOT = { is_eligible_heir_baseline = root }
+				}
+			}
+			age_in_years > 18
+			age_in_years < 25
+		}
+	}
+	hidden = yes
+	
+	immediate = {
+		random_character = {
+			limit = {
+				is_married = no
+				is_female = no
+				OR = {
+					has_estate = estate_type:nobles_estate 
+					AND = {
+						has_estate = estate_type:crown_estate 
+						NOT = { is_eligible_heir_baseline = root }
+					}
+				}
+				age_in_years > 18
+				age_in_years < 25
+			}
+			save_scope_as = target_male
+		}
+		random_character = {
+			limit = {
+				is_married = no
+				is_female = yes
+				NOT = {
+					is_close_relative = scope:target_male
+				}
+				OR = {
+					has_estate = estate_type:nobles_estate 
+					AND = {
+						has_estate = estate_type:crown_estate 
+						NOT = { is_eligible_heir_baseline = root }
+					}
+				}
+				age_in_years > 18
+				age_in_years < 25
+			}
+			save_scope_as = target_female
+		}
+	}
+	option = {
+		name = noble_auto_marry.1.a
+		scope:target_male ?= { marry_character = scope:target_female }
+	}
+}
+
+# duplicating events for faster processing of marriges, but things are the same
+
+
+noble_auto_marry.3 = {
+	type = country_event
+	title = noble_auto_marry.1.t
+	desc = noble_auto_marry.1.d
+	
+	trigger = {
+		is_ai = no
+		NOT = { has_variable = hide_marriage_events }
+		any_character = {
+			is_married = no
+			is_female = no
+			OR = {
+				has_estate = estate_type:nobles_estate 
+				AND = {
+					has_estate = estate_type:crown_estate 
+					NOT = { is_eligible_heir_baseline = root }
+				}
+			}
+			age_in_years > 18
+			age_in_years < 25
+		}
+		any_character = {
+			is_married = no
+			is_female = yes
+			OR = {
+				has_estate = estate_type:nobles_estate 
+				AND = {
+					has_estate = estate_type:crown_estate 
+					NOT = { is_eligible_heir_baseline = root }
+				}
+			}
+			age_in_years > 18
+			age_in_years < 25
+		}
+	}
+	
+	immediate = {
+		random_character = {
+			limit = {
+				is_married = no
+				is_female = no
+				OR = {
+					has_estate = estate_type:nobles_estate 
+					AND = {
+						has_estate = estate_type:crown_estate 
+						NOT = { is_eligible_heir_baseline = root }
+					}
+				}
+				age_in_years > 18
+				age_in_years < 25
+			}
+			save_scope_as = target_male
+		}
+		random_character = {
+			limit = {
+				is_married = no
+				is_female = yes
+				NOT = {
+					is_close_relative = scope:target_male
+				}
+				OR = {
+					has_estate = estate_type:nobles_estate 
+					AND = {
+						has_estate = estate_type:crown_estate 
+						NOT = { is_eligible_heir_baseline = root }
+					}
+				}
+				age_in_years > 18
+				age_in_years < 25
+			}
+			save_scope_as = target_female
+		}
+	}
+	option = {
+		name = noble_auto_marry.1.a
+		scope:target_male ?= { marry_character = scope:target_female }
+	}
+	option = {
+		name = noble_auto_marry.1.b
+		scope:target_male ?= { marry_character = scope:target_female }
+		custom_tooltip =  { text = hide_marriage_events.tt }
+		set_variable = hide_marriage_events
+	}
+}
+		
+noble_auto_marry.4 = {
+	type = country_event
+	title = noble_auto_marry.1.t
+	desc = noble_auto_marry.1.d
+	
+	trigger = {
+		has_variable = hide_marriage_events
+		is_ai = no
+		any_character = {
+			is_married = no
+			is_female = no
+			OR = {
+				has_estate = estate_type:nobles_estate 
+				AND = {
+					has_estate = estate_type:crown_estate 
+					NOT = { is_eligible_heir_baseline = root }
+				}
+			}
+			age_in_years > 18
+			age_in_years < 25
+		}
+		any_character = {
+			is_married = no
+			is_female = yes
+			OR = {
+				has_estate = estate_type:nobles_estate 
+				AND = {
+					has_estate = estate_type:crown_estate 
+					NOT = { is_eligible_heir_baseline = root }
+				}
+			}
+			age_in_years > 18
+			age_in_years < 25
+		}
+	}
+	hidden = yes
+	
+	immediate = {
+		random_character = {
+			limit = {
+				is_married = no
+				is_female = no
+				OR = {
+					has_estate = estate_type:nobles_estate 
+					AND = {
+						has_estate = estate_type:crown_estate 
+						NOT = { is_eligible_heir_baseline = root }
+					}
+				}
+				age_in_years > 18
+				age_in_years < 25
+			}
+			save_scope_as = target_male
+		}
+		random_character = {
+			limit = {
+				is_married = no
+				is_female = yes
+				NOT = {
+					is_close_relative = scope:target_male
+				}
+				OR = {
+					has_estate = estate_type:nobles_estate 
+					AND = {
+						has_estate = estate_type:crown_estate 
+						NOT = { is_eligible_heir_baseline = root }
+					}
+				}
+				age_in_years > 18
+				age_in_years < 25
+			}
+			save_scope_as = target_female
+		}
+	}
+	option = {
+		name = noble_auto_marry.1.a
+		scope:target_male ?= { marry_character = scope:target_female }
+	}
+}
+noble_auto_marry.5 = {
+	type = country_event
+	title = noble_auto_marry.1.t
+	desc = noble_auto_marry.1.d
+	
+	trigger = {
+		is_ai = no
+		NOT = { has_variable = hide_marriage_events }
+		any_character = {
+			is_married = no
+			is_female = no
+			OR = {
+				has_estate = estate_type:nobles_estate 
+				AND = {
+					has_estate = estate_type:crown_estate 
+					NOT = { is_eligible_heir_baseline = root }
+				}
+			}
+			age_in_years > 18
+			age_in_years < 25
+		}
+		any_character = {
+			is_married = no
+			is_female = yes
+			OR = {
+				has_estate = estate_type:nobles_estate 
+				AND = {
+					has_estate = estate_type:crown_estate 
+					NOT = { is_eligible_heir_baseline = root }
+				}
+			}
+			age_in_years > 18
+			age_in_years < 25
+		}
+	}
+	
+	immediate = {
+		random_character = {
+			limit = {
+				is_married = no
+				is_female = no
+				OR = {
+					has_estate = estate_type:nobles_estate 
+					AND = {
+						has_estate = estate_type:crown_estate 
+						NOT = { is_eligible_heir_baseline = root }
+					}
+				}
+				age_in_years > 18
+				age_in_years < 25
+			}
+			save_scope_as = target_male
+		}
+		random_character = {
+			limit = {
+				is_married = no
+				is_female = yes
+				NOT = {
+					is_close_relative = scope:target_male
+				}
+				OR = {
+					has_estate = estate_type:nobles_estate 
+					AND = {
+						has_estate = estate_type:crown_estate 
+						NOT = { is_eligible_heir_baseline = root }
+					}
+				}
+				age_in_years > 18
+				age_in_years < 25
+			}
+			save_scope_as = target_female
+		}
+	}
+	option = {
+		name = noble_auto_marry.1.a
+		scope:target_male ?= { marry_character = scope:target_female }
+	}
+	option = {
+		name = noble_auto_marry.1.b
+		scope:target_male ?= { marry_character = scope:target_female }
+		custom_tooltip =  { text = hide_marriage_events.tt }
+		set_variable = hide_marriage_events
+	}
+}
+		
+noble_auto_marry.6 = {
+	type = country_event
+	title = noble_auto_marry.1.t
+	desc = noble_auto_marry.1.d
+	
+	trigger = {
+		has_variable = hide_marriage_events
+		is_ai = no
+		any_character = {
+			is_married = no
+			is_female = no
+			OR = {
+				has_estate = estate_type:nobles_estate 
+				AND = {
+					has_estate = estate_type:crown_estate 
+					NOT = { is_eligible_heir_baseline = root }
+				}
+			}
+			age_in_years > 18
+			age_in_years < 25
+		}
+		any_character = {
+			is_married = no
+			is_female = yes
+			OR = {
+				has_estate = estate_type:nobles_estate 
+				AND = {
+					has_estate = estate_type:crown_estate 
+					NOT = { is_eligible_heir_baseline = root }
+				}
+			}
+			age_in_years > 18
+			age_in_years < 25
+		}
+	}
+	hidden = yes
+	
+	immediate = {
+		random_character = {
+			limit = {
+				is_married = no
+				is_female = no
+				OR = {
+					has_estate = estate_type:nobles_estate 
+					AND = {
+						has_estate = estate_type:crown_estate 
+						NOT = { is_eligible_heir_baseline = root }
+					}
+				}
+				age_in_years > 18
+				age_in_years < 25
+			}
+			save_scope_as = target_male
+		}
+		random_character = {
+			limit = {
+				is_married = no
+				is_female = yes
+				NOT = {
+					is_close_relative = scope:target_male
+				}
+				OR = {
+					has_estate = estate_type:nobles_estate 
+					AND = {
+						has_estate = estate_type:crown_estate 
+						NOT = { is_eligible_heir_baseline = root }
+					}
+				}
+				age_in_years > 18
+				age_in_years < 25
+			}
+			save_scope_as = target_female
+		}
+	}
+	option = {
+		name = noble_auto_marry.1.a
+		scope:target_male ?= { marry_character = scope:target_female }
+	}
+}
+noble_auto_marry.7 = {
+	type = country_event
+	title = noble_auto_marry.1.t
+	desc = noble_auto_marry.1.d
+	
+	trigger = {
+		is_ai = no
+		NOT = { has_variable = hide_marriage_events }
+		any_character = {
+			is_married = no
+			is_female = no
+			OR = {
+				has_estate = estate_type:nobles_estate 
+				AND = {
+					has_estate = estate_type:crown_estate 
+					NOT = { is_eligible_heir_baseline = root }
+				}
+			}
+			age_in_years > 18
+			age_in_years < 25
+		}
+		any_character = {
+			is_married = no
+			is_female = yes
+			OR = {
+				has_estate = estate_type:nobles_estate 
+				AND = {
+					has_estate = estate_type:crown_estate 
+					NOT = { is_eligible_heir_baseline = root }
+				}
+			}
+			age_in_years > 18
+			age_in_years < 25
+		}
+	}
+	
+	immediate = {
+		random_character = {
+			limit = {
+				is_married = no
+				is_female = no
+				OR = {
+					has_estate = estate_type:nobles_estate 
+					AND = {
+						has_estate = estate_type:crown_estate 
+						NOT = { is_eligible_heir_baseline = root }
+					}
+				}
+				age_in_years > 18
+				age_in_years < 25
+			}
+			save_scope_as = target_male
+		}
+		random_character = {
+			limit = {
+				is_married = no
+				is_female = yes
+				NOT = {
+					is_close_relative = scope:target_male
+				}
+				OR = {
+					has_estate = estate_type:nobles_estate 
+					AND = {
+						has_estate = estate_type:crown_estate 
+						NOT = { is_eligible_heir_baseline = root }
+					}
+				}
+				age_in_years > 18
+				age_in_years < 25
+			}
+			save_scope_as = target_female
+		}
+	}
+	option = {
+		name = noble_auto_marry.1.a
+		scope:target_male ?= { marry_character = scope:target_female }
+	}
+	option = {
+		name = noble_auto_marry.1.b
+		scope:target_male ?= { marry_character = scope:target_female }
+		custom_tooltip =  { text = hide_marriage_events.tt }
+		set_variable = hide_marriage_events
+	}
+}
+		
+noble_auto_marry.8 = {
+	type = country_event
+	title = noble_auto_marry.1.t
+	desc = noble_auto_marry.1.d
+	
+	trigger = {
+		has_variable = hide_marriage_events
+		is_ai = no
+		any_character = {
+			is_married = no
+			is_female = no
+			OR = {
+				has_estate = estate_type:nobles_estate 
+				AND = {
+					has_estate = estate_type:crown_estate 
+					NOT = { is_eligible_heir_baseline = root }
+				}
+			}
+			age_in_years > 18
+			age_in_years < 25
+		}
+		any_character = {
+			is_married = no
+			is_female = yes
+			OR = {
+				has_estate = estate_type:nobles_estate 
+				AND = {
+					has_estate = estate_type:crown_estate 
+					NOT = { is_eligible_heir_baseline = root }
+				}
+			}
+			age_in_years > 18
+			age_in_years < 25
+		}
+	}
+	hidden = yes
+	
+	immediate = {
+		random_character = {
+			limit = {
+				is_married = no
+				is_female = no
+				OR = {
+					has_estate = estate_type:nobles_estate 
+					AND = {
+						has_estate = estate_type:crown_estate 
+						NOT = { is_eligible_heir_baseline = root }
+					}
+				}
+				age_in_years > 18
+				age_in_years < 25
+			}
+			save_scope_as = target_male
+		}
+		random_character = {
+			limit = {
+				is_married = no
+				is_female = yes
+				NOT = {
+					is_close_relative = scope:target_male
+				}
+				OR = {
+					has_estate = estate_type:nobles_estate 
+					AND = {
+						has_estate = estate_type:crown_estate 
+						NOT = { is_eligible_heir_baseline = root }
+					}
+				}
+				age_in_years > 18
+				age_in_years < 25
+			}
+			save_scope_as = target_female
+		}
+	}
+	option = {
+		name = noble_auto_marry.1.a
+		scope:target_male ?= { marry_character = scope:target_female }
+	}
+}
+noble_auto_marry.9 = {
+	type = country_event
+	title = noble_auto_marry.1.t
+	desc = noble_auto_marry.1.d
+	
+	trigger = {
+		is_ai = no
+		NOT = { has_variable = hide_marriage_events }
+		any_character = {
+			is_married = no
+			is_female = no
+			OR = {
+				has_estate = estate_type:nobles_estate 
+				AND = {
+					has_estate = estate_type:crown_estate 
+					NOT = { is_eligible_heir_baseline = root }
+				}
+			}
+			age_in_years > 18
+			age_in_years < 25
+		}
+		any_character = {
+			is_married = no
+			is_female = yes
+			OR = {
+				has_estate = estate_type:nobles_estate 
+				AND = {
+					has_estate = estate_type:crown_estate 
+					NOT = { is_eligible_heir_baseline = root }
+				}
+			}
+			age_in_years > 18
+			age_in_years < 25
+		}
+	}
+	
+	immediate = {
+		random_character = {
+			limit = {
+				is_married = no
+				is_female = no
+				OR = {
+					has_estate = estate_type:nobles_estate 
+					AND = {
+						has_estate = estate_type:crown_estate 
+						NOT = { is_eligible_heir_baseline = root }
+					}
+				}
+				age_in_years > 18
+				age_in_years < 25
+			}
+			save_scope_as = target_male
+		}
+		random_character = {
+			limit = {
+				is_married = no
+				is_female = yes
+				NOT = {
+					is_close_relative = scope:target_male
+				}
+				OR = {
+					has_estate = estate_type:nobles_estate 
+					AND = {
+						has_estate = estate_type:crown_estate 
+						NOT = { is_eligible_heir_baseline = root }
+					}
+				}
+				age_in_years > 18
+				age_in_years < 25
+			}
+			save_scope_as = target_female
+		}
+	}
+	option = {
+		name = noble_auto_marry.1.a
+		scope:target_male ?= { marry_character = scope:target_female }
+	}
+	option = {
+		name = noble_auto_marry.1.b
+		scope:target_male ?= { marry_character = scope:target_female }
+		custom_tooltip =  { text = hide_marriage_events.tt }
+		set_variable = hide_marriage_events
+	}
+}
+		
+noble_auto_marry.10 = {
+	type = country_event
+	title = noble_auto_marry.1.t
+	desc = noble_auto_marry.1.d
+	
+	trigger = {
+		has_variable = hide_marriage_events
+		is_ai = no
+		any_character = {
+			is_married = no
+			is_female = no
+			OR = {
+				has_estate = estate_type:nobles_estate 
+				AND = {
+					has_estate = estate_type:crown_estate 
+					NOT = { is_eligible_heir_baseline = root }
+				}
+			}
+			age_in_years > 18
+			age_in_years < 25
+		}
+		any_character = {
+			is_married = no
+			is_female = yes
+			OR = {
+				has_estate = estate_type:nobles_estate 
+				AND = {
+					has_estate = estate_type:crown_estate 
+					NOT = { is_eligible_heir_baseline = root }
+				}
+			}
+			age_in_years > 18
+			age_in_years < 25
+		}
+	}
+	hidden = yes
+	
+	immediate = {
+		random_character = {
+			limit = {
+				is_married = no
+				is_female = no
+				OR = {
+					has_estate = estate_type:nobles_estate 
+					AND = {
+						has_estate = estate_type:crown_estate 
+						NOT = { is_eligible_heir_baseline = root }
+					}
+				}
+				age_in_years > 18
+				age_in_years < 25
+			}
+			save_scope_as = target_male
+		}
+		random_character = {
+			limit = {
+				is_married = no
+				is_female = yes
+				NOT = {
+					is_close_relative = scope:target_male
+				}
+				OR = {
+					has_estate = estate_type:nobles_estate 
+					AND = {
+						has_estate = estate_type:crown_estate 
+						NOT = { is_eligible_heir_baseline = root }
+					}
+				}
+				age_in_years > 18
+				age_in_years < 25
+			}
+			save_scope_as = target_female
+		}
+	}
+	option = {
+		name = noble_auto_marry.1.a
+		scope:target_male ?= { marry_character = scope:target_female }
+	}
+}
+
+noble_auto_marry.11 = {
+	type = country_event
+	title = noble_auto_marry.1.t
+	desc = noble_auto_marry.1.d
+	
+	trigger = {
+		is_ai = no
+		NOT = { has_variable = hide_marriage_events }
+		any_character = {
+			is_married = no
+			is_female = no
+			OR = {
+				has_estate = estate_type:nobles_estate 
+				AND = {
+					has_estate = estate_type:crown_estate 
+					NOT = { is_eligible_heir_baseline = root }
+				}
+			}
+			age_in_years > 18
+			age_in_years < 25
+		}
+		any_character = {
+			is_married = no
+			is_female = yes
+			OR = {
+				has_estate = estate_type:nobles_estate 
+				AND = {
+					has_estate = estate_type:crown_estate 
+					NOT = { is_eligible_heir_baseline = root }
+				}
+			}
+			age_in_years > 18
+			age_in_years < 25
+		}
+	}
+	
+	immediate = {
+		random_character = {
+			limit = {
+				is_married = no
+				is_female = no
+				OR = {
+					has_estate = estate_type:nobles_estate 
+					AND = {
+						has_estate = estate_type:crown_estate 
+						NOT = { is_eligible_heir_baseline = root }
+					}
+				}
+				age_in_years > 18
+				age_in_years < 25
+			}
+			save_scope_as = target_male
+		}
+		random_character = {
+			limit = {
+				is_married = no
+				is_female = yes
+				NOT = {
+					is_close_relative = scope:target_male
+				}
+				OR = {
+					has_estate = estate_type:nobles_estate 
+					AND = {
+						has_estate = estate_type:crown_estate 
+						NOT = { is_eligible_heir_baseline = root }
+					}
+				}
+				age_in_years > 18
+				age_in_years < 25
+			}
+			save_scope_as = target_female
+		}
+	}
+	option = {
+		name = noble_auto_marry.1.a
+		scope:target_male ?= { marry_character = scope:target_female }
+	}
+	option = {
+		name = noble_auto_marry.1.b
+		scope:target_male ?= { marry_character = scope:target_female }
+		custom_tooltip =  { text = hide_marriage_events.tt }
+		set_variable = hide_marriage_events
+	}
+}
+		
+noble_auto_marry.12 = {
+	type = country_event
+	title = noble_auto_marry.1.t
+	desc = noble_auto_marry.1.d
+	
+	trigger = {
+		has_variable = hide_marriage_events
+		is_ai = no
+		any_character = {
+			is_married = no
+			is_female = no
+			OR = {
+				has_estate = estate_type:nobles_estate 
+				AND = {
+					has_estate = estate_type:crown_estate 
+					NOT = { is_eligible_heir_baseline = root }
+				}
+			}
+			age_in_years > 18
+			age_in_years < 25
+		}
+		any_character = {
+			is_married = no
+			is_female = yes
+			OR = {
+				has_estate = estate_type:nobles_estate 
+				AND = {
+					has_estate = estate_type:crown_estate 
+					NOT = { is_eligible_heir_baseline = root }
+				}
+			}
+			age_in_years > 18
+			age_in_years < 25
+		}
+	}
+	hidden = yes
+	
+	
+	immediate = {
+		random_character = {
+			limit = {
+				is_married = no
+				is_female = no
+				OR = {
+					has_estate = estate_type:nobles_estate 
+					AND = {
+						has_estate = estate_type:crown_estate 
+						NOT = { is_eligible_heir_baseline = root }
+					}
+				}
+				age_in_years > 18
+				age_in_years < 25
+			}
+			save_scope_as = target_male
+		}
+		random_character = {
+			limit = {
+				is_married = no
+				is_female = yes
+				NOT = {
+					is_close_relative = scope:target_male
+				}
+				OR = {
+					has_estate = estate_type:nobles_estate 
+					AND = {
+						has_estate = estate_type:crown_estate 
+						NOT = { is_eligible_heir_baseline = root }
+					}
+				}
+				age_in_years > 18
+				age_in_years < 25
+			}
+			save_scope_as = target_female
+		}
+	}
+	option = {
+		name = noble_auto_marry.1.a
+		scope:target_male ?= { marry_character = scope:target_female }
+	}
+}
+noble_auto_marry.13 = {
+	type = country_event
+	title = noble_auto_marry.1.t
+	desc = noble_auto_marry.1.d
+	
+	trigger = {
+		is_ai = no
+		NOT = { has_variable = hide_marriage_events }
+		any_character = {
+			is_married = no
+			is_female = no
+			OR = {
+				has_estate = estate_type:nobles_estate 
+				AND = {
+					has_estate = estate_type:crown_estate 
+					NOT = { is_eligible_heir_baseline = root }
+				}
+			}
+			age_in_years > 18
+			age_in_years < 25
+		}
+		any_character = {
+			is_married = no
+			is_female = yes
+			OR = {
+				has_estate = estate_type:nobles_estate 
+				AND = {
+					has_estate = estate_type:crown_estate 
+					NOT = { is_eligible_heir_baseline = root }
+				}
+			}
+			age_in_years > 18
+			age_in_years < 25
+		}
+	}
+	
+	immediate = {
+		random_character = {
+			limit = {
+				is_married = no
+				is_female = no
+				OR = {
+					has_estate = estate_type:nobles_estate 
+					AND = {
+						has_estate = estate_type:crown_estate 
+						NOT = { is_eligible_heir_baseline = root }
+					}
+				}
+				age_in_years > 18
+				age_in_years < 25
+			}
+			save_scope_as = target_male
+		}
+		random_character = {
+			limit = {
+				is_married = no
+				is_female = yes
+				NOT = {
+					is_close_relative = scope:target_male
+				}
+				OR = {
+					has_estate = estate_type:nobles_estate 
+					AND = {
+						has_estate = estate_type:crown_estate 
+						NOT = { is_eligible_heir_baseline = root }
+					}
+				}
+				age_in_years > 18
+				age_in_years < 25
+			}
+			save_scope_as = target_female
+		}
+	}
+	option = {
+		name = noble_auto_marry.1.a
+		scope:target_male ?= { marry_character = scope:target_female }
+	}
+	option = {
+		name = noble_auto_marry.1.b
+		scope:target_male ?= { marry_character = scope:target_female }
+		custom_tooltip =  { text = hide_marriage_events.tt }
+		set_variable = hide_marriage_events
+	}
+}
+		
+noble_auto_marry.14 = {
+	type = country_event
+	title = noble_auto_marry.1.t
+	desc = noble_auto_marry.1.d
+	
+	trigger = {
+		has_variable = hide_marriage_events
+		is_ai = no
+		any_character = {
+			is_married = no
+			is_female = no
+			OR = {
+				has_estate = estate_type:nobles_estate 
+				AND = {
+					has_estate = estate_type:crown_estate 
+					NOT = { is_eligible_heir_baseline = root }
+				}
+			}
+			age_in_years > 18
+			age_in_years < 25
+		}
+		any_character = {
+			is_married = no
+			is_female = yes
+			OR = {
+				has_estate = estate_type:nobles_estate 
+				AND = {
+					has_estate = estate_type:crown_estate 
+					NOT = { is_eligible_heir_baseline = root }
+				}
+			}
+			age_in_years > 18
+			age_in_years < 25
+		}
+	}
+	hidden = yes
+	
+	immediate = {
+		random_character = {
+			limit = {
+				is_married = no
+				is_female = no
+				OR = {
+					has_estate = estate_type:nobles_estate 
+					AND = {
+						has_estate = estate_type:crown_estate 
+						NOT = { is_eligible_heir_baseline = root }
+					}
+				}
+				age_in_years > 18
+				age_in_years < 25
+			}
+			save_scope_as = target_male
+		}
+		random_character = {
+			limit = {
+				is_married = no
+				is_female = yes
+				NOT = {
+					is_close_relative = scope:target_male
+				}
+				OR = {
+					has_estate = estate_type:nobles_estate 
+					AND = {
+						has_estate = estate_type:crown_estate 
+						NOT = { is_eligible_heir_baseline = root }
+					}
+				}
+				age_in_years > 18
+				age_in_years < 25
+			}
+			save_scope_as = target_female
+		}
+	}
+	option = {
+		name = noble_auto_marry.1.a
+		scope:target_male ?= { marry_character = scope:target_female }
+	}
+}
+noble_auto_marry.15 = {
+	type = country_event
+	title = noble_auto_marry.1.t
+	desc = noble_auto_marry.1.d
+	
+	trigger = {
+		is_ai = no
+		NOT = { has_variable = hide_marriage_events }
+		any_character = {
+			is_married = no
+			is_female = no
+			OR = {
+				has_estate = estate_type:nobles_estate 
+				AND = {
+					has_estate = estate_type:crown_estate 
+					NOT = { is_eligible_heir_baseline = root }
+				}
+			}
+			age_in_years > 18
+			age_in_years < 25
+		}
+		any_character = {
+			is_married = no
+			is_female = yes
+			OR = {
+				has_estate = estate_type:nobles_estate 
+				AND = {
+					has_estate = estate_type:crown_estate 
+					NOT = { is_eligible_heir_baseline = root }
+				}
+			}
+			age_in_years > 18
+			age_in_years < 25
+		}
+	}
+	
+	
+	immediate = {
+		random_character = {
+			limit = {
+				is_married = no
+				is_female = no
+				OR = {
+					has_estate = estate_type:nobles_estate 
+					AND = {
+						has_estate = estate_type:crown_estate 
+						NOT = { is_eligible_heir_baseline = root }
+					}
+				}
+				age_in_years > 18
+				age_in_years < 25
+			}
+			save_scope_as = target_male
+		}
+		random_character = {
+			limit = {
+				is_married = no
+				is_female = yes
+				NOT = {
+					is_close_relative = scope:target_male
+				}
+				OR = {
+					has_estate = estate_type:nobles_estate 
+					AND = {
+						has_estate = estate_type:crown_estate 
+						NOT = { is_eligible_heir_baseline = root }
+					}
+				}
+				age_in_years > 18
+				age_in_years < 25
+			}
+			save_scope_as = target_female
+		}
+	}
+	option = {
+		name = noble_auto_marry.1.a
+		scope:target_male ?= { marry_character = scope:target_female }
+	}
+	option = {
+		name = noble_auto_marry.1.b
+		scope:target_male ?= { marry_character = scope:target_female }
+		custom_tooltip =  { text = hide_marriage_events.tt }
+		set_variable = hide_marriage_events
+	}
+}
+		
+noble_auto_marry.16 = {
+	type = country_event
+	title = noble_auto_marry.1.t
+	desc = noble_auto_marry.1.d
+	
+	trigger = {
+		has_variable = hide_marriage_events
+		is_ai = no
+		any_character = {
+			is_married = no
+			is_female = no
+			OR = {
+				has_estate = estate_type:nobles_estate 
+				AND = {
+					has_estate = estate_type:crown_estate 
+					NOT = { is_eligible_heir_baseline = root }
+				}
+			}
+			age_in_years > 18
+			age_in_years < 25
+		}
+		any_character = {
+			is_married = no
+			is_female = yes
+			OR = {
+				has_estate = estate_type:nobles_estate 
+				AND = {
+					has_estate = estate_type:crown_estate 
+					NOT = { is_eligible_heir_baseline = root }
+				}
+			}
+			age_in_years > 18
+			age_in_years < 25
+		}
+	}
+	hidden = yes
+	
+	immediate = {
+		random_character = {
+			limit = {
+				is_married = no
+				is_female = no
+				OR = {
+					has_estate = estate_type:nobles_estate 
+					AND = {
+						has_estate = estate_type:crown_estate 
+						NOT = { is_eligible_heir_baseline = root }
+					}
+				}
+				age_in_years > 18
+				age_in_years < 25
+			}
+			save_scope_as = target_male
+		}
+		random_character = {
+			limit = {
+				is_married = no
+				is_female = yes
+				NOT = {
+					is_close_relative = scope:target_male
+				}
+				OR = {
+					has_estate = estate_type:nobles_estate 
+					AND = {
+						has_estate = estate_type:crown_estate 
+						NOT = { is_eligible_heir_baseline = root }
+					}
+				}
+				age_in_years > 18
+				age_in_years < 25
+			}
+			save_scope_as = target_female
+		}
+	}
+	option = {
+		name = noble_auto_marry.1.a
+		scope:target_male ?= { marry_character = scope:target_female }
+	}
+}
+noble_auto_marry.17 = {
+	type = country_event
+	title = noble_auto_marry.1.t
+	desc = noble_auto_marry.1.d
+	
+	trigger = {
+		is_ai = no
+		NOT = { has_variable = hide_marriage_events }
+		any_character = {
+			is_married = no
+			is_female = no
+			OR = {
+				has_estate = estate_type:nobles_estate 
+				AND = {
+					has_estate = estate_type:crown_estate 
+					NOT = { is_eligible_heir_baseline = root }
+				}
+			}
+			age_in_years > 18
+			age_in_years < 25
+		}
+		any_character = {
+			is_married = no
+			is_female = yes
+			OR = {
+				has_estate = estate_type:nobles_estate 
+				AND = {
+					has_estate = estate_type:crown_estate 
+					NOT = { is_eligible_heir_baseline = root }
+				}
+			}
+			age_in_years > 18
+			age_in_years < 25
+		}
+	}
+	
+	immediate = {
+		random_character = {
+			limit = {
+				is_married = no
+				is_female = no
+				OR = {
+					has_estate = estate_type:nobles_estate 
+					AND = {
+						has_estate = estate_type:crown_estate 
+						NOT = { is_eligible_heir_baseline = root }
+					}
+				}
+				age_in_years > 18
+				age_in_years < 25
+			}
+			save_scope_as = target_male
+		}
+		random_character = {
+			limit = {
+				is_married = no
+				is_female = yes
+				NOT = {
+					is_close_relative = scope:target_male
+				}
+				OR = {
+					has_estate = estate_type:nobles_estate 
+					AND = {
+						has_estate = estate_type:crown_estate 
+						NOT = { is_eligible_heir_baseline = root }
+					}
+				}
+				age_in_years > 18
+				age_in_years < 25
+			}
+			save_scope_as = target_female
+		}
+	}
+	option = {
+		name = noble_auto_marry.1.a
+		scope:target_male ?= { marry_character = scope:target_female }
+	}
+	option = {
+		name = noble_auto_marry.1.b
+		scope:target_male ?= { marry_character = scope:target_female }
+		custom_tooltip =  { text = hide_marriage_events.tt }
+		set_variable = hide_marriage_events
+	}
+}
+		
+noble_auto_marry.18 = {
+	type = country_event
+	title = noble_auto_marry.1.t
+	desc = noble_auto_marry.1.d
+	
+	trigger = {
+		has_variable = hide_marriage_events
+		is_ai = no
+		any_character = {
+			is_married = no
+			is_female = no
+			OR = {
+				has_estate = estate_type:nobles_estate 
+				AND = {
+					has_estate = estate_type:crown_estate 
+					NOT = { is_eligible_heir_baseline = root }
+				}
+			}
+			age_in_years > 18
+			age_in_years < 25
+		}
+		any_character = {
+			is_married = no
+			is_female = yes
+			OR = {
+				has_estate = estate_type:nobles_estate 
+				AND = {
+					has_estate = estate_type:crown_estate 
+					NOT = { is_eligible_heir_baseline = root }
+				}
+			}
+			age_in_years > 18
+			age_in_years < 25
+		}
+	}
+	hidden = yes
+	
+	immediate = {
+		random_character = {
+			limit = {
+				is_married = no
+				is_female = no
+				OR = {
+					has_estate = estate_type:nobles_estate 
+					AND = {
+						has_estate = estate_type:crown_estate 
+						NOT = { is_eligible_heir_baseline = root }
+					}
+				}
+				age_in_years > 18
+				age_in_years < 25
+			}
+			save_scope_as = target_male
+		}
+		random_character = {
+			limit = {
+				is_married = no
+				is_female = yes
+				NOT = {
+					is_close_relative = scope:target_male
+				}
+				OR = {
+					has_estate = estate_type:nobles_estate 
+					AND = {
+						has_estate = estate_type:crown_estate 
+						NOT = { is_eligible_heir_baseline = root }
+					}
+				}
+				age_in_years > 18
+				age_in_years < 25
+			}
+			save_scope_as = target_female
+		}
+	}
+	option = {
+		name = noble_auto_marry.1.a
+		scope:target_male ?= { marry_character = scope:target_female }
+	}
+}
+noble_auto_marry.19 = {
+	type = country_event
+	title = noble_auto_marry.1.t
+	desc = noble_auto_marry.1.d
+	
+	trigger = {
+		is_ai = no
+		NOT = { has_variable = hide_marriage_events }
+		any_character = {
+			is_married = no
+			is_female = no
+			OR = {
+				has_estate = estate_type:nobles_estate 
+				AND = {
+					has_estate = estate_type:crown_estate 
+					NOT = { is_eligible_heir_baseline = root }
+				}
+			}
+			age_in_years > 18
+			age_in_years < 25
+		}
+		any_character = {
+			is_married = no
+			is_female = yes
+			OR = {
+				has_estate = estate_type:nobles_estate 
+				AND = {
+					has_estate = estate_type:crown_estate 
+					NOT = { is_eligible_heir_baseline = root }
+				}
+			}
+			age_in_years > 18
+			age_in_years < 25
+		}
+	}
+	
+	immediate = {
+		random_character = {
+			limit = {
+				is_married = no
+				is_female = no
+				OR = {
+					has_estate = estate_type:nobles_estate 
+					AND = {
+						has_estate = estate_type:crown_estate 
+						NOT = { is_eligible_heir_baseline = root }
+					}
+				}
+				age_in_years > 18
+				age_in_years < 25
+			}
+			save_scope_as = target_male
+		}
+		random_character = {
+			limit = {
+				is_married = no
+				is_female = yes
+				NOT = {
+					is_close_relative = scope:target_male
+				}
+				OR = {
+					has_estate = estate_type:nobles_estate 
+					AND = {
+						has_estate = estate_type:crown_estate 
+						NOT = { is_eligible_heir_baseline = root }
+					}
+				}
+				age_in_years > 18
+				age_in_years < 25
+			}
+			save_scope_as = target_female
+		}
+	}
+	option = {
+		name = noble_auto_marry.1.a
+		scope:target_male ?= { marry_character = scope:target_female }
+	}
+	option = {
+		name = noble_auto_marry.1.b
+		scope:target_male ?= { marry_character = scope:target_female }
+		custom_tooltip =  { text = hide_marriage_events.tt }
+		set_variable = hide_marriage_events
+	}
+}
+		
+noble_auto_marry.20 = {
+	type = country_event
+	title = noble_auto_marry.1.t
+	desc = noble_auto_marry.1.d
+	
+	trigger = {
+		has_variable = hide_marriage_events
+		is_ai = no
+		any_character = {
+			is_married = no
+			is_female = no
+			OR = {
+				has_estate = estate_type:nobles_estate 
+				AND = {
+					has_estate = estate_type:crown_estate 
+					NOT = { is_eligible_heir_baseline = root }
+				}
+			}
+			age_in_years > 18
+			age_in_years < 25
+		}
+		any_character = {
+			is_married = no
+			is_female = yes
+			OR = {
+				has_estate = estate_type:nobles_estate 
+				AND = {
+					has_estate = estate_type:crown_estate 
+					NOT = { is_eligible_heir_baseline = root }
+				}
+			}
+			age_in_years > 18
+			age_in_years < 25
+		}
+	}
+	hidden = yes
+	
+	immediate = {
+		random_character = {
+			limit = {
+				is_married = no
+				is_female = no
+				OR = {
+					has_estate = estate_type:nobles_estate 
+					AND = {
+						has_estate = estate_type:crown_estate 
+						NOT = { is_eligible_heir_baseline = root }
+					}
+				}
+				age_in_years > 18
+				age_in_years < 25
+			}
+			save_scope_as = target_male
+		}
+		random_character = {
+			limit = {
+				is_married = no
+				is_female = yes
+				NOT = {
+					is_close_relative = scope:target_male
+				}
+				OR = {
+					has_estate = estate_type:nobles_estate 
+					AND = {
+						has_estate = estate_type:crown_estate 
+						NOT = { is_eligible_heir_baseline = root }
+					}
+				}
+				age_in_years > 18
+				age_in_years < 25
+			}
+			save_scope_as = target_female
+		}
+	}
+	option = {
+		name = noble_auto_marry.1.a
+		scope:target_male ?= { marry_character = scope:target_female }
+	}
+}
+
+noble_auto_marry.21 = {
+	type = country_event
+	title = noble_auto_marry.1.t
+	desc = noble_auto_marry.1.d
+	
+	trigger = {
+		is_ai = no
+		NOT = { has_variable = hide_marriage_events }
+		any_character = {
+			is_married = no
+			is_female = no
+			OR = {
+				has_estate = estate_type:nobles_estate 
+				AND = {
+					has_estate = estate_type:crown_estate 
+					NOT = { is_eligible_heir_baseline = root }
+				}
+			}
+			age_in_years > 18
+			age_in_years < 25
+		}
+		any_character = {
+			is_married = no
+			is_female = yes
+			OR = {
+				has_estate = estate_type:nobles_estate 
+				AND = {
+					has_estate = estate_type:crown_estate 
+					NOT = { is_eligible_heir_baseline = root }
+				}
+			}
+			age_in_years > 18
+			age_in_years < 25
+		}
+	}
+	
+	immediate = {
+		random_character = {
+			limit = {
+				is_married = no
+				is_female = no
+				OR = {
+					has_estate = estate_type:nobles_estate 
+					AND = {
+						has_estate = estate_type:crown_estate 
+						NOT = { is_eligible_heir_baseline = root }
+					}
+				}
+				age_in_years > 18
+				age_in_years < 25
+			}
+			save_scope_as = target_male
+		}
+		random_character = {
+			limit = {
+				is_married = no
+				is_female = yes
+				NOT = {
+					is_close_relative = scope:target_male
+				}
+				OR = {
+					has_estate = estate_type:nobles_estate 
+					AND = {
+						has_estate = estate_type:crown_estate 
+						NOT = { is_eligible_heir_baseline = root }
+					}
+				}
+				age_in_years > 18
+				age_in_years < 25
+			}
+			save_scope_as = target_female
+		}
+	}
+	option = {
+		name = noble_auto_marry.1.a
+		scope:target_male ?= { marry_character = scope:target_female }
+	}
+	option = {
+		name = noble_auto_marry.1.b
+		scope:target_male ?= { marry_character = scope:target_female }
+		custom_tooltip =  { text = hide_marriage_events.tt }
+		set_variable = hide_marriage_events
+	}
+}
+		
+noble_auto_marry.22 = {
+	type = country_event
+	title = noble_auto_marry.1.t
+	desc = noble_auto_marry.1.d
+	
+	trigger = {
+		has_variable = hide_marriage_events
+		is_ai = no
+		any_character = {
+			is_married = no
+			is_female = no
+			OR = {
+				has_estate = estate_type:nobles_estate 
+				AND = {
+					has_estate = estate_type:crown_estate 
+					NOT = { is_eligible_heir_baseline = root }
+				}
+			}
+			age_in_years > 18
+			age_in_years < 25
+		}
+		any_character = {
+			is_married = no
+			is_female = yes
+			OR = {
+				has_estate = estate_type:nobles_estate 
+				AND = {
+					has_estate = estate_type:crown_estate 
+					NOT = { is_eligible_heir_baseline = root }
+				}
+			}
+			age_in_years > 18
+			age_in_years < 25
+		}
+	}
+	hidden = yes
+	
+	immediate = {
+		random_character = {
+			limit = {
+				is_married = no
+				is_female = no
+				OR = {
+					has_estate = estate_type:nobles_estate 
+					AND = {
+						has_estate = estate_type:crown_estate 
+						NOT = { is_eligible_heir_baseline = root }
+					}
+				}
+				age_in_years > 18
+				age_in_years < 25
+			}
+			save_scope_as = target_male
+		}
+		random_character = {
+			limit = {
+				is_married = no
+				is_female = yes
+				NOT = {
+					is_close_relative = scope:target_male
+				}
+				OR = {
+					has_estate = estate_type:nobles_estate 
+					AND = {
+						has_estate = estate_type:crown_estate 
+						NOT = { is_eligible_heir_baseline = root }
+					}
+				}
+				age_in_years > 18
+				age_in_years < 25
+			}
+			save_scope_as = target_female
+		}
+	}
+	option = {
+		name = noble_auto_marry.1.a
+		scope:target_male ?= { marry_character = scope:target_female }
+	}
+}
+
+
+
+noble_auto_marry.23 = {
+	type = country_event
+	title = noble_auto_marry.1.t
+	desc = noble_auto_marry.1.d
+	
+	trigger = {
+		is_ai = no
+		NOT = { has_variable = hide_marriage_events }
+		any_character = {
+			is_married = no
+			is_female = no
+			OR = {
+				has_estate = estate_type:nobles_estate 
+				AND = {
+					has_estate = estate_type:crown_estate 
+					NOT = { is_eligible_heir_baseline = root }
+				}
+			}
+			age_in_years > 18
+			age_in_years < 25
+		}
+		any_character = {
+			is_married = no
+			is_female = yes
+			OR = {
+				has_estate = estate_type:nobles_estate 
+				AND = {
+					has_estate = estate_type:crown_estate 
+					NOT = { is_eligible_heir_baseline = root }
+				}
+			}
+			age_in_years > 18
+			age_in_years < 25
+		}
+	}
+	
+	immediate = {
+		random_character = {
+			limit = {
+				is_married = no
+				is_female = no
+				OR = {
+					has_estate = estate_type:nobles_estate 
+					AND = {
+						has_estate = estate_type:crown_estate 
+						NOT = { is_eligible_heir_baseline = root }
+					}
+				}
+				age_in_years > 18
+				age_in_years < 25
+			}
+			save_scope_as = target_male
+		}
+		random_character = {
+			limit = {
+				is_married = no
+				is_female = yes
+				NOT = {
+					is_close_relative = scope:target_male
+				}
+				OR = {
+					has_estate = estate_type:nobles_estate 
+					AND = {
+						has_estate = estate_type:crown_estate 
+						NOT = { is_eligible_heir_baseline = root }
+					}
+				}
+				age_in_years > 18
+				age_in_years < 25
+			}
+			save_scope_as = target_female
+		}
+	}
+	option = {
+		name = noble_auto_marry.1.a
+		scope:target_male ?= { marry_character = scope:target_female }
+	}
+	option = {
+		name = noble_auto_marry.1.b
+		scope:target_male ?= { marry_character = scope:target_female }
+		custom_tooltip =  { text = hide_marriage_events.tt }
+		set_variable = hide_marriage_events
+	}
+}
+		
+noble_auto_marry.24 = {
+	type = country_event
+	title = noble_auto_marry.1.t
+	desc = noble_auto_marry.1.d
+	
+	trigger = {
+		has_variable = hide_marriage_events
+		is_ai = no
+		any_character = {
+			is_married = no
+			is_female = no
+			OR = {
+				has_estate = estate_type:nobles_estate 
+				AND = {
+					has_estate = estate_type:crown_estate 
+					NOT = { is_eligible_heir_baseline = root }
+				}
+			}
+			age_in_years > 18
+			age_in_years < 25
+		}
+		any_character = {
+			is_married = no
+			is_female = yes
+			OR = {
+				has_estate = estate_type:nobles_estate 
+				AND = {
+					has_estate = estate_type:crown_estate 
+					NOT = { is_eligible_heir_baseline = root }
+				}
+			}
+			age_in_years > 18
+			age_in_years < 25
+		}
+	}
+	hidden = yes
+	
+	immediate = {
+		random_character = {
+			limit = {
+				is_married = no
+				is_female = no
+				OR = {
+					has_estate = estate_type:nobles_estate 
+					AND = {
+						has_estate = estate_type:crown_estate 
+						NOT = { is_eligible_heir_baseline = root }
+					}
+				}
+				age_in_years > 18
+				age_in_years < 25
+			}
+			save_scope_as = target_male
+		}
+		random_character = {
+			limit = {
+				is_married = no
+				is_female = yes
+				NOT = {
+					is_close_relative = scope:target_male
+				}
+				OR = {
+					has_estate = estate_type:nobles_estate 
+					AND = {
+						has_estate = estate_type:crown_estate 
+						NOT = { is_eligible_heir_baseline = root }
+					}
+				}
+				age_in_years > 18
+				age_in_years < 25
+			}
+			save_scope_as = target_female
+		}
+	}
+	option = {
+		name = noble_auto_marry.1.a
+		scope:target_male ?= { marry_character = scope:target_female }
+	}
+}
+noble_auto_marry.25 = {
+	type = country_event
+	title = noble_auto_marry.1.t
+	desc = noble_auto_marry.1.d
+	
+	trigger = {
+		is_ai = no
+		NOT = { has_variable = hide_marriage_events }
+		any_character = {
+			is_married = no
+			is_female = no
+			OR = {
+				has_estate = estate_type:nobles_estate 
+				AND = {
+					has_estate = estate_type:crown_estate 
+					NOT = { is_eligible_heir_baseline = root }
+				}
+			}
+			age_in_years > 18
+			age_in_years < 25
+		}
+		any_character = {
+			is_married = no
+			is_female = yes
+			OR = {
+				has_estate = estate_type:nobles_estate 
+				AND = {
+					has_estate = estate_type:crown_estate 
+					NOT = { is_eligible_heir_baseline = root }
+				}
+			}
+			age_in_years > 18
+			age_in_years < 25
+		}
+	}
+	
+	
+	immediate = {
+		random_character = {
+			limit = {
+				is_married = no
+				is_female = no
+				OR = {
+					has_estate = estate_type:nobles_estate 
+					AND = {
+						has_estate = estate_type:crown_estate 
+						NOT = { is_eligible_heir_baseline = root }
+					}
+				}
+				age_in_years > 18
+				age_in_years < 25
+			}
+			save_scope_as = target_male
+		}
+		random_character = {
+			limit = {
+				is_married = no
+				is_female = yes
+				NOT = {
+					is_close_relative = scope:target_male
+				}
+				OR = {
+					has_estate = estate_type:nobles_estate 
+					AND = {
+						has_estate = estate_type:crown_estate 
+						NOT = { is_eligible_heir_baseline = root }
+					}
+				}
+				age_in_years > 18
+				age_in_years < 25
+			}
+			save_scope_as = target_female
+		}
+	}
+	option = {
+		name = noble_auto_marry.1.a
+		scope:target_male ?= { marry_character = scope:target_female }
+	}
+	option = {
+		name = noble_auto_marry.1.b
+		scope:target_male ?= { marry_character = scope:target_female }
+		custom_tooltip =  { text = hide_marriage_events.tt }
+		set_variable = hide_marriage_events
+	}
+}
+		
+noble_auto_marry.26 = {
+	type = country_event
+	title = noble_auto_marry.1.t
+	desc = noble_auto_marry.1.d
+	
+	trigger = {
+		has_variable = hide_marriage_events
+		is_ai = no
+		any_character = {
+			is_married = no
+			is_female = no
+			OR = {
+				has_estate = estate_type:nobles_estate 
+				AND = {
+					has_estate = estate_type:crown_estate 
+					NOT = { is_eligible_heir_baseline = root }
+				}
+			}
+			age_in_years > 18
+			age_in_years < 25
+		}
+		any_character = {
+			is_married = no
+			is_female = yes
+			OR = {
+				has_estate = estate_type:nobles_estate 
+				AND = {
+					has_estate = estate_type:crown_estate 
+					NOT = { is_eligible_heir_baseline = root }
+				}
+			}
+			age_in_years > 18
+			age_in_years < 25
+		}
+	}
+	hidden = yes
+	
+	immediate = {
+		random_character = {
+			limit = {
+				is_married = no
+				is_female = no
+				OR = {
+					has_estate = estate_type:nobles_estate 
+					AND = {
+						has_estate = estate_type:crown_estate 
+						NOT = { is_eligible_heir_baseline = root }
+					}
+				}
+				age_in_years > 18
+				age_in_years < 25
+			}
+			save_scope_as = target_male
+		}
+		random_character = {
+			limit = {
+				is_married = no
+				is_female = yes
+				NOT = {
+					is_close_relative = scope:target_male
+				}
+				OR = {
+					has_estate = estate_type:nobles_estate 
+					AND = {
+						has_estate = estate_type:crown_estate 
+						NOT = { is_eligible_heir_baseline = root }
+					}
+				}
+				age_in_years > 18
+				age_in_years < 25
+			}
+			save_scope_as = target_female
+		}
+	}
+	option = {
+		name = noble_auto_marry.1.a
+		scope:target_male ?= { marry_character = scope:target_female }
+	}
+}
+noble_auto_marry.27 = {
+	type = country_event
+	title = noble_auto_marry.1.t
+	desc = noble_auto_marry.1.d
+	
+	trigger = {
+		is_ai = no
+		NOT = { has_variable = hide_marriage_events }
+		any_character = {
+			is_married = no
+			is_female = no
+			OR = {
+				has_estate = estate_type:nobles_estate 
+				AND = {
+					has_estate = estate_type:crown_estate 
+					NOT = { is_eligible_heir_baseline = root }
+				}
+			}
+			age_in_years > 18
+			age_in_years < 25
+		}
+		any_character = {
+			is_married = no
+			is_female = yes
+			OR = {
+				has_estate = estate_type:nobles_estate 
+				AND = {
+					has_estate = estate_type:crown_estate 
+					NOT = { is_eligible_heir_baseline = root }
+				}
+			}
+			age_in_years > 18
+			age_in_years < 25
+		}
+	}
+	
+	immediate = {
+		random_character = {
+			limit = {
+				is_married = no
+				is_female = no
+				OR = {
+					has_estate = estate_type:nobles_estate 
+					AND = {
+						has_estate = estate_type:crown_estate 
+						NOT = { is_eligible_heir_baseline = root }
+					}
+				}
+				age_in_years > 18
+				age_in_years < 25
+			}
+			save_scope_as = target_male
+		}
+		random_character = {
+			limit = {
+				is_married = no
+				is_female = yes
+				NOT = {
+					is_close_relative = scope:target_male
+				}
+				OR = {
+					has_estate = estate_type:nobles_estate 
+					AND = {
+						has_estate = estate_type:crown_estate 
+						NOT = { is_eligible_heir_baseline = root }
+					}
+				}
+				age_in_years > 18
+				age_in_years < 25
+			}
+			save_scope_as = target_female
+		}
+	}
+	option = {
+		name = noble_auto_marry.1.a
+		scope:target_male ?= { marry_character = scope:target_female }
+	}
+	option = {
+		name = noble_auto_marry.1.b
+		scope:target_male ?= { marry_character = scope:target_female }
+		custom_tooltip =  { text = hide_marriage_events.tt }
+		set_variable = hide_marriage_events
+	}
+}
+		
+noble_auto_marry.28 = {
+	type = country_event
+	title = noble_auto_marry.1.t
+	desc = noble_auto_marry.1.d
+	
+	trigger = {
+		has_variable = hide_marriage_events
+		is_ai = no
+		any_character = {
+			is_married = no
+			is_female = no
+			OR = {
+				has_estate = estate_type:nobles_estate 
+				AND = {
+					has_estate = estate_type:crown_estate 
+					NOT = { is_eligible_heir_baseline = root }
+				}
+			}
+			age_in_years > 18
+			age_in_years < 25
+		}
+		any_character = {
+			is_married = no
+			is_female = yes
+			OR = {
+				has_estate = estate_type:nobles_estate 
+				AND = {
+					has_estate = estate_type:crown_estate 
+					NOT = { is_eligible_heir_baseline = root }
+				}
+			}
+			age_in_years > 18
+			age_in_years < 25
+		}
+	}
+	hidden = yes
+	
+	
+	immediate = {
+		random_character = {
+			limit = {
+				is_married = no
+				is_female = no
+				OR = {
+					has_estate = estate_type:nobles_estate 
+					AND = {
+						has_estate = estate_type:crown_estate 
+						NOT = { is_eligible_heir_baseline = root }
+					}
+				}
+				age_in_years > 18
+				age_in_years < 25
+			}
+			save_scope_as = target_male
+		}
+		random_character = {
+			limit = {
+				is_married = no
+				is_female = yes
+				NOT = {
+					is_close_relative = scope:target_male
+				}
+				OR = {
+					has_estate = estate_type:nobles_estate 
+					AND = {
+						has_estate = estate_type:crown_estate 
+						NOT = { is_eligible_heir_baseline = root }
+					}
+				}
+				age_in_years > 18
+				age_in_years < 25
+			}
+			save_scope_as = target_female
+		}
+	}
+	option = {
+		name = noble_auto_marry.1.a
+		scope:target_male ?= { marry_character = scope:target_female }
+	}
+}
+noble_auto_marry.29 = {
+	type = country_event
+	title = noble_auto_marry.1.t
+	desc = noble_auto_marry.1.d
+	
+	trigger = {
+		is_ai = no
+		NOT = { has_variable = hide_marriage_events }
+		any_character = {
+			is_married = no
+			is_female = no
+			OR = {
+				has_estate = estate_type:nobles_estate 
+				AND = {
+					has_estate = estate_type:crown_estate 
+					NOT = { is_eligible_heir_baseline = root }
+				}
+			}
+			age_in_years > 18
+			age_in_years < 25
+		}
+		any_character = {
+			is_married = no
+			is_female = yes
+			OR = {
+				has_estate = estate_type:nobles_estate 
+				AND = {
+					has_estate = estate_type:crown_estate 
+					NOT = { is_eligible_heir_baseline = root }
+				}
+			}
+			age_in_years > 18
+			age_in_years < 25
+		}
+	}
+	
+	immediate = {
+		random_character = {
+			limit = {
+				is_married = no
+				is_female = no
+				OR = {
+					has_estate = estate_type:nobles_estate 
+					AND = {
+						has_estate = estate_type:crown_estate 
+						NOT = { is_eligible_heir_baseline = root }
+					}
+				}
+				age_in_years > 18
+				age_in_years < 25
+			}
+			save_scope_as = target_male
+		}
+		random_character = {
+			limit = {
+				is_married = no
+				is_female = yes
+				NOT = {
+					is_close_relative = scope:target_male
+				}
+				OR = {
+					has_estate = estate_type:nobles_estate 
+					AND = {
+						has_estate = estate_type:crown_estate 
+						NOT = { is_eligible_heir_baseline = root }
+					}
+				}
+				age_in_years > 18
+				age_in_years < 25
+			}
+			save_scope_as = target_female
+		}
+	}
+	option = {
+		name = noble_auto_marry.1.a
+		scope:target_male ?= { marry_character = scope:target_female }
+	}
+	option = {
+		name = noble_auto_marry.1.b
+		scope:target_male ?= { marry_character = scope:target_female }
+		custom_tooltip =  { text = hide_marriage_events.tt }
+		set_variable = hide_marriage_events
+	}
+}
+		
+noble_auto_marry.30 = {
+	type = country_event
+	title = noble_auto_marry.1.t
+	desc = noble_auto_marry.1.d
+	
+	trigger = {
+		has_variable = hide_marriage_events
+		is_ai = no
+		any_character = {
+			is_married = no
+			is_female = no
+			OR = {
+				has_estate = estate_type:nobles_estate 
+				AND = {
+					has_estate = estate_type:crown_estate 
+					NOT = { is_eligible_heir_baseline = root }
+				}
+			}
+			age_in_years > 18
+			age_in_years < 25
+		}
+		any_character = {
+			is_married = no
+			is_female = yes
+			OR = {
+				has_estate = estate_type:nobles_estate 
+				AND = {
+					has_estate = estate_type:crown_estate 
+					NOT = { is_eligible_heir_baseline = root }
+				}
+			}
+			age_in_years > 18
+			age_in_years < 25
+		}
+	}
+	hidden = yes
+	
+	
+	immediate = {
+		random_character = {
+			limit = {
+				is_married = no
+				is_female = no
+				OR = {
+					has_estate = estate_type:nobles_estate 
+					AND = {
+						has_estate = estate_type:crown_estate 
+						NOT = { is_eligible_heir_baseline = root }
+					}
+				}
+				age_in_years > 18
+				age_in_years < 25
+			}
+			save_scope_as = target_male
+		}
+		random_character = {
+			limit = {
+				is_married = no
+				is_female = yes
+				NOT = {
+					is_close_relative = scope:target_male
+				}
+				OR = {
+					has_estate = estate_type:nobles_estate 
+					AND = {
+						has_estate = estate_type:crown_estate 
+						NOT = { is_eligible_heir_baseline = root }
+					}
+				}
+				age_in_years > 18
+				age_in_years < 25
+			}
+			save_scope_as = target_female
+		}
+	}
+	option = {
+		name = noble_auto_marry.1.a
+		scope:target_male ?= { marry_character = scope:target_female }
+	}
+}
+
+noble_auto_marry.31 = {
+	type = country_event
+	title = noble_auto_marry.1.t
+	desc = noble_auto_marry.1.d
+	
+	trigger = {
+		is_ai = no
+		NOT = { has_variable = hide_marriage_events }
+		any_character = {
+			is_married = no
+			is_female = no
+			OR = {
+				has_estate = estate_type:nobles_estate 
+				AND = {
+					has_estate = estate_type:crown_estate 
+					NOT = { is_eligible_heir_baseline = root }
+				}
+			}
+			age_in_years > 18
+			age_in_years < 25
+		}
+		any_character = {
+			is_married = no
+			is_female = yes
+			OR = {
+				has_estate = estate_type:nobles_estate 
+				AND = {
+					has_estate = estate_type:crown_estate 
+					NOT = { is_eligible_heir_baseline = root }
+				}
+			}
+			age_in_years > 18
+			age_in_years < 25
+		}
+	}
+	
+	
+	immediate = {
+		random_character = {
+			limit = {
+				is_married = no
+				is_female = no
+				OR = {
+					has_estate = estate_type:nobles_estate 
+					AND = {
+						has_estate = estate_type:crown_estate 
+						NOT = { is_eligible_heir_baseline = root }
+					}
+				}
+				age_in_years > 18
+				age_in_years < 25
+			}
+			save_scope_as = target_male
+		}
+		random_character = {
+			limit = {
+				is_married = no
+				is_female = yes
+				NOT = {
+					is_close_relative = scope:target_male
+				}
+				OR = {
+					has_estate = estate_type:nobles_estate 
+					AND = {
+						has_estate = estate_type:crown_estate 
+						NOT = { is_eligible_heir_baseline = root }
+					}
+				}
+				age_in_years > 18
+				age_in_years < 25
+			}
+			save_scope_as = target_female
+		}
+	}
+	option = {
+		name = noble_auto_marry.1.a
+		scope:target_male ?= { marry_character = scope:target_female }
+	}
+	option = {
+		name = noble_auto_marry.1.b
+		scope:target_male ?= { marry_character = scope:target_female }
+		custom_tooltip =  { text = hide_marriage_events.tt }
+		set_variable = hide_marriage_events
+	}
+}
+		
+noble_auto_marry.32 = {
+	type = country_event
+	title = noble_auto_marry.1.t
+	desc = noble_auto_marry.1.d
+	
+	trigger = {
+		has_variable = hide_marriage_events
+		is_ai = no
+		any_character = {
+			is_married = no
+			is_female = no
+			OR = {
+				has_estate = estate_type:nobles_estate 
+				AND = {
+					has_estate = estate_type:crown_estate 
+					NOT = { is_eligible_heir_baseline = root }
+				}
+			}
+			age_in_years > 18
+			age_in_years < 25
+		}
+		any_character = {
+			is_married = no
+			is_female = yes
+			OR = {
+				has_estate = estate_type:nobles_estate 
+				AND = {
+					has_estate = estate_type:crown_estate 
+					NOT = { is_eligible_heir_baseline = root }
+				}
+			}
+			age_in_years > 18
+			age_in_years < 25
+		}
+	}
+	hidden = yes
+	
+	
+	immediate = {
+		random_character = {
+			limit = {
+				is_married = no
+				is_female = no
+				OR = {
+					has_estate = estate_type:nobles_estate 
+					AND = {
+						has_estate = estate_type:crown_estate 
+						NOT = { is_eligible_heir_baseline = root }
+					}
+				}
+				age_in_years > 18
+				age_in_years < 25
+			}
+			save_scope_as = target_male
+		}
+		random_character = {
+			limit = {
+				is_married = no
+				is_female = yes
+				NOT = {
+					is_close_relative = scope:target_male
+				}
+				OR = {
+					has_estate = estate_type:nobles_estate 
+					AND = {
+						has_estate = estate_type:crown_estate 
+						NOT = { is_eligible_heir_baseline = root }
+					}
+				}
+				age_in_years > 18
+				age_in_years < 25
+			}
+			save_scope_as = target_female
+		}
+	}
+	option = {
+		name = noble_auto_marry.1.a
+		scope:target_male ?= { marry_character = scope:target_female }
+	}
+}
+noble_auto_marry.33 = {
+	type = country_event
+	title = noble_auto_marry.1.t
+	desc = noble_auto_marry.1.d
+	
+	trigger = {
+		is_ai = no
+		NOT = { has_variable = hide_marriage_events }
+		any_character = {
+			is_married = no
+			is_female = no
+			OR = {
+				has_estate = estate_type:nobles_estate 
+				AND = {
+					has_estate = estate_type:crown_estate 
+					NOT = { is_eligible_heir_baseline = root }
+				}
+			}
+			age_in_years > 18
+			age_in_years < 25
+		}
+		any_character = {
+			is_married = no
+			is_female = yes
+			OR = {
+				has_estate = estate_type:nobles_estate 
+				AND = {
+					has_estate = estate_type:crown_estate 
+					NOT = { is_eligible_heir_baseline = root }
+				}
+			}
+			age_in_years > 18
+			age_in_years < 25
+		}
+	}
+	
+	
+	immediate = {
+		random_character = {
+			limit = {
+				is_married = no
+				is_female = no
+				OR = {
+					has_estate = estate_type:nobles_estate 
+					AND = {
+						has_estate = estate_type:crown_estate 
+						NOT = { is_eligible_heir_baseline = root }
+					}
+				}
+				age_in_years > 18
+				age_in_years < 25
+			}
+			save_scope_as = target_male
+		}
+		random_character = {
+			limit = {
+				is_married = no
+				is_female = yes
+				NOT = {
+					is_close_relative = scope:target_male
+				}
+				OR = {
+					has_estate = estate_type:nobles_estate 
+					AND = {
+						has_estate = estate_type:crown_estate 
+						NOT = { is_eligible_heir_baseline = root }
+					}
+				}
+				age_in_years > 18
+				age_in_years < 25
+			}
+			save_scope_as = target_female
+		}
+	}
+	option = {
+		name = noble_auto_marry.1.a
+		scope:target_male ?= { marry_character = scope:target_female }
+	}
+	option = {
+		name = noble_auto_marry.1.b
+		scope:target_male ?= { marry_character = scope:target_female }
+		custom_tooltip =  { text = hide_marriage_events.tt }
+		set_variable = hide_marriage_events
+	}
+}
+		
+noble_auto_marry.34 = {
+	type = country_event
+	title = noble_auto_marry.1.t
+	desc = noble_auto_marry.1.d
+	
+	trigger = {
+		has_variable = hide_marriage_events
+		is_ai = no
+		any_character = {
+			is_married = no
+			is_female = no
+			OR = {
+				has_estate = estate_type:nobles_estate 
+				AND = {
+					has_estate = estate_type:crown_estate 
+					NOT = { is_eligible_heir_baseline = root }
+				}
+			}
+			age_in_years > 18
+			age_in_years < 25
+		}
+		any_character = {
+			is_married = no
+			is_female = yes
+			OR = {
+				has_estate = estate_type:nobles_estate 
+				AND = {
+					has_estate = estate_type:crown_estate 
+					NOT = { is_eligible_heir_baseline = root }
+				}
+			}
+			age_in_years > 18
+			age_in_years < 25
+		}
+	}
+	hidden = yes
+	
+	immediate = {
+		random_character = {
+			limit = {
+				is_married = no
+				is_female = no
+				OR = {
+					has_estate = estate_type:nobles_estate 
+					AND = {
+						has_estate = estate_type:crown_estate 
+						NOT = { is_eligible_heir_baseline = root }
+					}
+				}
+				age_in_years > 18
+				age_in_years < 25
+			}
+			save_scope_as = target_male
+		}
+		random_character = {
+			limit = {
+				is_married = no
+				is_female = yes
+				NOT = {
+					is_close_relative = scope:target_male
+				}
+				OR = {
+					has_estate = estate_type:nobles_estate 
+					AND = {
+						has_estate = estate_type:crown_estate 
+						NOT = { is_eligible_heir_baseline = root }
+					}
+				}
+				age_in_years > 18
+				age_in_years < 25
+			}
+			save_scope_as = target_female
+		}
+	}
+	option = {
+		name = noble_auto_marry.1.a
+		scope:target_male ?= { marry_character = scope:target_female }
+	}
+}
+noble_auto_marry.35 = {
+	type = country_event
+	title = noble_auto_marry.1.t
+	desc = noble_auto_marry.1.d
+	
+	trigger = {
+		is_ai = no
+		NOT = { has_variable = hide_marriage_events }
+		any_character = {
+			is_married = no
+			is_female = no
+			OR = {
+				has_estate = estate_type:nobles_estate 
+				AND = {
+					has_estate = estate_type:crown_estate 
+					NOT = { is_eligible_heir_baseline = root }
+				}
+			}
+			age_in_years > 18
+			age_in_years < 25
+		}
+		any_character = {
+			is_married = no
+			is_female = yes
+			OR = {
+				has_estate = estate_type:nobles_estate 
+				AND = {
+					has_estate = estate_type:crown_estate 
+					NOT = { is_eligible_heir_baseline = root }
+				}
+			}
+			age_in_years > 18
+			age_in_years < 25
+		}
+	}
+	
+	immediate = {
+		random_character = {
+			limit = {
+				is_married = no
+				is_female = no
+				OR = {
+					has_estate = estate_type:nobles_estate 
+					AND = {
+						has_estate = estate_type:crown_estate 
+						NOT = { is_eligible_heir_baseline = root }
+					}
+				}
+				age_in_years > 18
+				age_in_years < 25
+			}
+			save_scope_as = target_male
+		}
+		random_character = {
+			limit = {
+				is_married = no
+				is_female = yes
+				NOT = {
+					is_close_relative = scope:target_male
+				}
+				OR = {
+					has_estate = estate_type:nobles_estate 
+					AND = {
+						has_estate = estate_type:crown_estate 
+						NOT = { is_eligible_heir_baseline = root }
+					}
+				}
+				age_in_years > 18
+				age_in_years < 25
+			}
+			save_scope_as = target_female
+		}
+	}
+	option = {
+		name = noble_auto_marry.1.a
+		scope:target_male ?= { marry_character = scope:target_female }
+	}
+	option = {
+		name = noble_auto_marry.1.b
+		scope:target_male ?= { marry_character = scope:target_female }
+		custom_tooltip =  { text = hide_marriage_events.tt }
+		set_variable = hide_marriage_events
+	}
+}
+		
+noble_auto_marry.36 = {
+	type = country_event
+	title = noble_auto_marry.1.t
+	desc = noble_auto_marry.1.d
+	
+	trigger = {
+		has_variable = hide_marriage_events
+		is_ai = no
+		any_character = {
+			is_married = no
+			is_female = no
+			OR = {
+				has_estate = estate_type:nobles_estate 
+				AND = {
+					has_estate = estate_type:crown_estate 
+					NOT = { is_eligible_heir_baseline = root }
+				}
+			}
+			age_in_years > 18
+			age_in_years < 25
+		}
+		any_character = {
+			is_married = no
+			is_female = yes
+			OR = {
+				has_estate = estate_type:nobles_estate 
+				AND = {
+					has_estate = estate_type:crown_estate 
+					NOT = { is_eligible_heir_baseline = root }
+				}
+			}
+			age_in_years > 18
+			age_in_years < 25
+		}
+	}
+	hidden = yes
+	
+	immediate = {
+		random_character = {
+			limit = {
+				is_married = no
+				is_female = no
+				OR = {
+					has_estate = estate_type:nobles_estate 
+					AND = {
+						has_estate = estate_type:crown_estate 
+						NOT = { is_eligible_heir_baseline = root }
+					}
+				}
+				age_in_years > 18
+				age_in_years < 25
+			}
+			save_scope_as = target_male
+		}
+		random_character = {
+			limit = {
+				is_married = no
+				is_female = yes
+				NOT = {
+					is_close_relative = scope:target_male
+				}
+				OR = {
+					has_estate = estate_type:nobles_estate 
+					AND = {
+						has_estate = estate_type:crown_estate 
+						NOT = { is_eligible_heir_baseline = root }
+					}
+				}
+				age_in_years > 18
+				age_in_years < 25
+			}
+			save_scope_as = target_female
+		}
+	}
+	option = {
+		name = noble_auto_marry.1.a
+		scope:target_male ?= { marry_character = scope:target_female }
+	}
+}
+noble_auto_marry.37 = {
+	type = country_event
+	title = noble_auto_marry.1.t
+	desc = noble_auto_marry.1.d
+	
+	trigger = {
+		is_ai = no
+		NOT = { has_variable = hide_marriage_events }
+		any_character = {
+			is_married = no
+			is_female = no
+			OR = {
+				has_estate = estate_type:nobles_estate 
+				AND = {
+					has_estate = estate_type:crown_estate 
+					NOT = { is_eligible_heir_baseline = root }
+				}
+			}
+			age_in_years > 18
+			age_in_years < 25
+		}
+		any_character = {
+			is_married = no
+			is_female = yes
+			OR = {
+				has_estate = estate_type:nobles_estate 
+				AND = {
+					has_estate = estate_type:crown_estate 
+					NOT = { is_eligible_heir_baseline = root }
+				}
+			}
+			age_in_years > 18
+			age_in_years < 25
+		}
+	}
+	
+	immediate = {
+		random_character = {
+			limit = {
+				is_married = no
+				is_female = no
+				OR = {
+					has_estate = estate_type:nobles_estate 
+					AND = {
+						has_estate = estate_type:crown_estate 
+						NOT = { is_eligible_heir_baseline = root }
+					}
+				}
+				age_in_years > 18
+				age_in_years < 25
+			}
+			save_scope_as = target_male
+		}
+		random_character = {
+			limit = {
+				is_married = no
+				is_female = yes
+				NOT = {
+					is_close_relative = scope:target_male
+				}
+				OR = {
+					has_estate = estate_type:nobles_estate 
+					AND = {
+						has_estate = estate_type:crown_estate 
+						NOT = { is_eligible_heir_baseline = root }
+					}
+				}
+				age_in_years > 18
+				age_in_years < 25
+			}
+			save_scope_as = target_female
+		}
+	}
+	option = {
+		name = noble_auto_marry.1.a
+		scope:target_male ?= { marry_character = scope:target_female }
+	}
+	option = {
+		name = noble_auto_marry.1.b
+		scope:target_male ?= { marry_character = scope:target_female }
+		custom_tooltip =  { text = hide_marriage_events.tt }
+		set_variable = hide_marriage_events
+	}
+}
+		
+noble_auto_marry.38 = {
+	type = country_event
+	title = noble_auto_marry.1.t
+	desc = noble_auto_marry.1.d
+	
+	trigger = {
+		has_variable = hide_marriage_events
+		is_ai = no
+		any_character = {
+			is_married = no
+			is_female = no
+			OR = {
+				has_estate = estate_type:nobles_estate 
+				AND = {
+					has_estate = estate_type:crown_estate 
+					NOT = { is_eligible_heir_baseline = root }
+				}
+			}
+			age_in_years > 18
+			age_in_years < 25
+		}
+		any_character = {
+			is_married = no
+			is_female = yes
+			OR = {
+				has_estate = estate_type:nobles_estate 
+				AND = {
+					has_estate = estate_type:crown_estate 
+					NOT = { is_eligible_heir_baseline = root }
+				}
+			}
+			age_in_years > 18
+			age_in_years < 25
+		}
+	}
+	hidden = yes
+	
+	immediate = {
+		random_character = {
+			limit = {
+				is_married = no
+				is_female = no
+				OR = {
+					has_estate = estate_type:nobles_estate 
+					AND = {
+						has_estate = estate_type:crown_estate 
+						NOT = { is_eligible_heir_baseline = root }
+					}
+				}
+				age_in_years > 18
+				age_in_years < 25
+			}
+			save_scope_as = target_male
+		}
+		random_character = {
+			limit = {
+				is_married = no
+				is_female = yes
+				NOT = {
+					is_close_relative = scope:target_male
+				}
+				OR = {
+					has_estate = estate_type:nobles_estate 
+					AND = {
+						has_estate = estate_type:crown_estate 
+						NOT = { is_eligible_heir_baseline = root }
+					}
+				}
+				age_in_years > 18
+				age_in_years < 25
+			}
+			save_scope_as = target_female
+		}
+	}
+	option = {
+		name = noble_auto_marry.1.a
+		scope:target_male ?= { marry_character = scope:target_female }
+	}
+}
+noble_auto_marry.39 = {
+	type = country_event
+	title = noble_auto_marry.1.t
+	desc = noble_auto_marry.1.d
+	
+	trigger = {
+		is_ai = no
+		NOT = { has_variable = hide_marriage_events }
+		any_character = {
+			is_married = no
+			is_female = no
+			OR = {
+				has_estate = estate_type:nobles_estate 
+				AND = {
+					has_estate = estate_type:crown_estate 
+					NOT = { is_eligible_heir_baseline = root }
+				}
+			}
+			age_in_years > 18
+			age_in_years < 25
+		}
+		any_character = {
+			is_married = no
+			is_female = yes
+			OR = {
+				has_estate = estate_type:nobles_estate 
+				AND = {
+					has_estate = estate_type:crown_estate 
+					NOT = { is_eligible_heir_baseline = root }
+				}
+			}
+			age_in_years > 18
+			age_in_years < 25
+		}
+	}
+	
+	
+	immediate = {
+		random_character = {
+			limit = {
+				is_married = no
+				is_female = no
+				OR = {
+					has_estate = estate_type:nobles_estate 
+					AND = {
+						has_estate = estate_type:crown_estate 
+						NOT = { is_eligible_heir_baseline = root }
+					}
+				}
+				age_in_years > 18
+				age_in_years < 25
+			}
+			save_scope_as = target_male
+		}
+		random_character = {
+			limit = {
+				is_married = no
+				is_female = yes
+				NOT = {
+					is_close_relative = scope:target_male
+				}
+				OR = {
+					has_estate = estate_type:nobles_estate 
+					AND = {
+						has_estate = estate_type:crown_estate 
+						NOT = { is_eligible_heir_baseline = root }
+					}
+				}
+				age_in_years > 18
+				age_in_years < 25
+			}
+			save_scope_as = target_female
+		}
+	}
+	option = {
+		name = noble_auto_marry.1.a
+		scope:target_male ?= { marry_character = scope:target_female }
+	}
+	option = {
+		name = noble_auto_marry.1.b
+		scope:target_male ?= { marry_character = scope:target_female }
+		custom_tooltip =  { text = hide_marriage_events.tt }
+		set_variable = hide_marriage_events
+	}
+}
+		
+noble_auto_marry.40 = {
+	type = country_event
+	title = noble_auto_marry.1.t
+	desc = noble_auto_marry.1.d
+	
+	trigger = {
+		has_variable = hide_marriage_events
+		is_ai = no
+		any_character = {
+			is_married = no
+			is_female = no
+			OR = {
+				has_estate = estate_type:nobles_estate 
+				AND = {
+					has_estate = estate_type:crown_estate 
+					NOT = { is_eligible_heir_baseline = root }
+				}
+			}
+			age_in_years > 18
+			age_in_years < 25
+		}
+		any_character = {
+			is_married = no
+			is_female = yes
+			OR = {
+				has_estate = estate_type:nobles_estate 
+				AND = {
+					has_estate = estate_type:crown_estate 
+					NOT = { is_eligible_heir_baseline = root }
+				}
+			}
+			age_in_years > 18
+			age_in_years < 25
+		}
+	}
+	hidden = yes
+	
+	immediate = {
+		random_character = {
+			limit = {
+				is_married = no
+				is_female = no
+				OR = {
+					has_estate = estate_type:nobles_estate 
+					AND = {
+						has_estate = estate_type:crown_estate 
+						NOT = { is_eligible_heir_baseline = root }
+					}
+				}
+				age_in_years > 18
+				age_in_years < 25
+			}
+			save_scope_as = target_male
+		}
+		random_character = {
+			limit = {
+				is_married = no
+				is_female = yes
+				NOT = {
+					is_close_relative = scope:target_male
+				}
+				OR = {
+					has_estate = estate_type:nobles_estate 
+					AND = {
+						has_estate = estate_type:crown_estate 
+						NOT = { is_eligible_heir_baseline = root }
+					}
+				}
+				age_in_years > 18
+				age_in_years < 25
+			}
+			save_scope_as = target_female
+		}
+	}
+	option = {
+		name = noble_auto_marry.1.a
+		scope:target_male ?= { marry_character = scope:target_female }
+	}
+}
+
+noble_auto_marry.41 = {
+	type = country_event
+	title = noble_auto_marry.1.t
+	desc = noble_auto_marry.1.d
+	
+	trigger = {
+		is_ai = no
+		NOT = { has_variable = hide_marriage_events }
+		any_character = {
+			is_married = no
+			is_female = no
+			OR = {
+				has_estate = estate_type:nobles_estate 
+				AND = {
+					has_estate = estate_type:crown_estate 
+					NOT = { is_eligible_heir_baseline = root }
+				}
+			}
+			age_in_years > 18
+			age_in_years < 25
+		}
+		any_character = {
+			is_married = no
+			is_female = yes
+			OR = {
+				has_estate = estate_type:nobles_estate 
+				AND = {
+					has_estate = estate_type:crown_estate 
+					NOT = { is_eligible_heir_baseline = root }
+				}
+			}
+			age_in_years > 18
+			age_in_years < 25
+		}
+	}
+	
+	immediate = {
+		random_character = {
+			limit = {
+				is_married = no
+				is_female = no
+				OR = {
+					has_estate = estate_type:nobles_estate 
+					AND = {
+						has_estate = estate_type:crown_estate 
+						NOT = { is_eligible_heir_baseline = root }
+					}
+				}
+				age_in_years > 18
+				age_in_years < 25
+			}
+			save_scope_as = target_male
+		}
+		random_character = {
+			limit = {
+				is_married = no
+				is_female = yes
+				NOT = {
+					is_close_relative = scope:target_male
+				}
+				OR = {
+					has_estate = estate_type:nobles_estate 
+					AND = {
+						has_estate = estate_type:crown_estate 
+						NOT = { is_eligible_heir_baseline = root }
+					}
+				}
+				age_in_years > 18
+				age_in_years < 25
+			}
+			save_scope_as = target_female
+		}
+	}
+	option = {
+		name = noble_auto_marry.1.a
+		scope:target_male ?= { marry_character = scope:target_female }
+	}
+	option = {
+		name = noble_auto_marry.1.b
+		scope:target_male ?= { marry_character = scope:target_female }
+		custom_tooltip =  { text = hide_marriage_events.tt }
+		set_variable = hide_marriage_events
+	}
+}
+		
+noble_auto_marry.42 = {
+	type = country_event
+	title = noble_auto_marry.1.t
+	desc = noble_auto_marry.1.d
+	
+	trigger = {
+		has_variable = hide_marriage_events
+		is_ai = no
+		any_character = {
+			is_married = no
+			is_female = no
+			OR = {
+				has_estate = estate_type:nobles_estate 
+				AND = {
+					has_estate = estate_type:crown_estate 
+					NOT = { is_eligible_heir_baseline = root }
+				}
+			}
+			age_in_years > 18
+			age_in_years < 25
+		}
+		any_character = {
+			is_married = no
+			is_female = yes
+			OR = {
+				has_estate = estate_type:nobles_estate 
+				AND = {
+					has_estate = estate_type:crown_estate 
+					NOT = { is_eligible_heir_baseline = root }
+				}
+			}
+			age_in_years > 18
+			age_in_years < 25
+		}
+	}
+	hidden = yes
+	
+	immediate = {
+		random_character = {
+			limit = {
+				is_married = no
+				is_female = no
+				OR = {
+					has_estate = estate_type:nobles_estate 
+					AND = {
+						has_estate = estate_type:crown_estate 
+						NOT = { is_eligible_heir_baseline = root }
+					}
+				}
+				age_in_years > 18
+				age_in_years < 25
+			}
+			save_scope_as = target_male
+		}
+		random_character = {
+			limit = {
+				is_married = no
+				is_female = yes
+				NOT = {
+					is_close_relative = scope:target_male
+				}
+				OR = {
+					has_estate = estate_type:nobles_estate 
+					AND = {
+						has_estate = estate_type:crown_estate 
+						NOT = { is_eligible_heir_baseline = root }
+					}
+				}
+				age_in_years > 18
+				age_in_years < 25
+			}
+			save_scope_as = target_female
+		}
+	}
+	option = {
+		name = noble_auto_marry.1.a
+		scope:target_male ?= { marry_character = scope:target_female }
+	}
+}
+
+
+
+noble_auto_marry.43 = {
+	type = country_event
+	title = noble_auto_marry.1.t
+	desc = noble_auto_marry.1.d
+	
+	trigger = {
+		is_ai = no
+		NOT = { has_variable = hide_marriage_events }
+		any_character = {
+			is_married = no
+			is_female = no
+			OR = {
+				has_estate = estate_type:nobles_estate 
+				AND = {
+					has_estate = estate_type:crown_estate 
+					NOT = { is_eligible_heir_baseline = root }
+				}
+			}
+			age_in_years > 18
+			age_in_years < 25
+		}
+		any_character = {
+			is_married = no
+			is_female = yes
+			OR = {
+				has_estate = estate_type:nobles_estate 
+				AND = {
+					has_estate = estate_type:crown_estate 
+					NOT = { is_eligible_heir_baseline = root }
+				}
+			}
+			age_in_years > 18
+			age_in_years < 25
+		}
+	}
+	
+	immediate = {
+		random_character = {
+			limit = {
+				is_married = no
+				is_female = no
+				OR = {
+					has_estate = estate_type:nobles_estate 
+					AND = {
+						has_estate = estate_type:crown_estate 
+						NOT = { is_eligible_heir_baseline = root }
+					}
+				}
+				age_in_years > 18
+				age_in_years < 25
+			}
+			save_scope_as = target_male
+		}
+		random_character = {
+			limit = {
+				is_married = no
+				is_female = yes
+				NOT = {
+					is_close_relative = scope:target_male
+				}
+				OR = {
+					has_estate = estate_type:nobles_estate 
+					AND = {
+						has_estate = estate_type:crown_estate 
+						NOT = { is_eligible_heir_baseline = root }
+					}
+				}
+				age_in_years > 18
+				age_in_years < 25
+			}
+			save_scope_as = target_female
+		}
+	}
+	option = {
+		name = noble_auto_marry.1.a
+		scope:target_male ?= { marry_character = scope:target_female }
+	}
+	option = {
+		name = noble_auto_marry.1.b
+		scope:target_male ?= { marry_character = scope:target_female }
+		custom_tooltip =  { text = hide_marriage_events.tt }
+		set_variable = hide_marriage_events
+	}
+}
+		
+noble_auto_marry.44 = {
+	type = country_event
+	title = noble_auto_marry.1.t
+	desc = noble_auto_marry.1.d
+	
+	trigger = {
+		has_variable = hide_marriage_events
+		is_ai = no
+		any_character = {
+			is_married = no
+			is_female = no
+			OR = {
+				has_estate = estate_type:nobles_estate 
+				AND = {
+					has_estate = estate_type:crown_estate 
+					NOT = { is_eligible_heir_baseline = root }
+				}
+			}
+			age_in_years > 18
+			age_in_years < 25
+		}
+		any_character = {
+			is_married = no
+			is_female = yes
+			OR = {
+				has_estate = estate_type:nobles_estate 
+				AND = {
+					has_estate = estate_type:crown_estate 
+					NOT = { is_eligible_heir_baseline = root }
+				}
+			}
+			age_in_years > 18
+			age_in_years < 25
+		}
+	}
+	hidden = yes
+	
+	immediate = {
+		random_character = {
+			limit = {
+				is_married = no
+				is_female = no
+				OR = {
+					has_estate = estate_type:nobles_estate 
+					AND = {
+						has_estate = estate_type:crown_estate 
+						NOT = { is_eligible_heir_baseline = root }
+					}
+				}
+				age_in_years > 18
+				age_in_years < 25
+			}
+			save_scope_as = target_male
+		}
+		random_character = {
+			limit = {
+				is_married = no
+				is_female = yes
+				NOT = {
+					is_close_relative = scope:target_male
+				}
+				OR = {
+					has_estate = estate_type:nobles_estate 
+					AND = {
+						has_estate = estate_type:crown_estate 
+						NOT = { is_eligible_heir_baseline = root }
+					}
+				}
+				age_in_years > 18
+				age_in_years < 25
+			}
+			save_scope_as = target_female
+		}
+	}
+	option = {
+		name = noble_auto_marry.1.a
+		scope:target_male ?= { marry_character = scope:target_female }
+	}
+}
+noble_auto_marry.45 = {
+	type = country_event
+	title = noble_auto_marry.1.t
+	desc = noble_auto_marry.1.d
+	
+	trigger = {
+		is_ai = no
+		NOT = { has_variable = hide_marriage_events }
+		any_character = {
+			is_married = no
+			is_female = no
+			OR = {
+				has_estate = estate_type:nobles_estate 
+				AND = {
+					has_estate = estate_type:crown_estate 
+					NOT = { is_eligible_heir_baseline = root }
+				}
+			}
+			age_in_years > 18
+			age_in_years < 25
+		}
+		any_character = {
+			is_married = no
+			is_female = yes
+			OR = {
+				has_estate = estate_type:nobles_estate 
+				AND = {
+					has_estate = estate_type:crown_estate 
+					NOT = { is_eligible_heir_baseline = root }
+				}
+			}
+			age_in_years > 18
+			age_in_years < 25
+		}
+	}
+	
+	immediate = {
+		random_character = {
+			limit = {
+				is_married = no
+				is_female = no
+				OR = {
+					has_estate = estate_type:nobles_estate 
+					AND = {
+						has_estate = estate_type:crown_estate 
+						NOT = { is_eligible_heir_baseline = root }
+					}
+				}
+				age_in_years > 18
+				age_in_years < 25
+			}
+			save_scope_as = target_male
+		}
+		random_character = {
+			limit = {
+				is_married = no
+				is_female = yes
+				NOT = {
+					is_close_relative = scope:target_male
+				}
+				OR = {
+					has_estate = estate_type:nobles_estate 
+					AND = {
+						has_estate = estate_type:crown_estate 
+						NOT = { is_eligible_heir_baseline = root }
+					}
+				}
+				age_in_years > 18
+				age_in_years < 25
+			}
+			save_scope_as = target_female
+		}
+	}
+	option = {
+		name = noble_auto_marry.1.a
+		scope:target_male ?= { marry_character = scope:target_female }
+	}
+	option = {
+		name = noble_auto_marry.1.b
+		scope:target_male ?= { marry_character = scope:target_female }
+		custom_tooltip =  { text = hide_marriage_events.tt }
+		set_variable = hide_marriage_events
+	}
+}
+noble_auto_marry.46 = {
+	type = country_event
+	title = noble_auto_marry.1.t
+	desc = noble_auto_marry.1.d
+	
+	trigger = {
+		has_variable = hide_marriage_events
+		is_ai = no
+		any_character = {
+			is_married = no
+			is_female = no
+			OR = {
+				has_estate = estate_type:nobles_estate 
+				AND = {
+					has_estate = estate_type:crown_estate 
+					NOT = { is_eligible_heir_baseline = root }
+				}
+			}
+			age_in_years > 18
+			age_in_years < 25
+		}
+		any_character = {
+			is_married = no
+			is_female = yes
+			OR = {
+				has_estate = estate_type:nobles_estate 
+				AND = {
+					has_estate = estate_type:crown_estate 
+					NOT = { is_eligible_heir_baseline = root }
+				}
+			}
+			age_in_years > 18
+			age_in_years < 25
+		}
+	}
+	hidden = yes
+	
+	immediate = {
+		random_character = {
+			limit = {
+				is_married = no
+				is_female = no
+				OR = {
+					has_estate = estate_type:nobles_estate 
+					AND = {
+						has_estate = estate_type:crown_estate 
+						NOT = { is_eligible_heir_baseline = root }
+					}
+				}
+				age_in_years > 18
+				age_in_years < 25
+			}
+			save_scope_as = target_male
+		}
+		random_character = {
+			limit = {
+				is_married = no
+				is_female = yes
+				NOT = {
+					is_close_relative = scope:target_male
+				}
+				OR = {
+					has_estate = estate_type:nobles_estate 
+					AND = {
+						has_estate = estate_type:crown_estate 
+						NOT = { is_eligible_heir_baseline = root }
+					}
+				}
+				age_in_years > 18
+				age_in_years < 25
+			}
+			save_scope_as = target_female
+		}
+	}
+	option = {
+		name = noble_auto_marry.1.a
+		scope:target_male ?= { marry_character = scope:target_female }
+	}
+}
+
+noble_auto_marry.47 = {
+	type = country_event
+	title = noble_auto_marry.1.t
+	desc = noble_auto_marry.1.d
+	
+	trigger = {
+		is_ai = no
+		NOT = { has_variable = hide_marriage_events }
+		any_character = {
+			is_married = no
+			is_female = no
+			OR = {
+				has_estate = estate_type:nobles_estate 
+				AND = {
+					has_estate = estate_type:crown_estate 
+					NOT = { is_eligible_heir_baseline = root }
+				}
+			}
+			age_in_years > 18
+			age_in_years < 25
+		}
+		any_character = {
+			is_married = no
+			is_female = yes
+			OR = {
+				has_estate = estate_type:nobles_estate 
+				AND = {
+					has_estate = estate_type:crown_estate 
+					NOT = { is_eligible_heir_baseline = root }
+				}
+			}
+			age_in_years > 18
+			age_in_years < 25
+		}
+	}
+	
+	immediate = {
+		random_character = {
+			limit = {
+				is_married = no
+				is_female = no
+				OR = {
+					has_estate = estate_type:nobles_estate 
+					AND = {
+						has_estate = estate_type:crown_estate 
+						NOT = { is_eligible_heir_baseline = root }
+					}
+				}
+				age_in_years > 18
+				age_in_years < 25
+			}
+			save_scope_as = target_male
+		}
+		random_character = {
+			limit = {
+				is_married = no
+				is_female = yes
+				NOT = {
+					is_close_relative = scope:target_male
+				}
+				OR = {
+					has_estate = estate_type:nobles_estate 
+					AND = {
+						has_estate = estate_type:crown_estate 
+						NOT = { is_eligible_heir_baseline = root }
+					}
+				}
+				age_in_years > 18
+				age_in_years < 25
+			}
+			save_scope_as = target_female
+		}
+	}
+	option = {
+		name = noble_auto_marry.1.a
+		scope:target_male ?= { marry_character = scope:target_female }
+	}
+	option = {
+		name = noble_auto_marry.1.b
+		scope:target_male ?= { marry_character = scope:target_female }
+		custom_tooltip =  { text = hide_marriage_events.tt }
+		set_variable = hide_marriage_events
+	}
+}
+		
+noble_auto_marry.48 = {
+	type = country_event
+	title = noble_auto_marry.1.t
+	desc = noble_auto_marry.1.d
+	
+	trigger = {
+		has_variable = hide_marriage_events
+		is_ai = no
+		any_character = {
+			is_married = no
+			is_female = no
+			OR = {
+				has_estate = estate_type:nobles_estate 
+				AND = {
+					has_estate = estate_type:crown_estate 
+					NOT = { is_eligible_heir_baseline = root }
+				}
+			}
+			age_in_years > 18
+			age_in_years < 25
+		}
+		any_character = {
+			is_married = no
+			is_female = yes
+			OR = {
+				has_estate = estate_type:nobles_estate 
+				AND = {
+					has_estate = estate_type:crown_estate 
+					NOT = { is_eligible_heir_baseline = root }
+				}
+			}
+			age_in_years > 18
+			age_in_years < 25
+		}
+	}
+	hidden = yes
+	
+	immediate = {
+		random_character = {
+			limit = {
+				is_married = no
+				is_female = no
+				OR = {
+					has_estate = estate_type:nobles_estate 
+					AND = {
+						has_estate = estate_type:crown_estate 
+						NOT = { is_eligible_heir_baseline = root }
+					}
+				}
+				age_in_years > 18
+				age_in_years < 25
+			}
+			save_scope_as = target_male
+		}
+		random_character = {
+			limit = {
+				is_married = no
+				is_female = yes
+				NOT = {
+					is_close_relative = scope:target_male
+				}
+				OR = {
+					has_estate = estate_type:nobles_estate 
+					AND = {
+						has_estate = estate_type:crown_estate 
+						NOT = { is_eligible_heir_baseline = root }
+					}
+				}
+				age_in_years > 18
+				age_in_years < 25
+			}
+			save_scope_as = target_female
+		}
+	}
+	option = {
+		name = noble_auto_marry.1.a
+		scope:target_male ?= { marry_character = scope:target_female }
+	}
+}
+noble_auto_marry.49 = {
+	type = country_event
+	title = noble_auto_marry.1.t
+	desc = noble_auto_marry.1.d
+	
+	trigger = {
+		is_ai = no
+		NOT = { has_variable = hide_marriage_events }
+		any_character = {
+			is_married = no
+			is_female = no
+			OR = {
+				has_estate = estate_type:nobles_estate 
+				AND = {
+					has_estate = estate_type:crown_estate 
+					NOT = { is_eligible_heir_baseline = root }
+				}
+			}
+			age_in_years > 18
+			age_in_years < 25
+		}
+		any_character = {
+			is_married = no
+			is_female = yes
+			OR = {
+				has_estate = estate_type:nobles_estate 
+				AND = {
+					has_estate = estate_type:crown_estate 
+					NOT = { is_eligible_heir_baseline = root }
+				}
+			}
+			age_in_years > 18
+			age_in_years < 25
+		}
+	}
+	
+	immediate = {
+		random_character = {
+			limit = {
+				is_married = no
+				is_female = no
+				OR = {
+					has_estate = estate_type:nobles_estate 
+					AND = {
+						has_estate = estate_type:crown_estate 
+						NOT = { is_eligible_heir_baseline = root }
+					}
+				}
+				age_in_years > 18
+				age_in_years < 25
+			}
+			save_scope_as = target_male
+		}
+		random_character = {
+			limit = {
+				is_married = no
+				is_female = yes
+				NOT = {
+					is_close_relative = scope:target_male
+				}
+				OR = {
+					has_estate = estate_type:nobles_estate 
+					AND = {
+						has_estate = estate_type:crown_estate 
+						NOT = { is_eligible_heir_baseline = root }
+					}
+				}
+				age_in_years > 18
+				age_in_years < 25
+			}
+			save_scope_as = target_female
+		}
+	}
+	option = {
+		name = noble_auto_marry.1.a
+		scope:target_male ?= { marry_character = scope:target_female }
+	}
+	option = {
+		name = noble_auto_marry.1.b
+		scope:target_male ?= { marry_character = scope:target_female }
+		custom_tooltip =  { text = hide_marriage_events.tt }
+		set_variable = hide_marriage_events
+	}
+}
+		
+noble_auto_marry.50 = {
+	type = country_event
+	title = noble_auto_marry.1.t
+	desc = noble_auto_marry.1.d
+	
+	trigger = {
+		has_variable = hide_marriage_events
+		is_ai = no
+		any_character = {
+			is_married = no
+			is_female = no
+			OR = {
+				has_estate = estate_type:nobles_estate 
+				AND = {
+					has_estate = estate_type:crown_estate 
+					NOT = { is_eligible_heir_baseline = root }
+				}
+			}
+			age_in_years > 18
+			age_in_years < 25
+		}
+		any_character = {
+			is_married = no
+			is_female = yes
+			OR = {
+				has_estate = estate_type:nobles_estate 
+				AND = {
+					has_estate = estate_type:crown_estate 
+					NOT = { is_eligible_heir_baseline = root }
+				}
+			}
+			age_in_years > 18
+			age_in_years < 25
+		}
+	}
+	hidden = yes
+	
+	immediate = {
+		random_character = {
+			limit = {
+				is_married = no
+				is_female = no
+				OR = {
+					has_estate = estate_type:nobles_estate 
+					AND = {
+						has_estate = estate_type:crown_estate 
+						NOT = { is_eligible_heir_baseline = root }
+					}
+				}
+				age_in_years > 18
+				age_in_years < 25
+			}
+			save_scope_as = target_male
+		}
+		random_character = {
+			limit = {
+				is_married = no
+				is_female = yes
+				NOT = {
+					is_close_relative = scope:target_male
+				}
+				OR = {
+					has_estate = estate_type:nobles_estate 
+					AND = {
+						has_estate = estate_type:crown_estate 
+						NOT = { is_eligible_heir_baseline = root }
+					}
+				}
+				age_in_years > 18
+				age_in_years < 25
+			}
+			save_scope_as = target_female
+		}
+	}
+	option = {
+		name = noble_auto_marry.1.a
+		scope:target_male ?= { marry_character = scope:target_female }
+	}
+}
+
+noble_auto_marry.51 = {
+	type = country_event
+	title = noble_auto_marry.1.t
+	desc = noble_auto_marry.1.d
+	
+	trigger = {
+		is_ai = no
+		NOT = { has_variable = hide_marriage_events }
+		any_character = {
+			is_married = no
+			is_female = no
+			OR = {
+				has_estate = estate_type:nobles_estate 
+				AND = {
+					has_estate = estate_type:crown_estate 
+					NOT = { is_eligible_heir_baseline = root }
+				}
+			}
+			age_in_years > 18
+			age_in_years < 25
+		}
+		any_character = {
+			is_married = no
+			is_female = yes
+			OR = {
+				has_estate = estate_type:nobles_estate 
+				AND = {
+					has_estate = estate_type:crown_estate 
+					NOT = { is_eligible_heir_baseline = root }
+				}
+			}
+			age_in_years > 18
+			age_in_years < 25
+		}
+	}
+	
+	immediate = {
+		random_character = {
+			limit = {
+				is_married = no
+				is_female = no
+				OR = {
+					has_estate = estate_type:nobles_estate 
+					AND = {
+						has_estate = estate_type:crown_estate 
+						NOT = { is_eligible_heir_baseline = root }
+					}
+				}
+				age_in_years > 18
+				age_in_years < 25
+			}
+			save_scope_as = target_male
+		}
+		random_character = {
+			limit = {
+				is_married = no
+				is_female = yes
+				NOT = {
+					is_close_relative = scope:target_male
+				}
+				OR = {
+					has_estate = estate_type:nobles_estate 
+					AND = {
+						has_estate = estate_type:crown_estate 
+						NOT = { is_eligible_heir_baseline = root }
+					}
+				}
+				age_in_years > 18
+				age_in_years < 25
+			}
+			save_scope_as = target_female
+		}
+	}
+	option = {
+		name = noble_auto_marry.1.a
+		scope:target_male ?= { marry_character = scope:target_female }
+	}
+	option = {
+		name = noble_auto_marry.1.b
+		scope:target_male ?= { marry_character = scope:target_female }
+		custom_tooltip =  { text = hide_marriage_events.tt }
+		set_variable = hide_marriage_events
+	}
+}
+		
+noble_auto_marry.52 = {
+	type = country_event
+	title = noble_auto_marry.1.t
+	desc = noble_auto_marry.1.d
+	
+	trigger = {
+		has_variable = hide_marriage_events
+		is_ai = no
+		any_character = {
+			is_married = no
+			is_female = no
+			OR = {
+				has_estate = estate_type:nobles_estate 
+				AND = {
+					has_estate = estate_type:crown_estate 
+					NOT = { is_eligible_heir_baseline = root }
+				}
+			}
+			age_in_years > 18
+			age_in_years < 25
+		}
+		any_character = {
+			is_married = no
+			is_female = yes
+			OR = {
+				has_estate = estate_type:nobles_estate 
+				AND = {
+					has_estate = estate_type:crown_estate 
+					NOT = { is_eligible_heir_baseline = root }
+				}
+			}
+			age_in_years > 18
+			age_in_years < 25
+		}
+	}
+	hidden = yes
+	
+	immediate = {
+		random_character = {
+			limit = {
+				is_married = no
+				is_female = no
+				OR = {
+					has_estate = estate_type:nobles_estate 
+					AND = {
+						has_estate = estate_type:crown_estate 
+						NOT = { is_eligible_heir_baseline = root }
+					}
+				}
+				age_in_years > 18
+				age_in_years < 25
+			}
+			save_scope_as = target_male
+		}
+		random_character = {
+			limit = {
+				is_married = no
+				is_female = yes
+				NOT = {
+					is_close_relative = scope:target_male
+				}
+				OR = {
+					has_estate = estate_type:nobles_estate 
+					AND = {
+						has_estate = estate_type:crown_estate 
+						NOT = { is_eligible_heir_baseline = root }
+					}
+				}
+				age_in_years > 18
+				age_in_years < 25
+			}
+			save_scope_as = target_female
+		}
+	}
+	option = {
+		name = noble_auto_marry.1.a
+		scope:target_male ?= { marry_character = scope:target_female }
+	}
+}
+noble_auto_marry.53 = {
+	type = country_event
+	title = noble_auto_marry.1.t
+	desc = noble_auto_marry.1.d
+	
+	trigger = {
+		is_ai = no
+		NOT = { has_variable = hide_marriage_events }
+		any_character = {
+			is_married = no
+			is_female = no
+			OR = {
+				has_estate = estate_type:nobles_estate 
+				AND = {
+					has_estate = estate_type:crown_estate 
+					NOT = { is_eligible_heir_baseline = root }
+				}
+			}
+			age_in_years > 18
+			age_in_years < 25
+		}
+		any_character = {
+			is_married = no
+			is_female = yes
+			OR = {
+				has_estate = estate_type:nobles_estate 
+				AND = {
+					has_estate = estate_type:crown_estate 
+					NOT = { is_eligible_heir_baseline = root }
+				}
+			}
+			age_in_years > 18
+			age_in_years < 25
+		}
+	}
+	
+	immediate = {
+		random_character = {
+			limit = {
+				is_married = no
+				is_female = no
+				OR = {
+					has_estate = estate_type:nobles_estate 
+					AND = {
+						has_estate = estate_type:crown_estate 
+						NOT = { is_eligible_heir_baseline = root }
+					}
+				}
+				age_in_years > 18
+				age_in_years < 25
+			}
+			save_scope_as = target_male
+		}
+		random_character = {
+			limit = {
+				is_married = no
+				is_female = yes
+				NOT = {
+					is_close_relative = scope:target_male
+				}
+				OR = {
+					has_estate = estate_type:nobles_estate 
+					AND = {
+						has_estate = estate_type:crown_estate 
+						NOT = { is_eligible_heir_baseline = root }
+					}
+				}
+				age_in_years > 18
+				age_in_years < 25
+			}
+			save_scope_as = target_female
+		}
+	}
+	option = {
+		name = noble_auto_marry.1.a
+		scope:target_male ?= { marry_character = scope:target_female }
+	}
+	option = {
+		name = noble_auto_marry.1.b
+		scope:target_male ?= { marry_character = scope:target_female }
+		custom_tooltip =  { text = hide_marriage_events.tt }
+		set_variable = hide_marriage_events
+	}
+}
+		
+noble_auto_marry.54 = {
+	type = country_event
+	title = noble_auto_marry.1.t
+	desc = noble_auto_marry.1.d
+	
+	trigger = {
+		has_variable = hide_marriage_events
+		is_ai = no
+		any_character = {
+			is_married = no
+			is_female = no
+			OR = {
+				has_estate = estate_type:nobles_estate 
+				AND = {
+					has_estate = estate_type:crown_estate 
+					NOT = { is_eligible_heir_baseline = root }
+				}
+			}
+			age_in_years > 18
+			age_in_years < 25
+		}
+		any_character = {
+			is_married = no
+			is_female = yes
+			OR = {
+				has_estate = estate_type:nobles_estate 
+				AND = {
+					has_estate = estate_type:crown_estate 
+					NOT = { is_eligible_heir_baseline = root }
+				}
+			}
+			age_in_years > 18
+			age_in_years < 25
+		}
+	}
+	hidden = yes
+	
+	immediate = {
+		random_character = {
+			limit = {
+				is_married = no
+				is_female = no
+				OR = {
+					has_estate = estate_type:nobles_estate 
+					AND = {
+						has_estate = estate_type:crown_estate 
+						NOT = { is_eligible_heir_baseline = root }
+					}
+				}
+				age_in_years > 18
+				age_in_years < 25
+			}
+			save_scope_as = target_male
+		}
+		random_character = {
+			limit = {
+				is_married = no
+				is_female = yes
+				NOT = {
+					is_close_relative = scope:target_male
+				}
+				OR = {
+					has_estate = estate_type:nobles_estate 
+					AND = {
+						has_estate = estate_type:crown_estate 
+						NOT = { is_eligible_heir_baseline = root }
+					}
+				}
+				age_in_years > 18
+				age_in_years < 25
+			}
+			save_scope_as = target_female
+		}
+	}
+	option = {
+		name = noble_auto_marry.1.a
+		scope:target_male ?= { marry_character = scope:target_female }
+	}
+}
+noble_auto_marry.55 = {
+	type = country_event
+	title = noble_auto_marry.1.t
+	desc = noble_auto_marry.1.d
+	
+	trigger = {
+		is_ai = no
+		NOT = { has_variable = hide_marriage_events }
+		any_character = {
+			is_married = no
+			is_female = no
+			OR = {
+				has_estate = estate_type:nobles_estate 
+				AND = {
+					has_estate = estate_type:crown_estate 
+					NOT = { is_eligible_heir_baseline = root }
+				}
+			}
+			age_in_years > 18
+			age_in_years < 25
+		}
+		any_character = {
+			is_married = no
+			is_female = yes
+			OR = {
+				has_estate = estate_type:nobles_estate 
+				AND = {
+					has_estate = estate_type:crown_estate 
+					NOT = { is_eligible_heir_baseline = root }
+				}
+			}
+			age_in_years > 18
+			age_in_years < 25
+		}
+	}
+	
+	
+	immediate = {
+		random_character = {
+			limit = {
+				is_married = no
+				is_female = no
+				OR = {
+					has_estate = estate_type:nobles_estate 
+					AND = {
+						has_estate = estate_type:crown_estate 
+						NOT = { is_eligible_heir_baseline = root }
+					}
+				}
+				age_in_years > 18
+				age_in_years < 25
+			}
+			save_scope_as = target_male
+		}
+		random_character = {
+			limit = {
+				is_married = no
+				is_female = yes
+				NOT = {
+					is_close_relative = scope:target_male
+				}
+				OR = {
+					has_estate = estate_type:nobles_estate 
+					AND = {
+						has_estate = estate_type:crown_estate 
+						NOT = { is_eligible_heir_baseline = root }
+					}
+				}
+				age_in_years > 18
+				age_in_years < 25
+			}
+			save_scope_as = target_female
+		}
+	}
+	option = {
+		name = noble_auto_marry.1.a
+		scope:target_male ?= { marry_character = scope:target_female }
+	}
+	option = {
+		name = noble_auto_marry.1.b
+		scope:target_male ?= { marry_character = scope:target_female }
+		custom_tooltip =  { text = hide_marriage_events.tt }
+		set_variable = hide_marriage_events
+	}
+}
+		
+noble_auto_marry.56 = {
+	type = country_event
+	title = noble_auto_marry.1.t
+	desc = noble_auto_marry.1.d
+	
+	trigger = {
+		has_variable = hide_marriage_events
+		is_ai = no
+		any_character = {
+			is_married = no
+			is_female = no
+			OR = {
+				has_estate = estate_type:nobles_estate 
+				AND = {
+					has_estate = estate_type:crown_estate 
+					NOT = { is_eligible_heir_baseline = root }
+				}
+			}
+			age_in_years > 18
+			age_in_years < 25
+		}
+		any_character = {
+			is_married = no
+			is_female = yes
+			OR = {
+				has_estate = estate_type:nobles_estate 
+				AND = {
+					has_estate = estate_type:crown_estate 
+					NOT = { is_eligible_heir_baseline = root }
+				}
+			}
+			age_in_years > 18
+			age_in_years < 25
+		}
+	}
+	hidden = yes
+	
+	immediate = {
+		random_character = {
+			limit = {
+				is_married = no
+				is_female = no
+				OR = {
+					has_estate = estate_type:nobles_estate 
+					AND = {
+						has_estate = estate_type:crown_estate 
+						NOT = { is_eligible_heir_baseline = root }
+					}
+				}
+				age_in_years > 18
+				age_in_years < 25
+			}
+			save_scope_as = target_male
+		}
+		random_character = {
+			limit = {
+				is_married = no
+				is_female = yes
+				NOT = {
+					is_close_relative = scope:target_male
+				}
+				OR = {
+					has_estate = estate_type:nobles_estate 
+					AND = {
+						has_estate = estate_type:crown_estate 
+						NOT = { is_eligible_heir_baseline = root }
+					}
+				}
+				age_in_years > 18
+				age_in_years < 25
+			}
+			save_scope_as = target_female
+		}
+	}
+	option = {
+		name = noble_auto_marry.1.a
+		scope:target_male ?= { marry_character = scope:target_female }
+	}
+}
+
+		
+noble_auto_marry.57 = {
+	type = country_event
+	title = noble_auto_marry.2.t
+	desc = noble_auto_marry.2.d
+	
+	trigger = {
+		is_ai = no
+		NOT = {
+			has_variable = noble_auto_marry_royal_planning_wedding
+		}
+		OR = {
+			AND = {
+				any_character = {
+					is_married = no
+					AND = {
+						has_estate = estate_type:crown_estate 
+						is_eligible_heir_baseline = root
+					}
+					is_female = no
+					NOT = { has_variable = auto_marry_reminder_sent }
+					age_in_years > 18
+					age_in_years < 25
+				}
+				any_character = {
+					is_married = no
+					has_estate = estate_type:nobles_estate 
+					is_female = yes
+					age_in_years > 18
+					age_in_years < 25
+				}
+			}
+			AND = {
+				any_character = {
+					is_married = no
+					AND = {
+						has_estate = estate_type:crown_estate 
+						is_eligible_heir_baseline = root
+					}
+					is_female = yes
+					NOT = { has_variable = auto_marry_reminder_sent }
+					age_in_years > 18
+					age_in_years < 25
+				}
+				any_character = {
+					is_married = no
+					has_estate = estate_type:nobles_estate 
+					is_female = no
+					age_in_years > 18
+					age_in_years < 25
+				}
+			}
+		}
+	}
+	
+	immediate = {
+		if = {
+			limit = {
+				any_character = {
+					is_married = no
+					NOT = { has_variable = auto_marry_reminder_sent }
+					age_in_years > 18
+					age_in_years < 25
+					OR = {
+						is_close_relative = root.ruler
+						is_close_relative = root.heir
+					}
+				}
+			}
+			random_character = {
+				limit = {
+					is_married = no
+					NOT = { has_variable = auto_marry_reminder_sent }
+					age_in_years > 18
+					age_in_years < 25
+					OR = {
+						is_close_relative = root.ruler
+						is_close_relative = root.heir
+					}
+				}
+				save_scope_as = unmarried_royal
+				set_variable = {
+					name = auto_marry_reminder_sent
+				}
+			}
+		}
+		else = {
+			random_character = {
+				limit = {
+					is_married = no
+					AND = {
+						has_estate = estate_type:crown_estate 
+						is_eligible_heir_baseline = root
+					}
+					NOT = { has_variable = auto_marry_reminder_sent }
+					age_in_years > 18
+					age_in_years < 25
+				}
+				save_scope_as = unmarried_royal
+				set_variable = {
+					name = auto_marry_reminder_sent
+				}
+			}
+		}
+	}
+	option = {
+		name = noble_auto_marry.2.a
+		scope:unmarried_royal ?= {
+			set_variable = {
+				name = auto_marry_reminder_sent
+			}
+		}
+	}
+	option = {
+		name = noble_auto_marry.2.b
+		scope:unmarried_royal ?= {
+			set_variable = {
+				name = auto_marry_reminder_sent
+			}
+		}
+		set_variable = {
+			name = noble_auto_marry_royal_planning_wedding
+		}
+		hidden_effect = {
+			scope:unmarried_royal ?={			
+				add_character_modifier = {
+					modifier = block_marriage
+					years = -1
+					mode = add_and_extend
+					recalculate_immediately = yes #only because it will be used immediately
+				}
+			}
+			if = {
+				limit = {
+					scope:unmarried_royal = {
+						is_female = yes
+					}
+				}
+				random_character = {
+					limit = {
+						is_married = no
+						is_female = no
+						OR = {
+							has_estate = estate_type:nobles_estate 
+							AND = {
+								has_estate = estate_type:crown_estate 
+								NOT = { is_eligible_heir_baseline = root }
+							}
+						}
+						age_in_years > 18
+						age_in_years < 25
+					}
+					save_scope_as = target_suitor
+					add_character_modifier = {
+						modifier = block_marriage
+						years = -1
+						mode = add_and_extend
+						recalculate_immediately = yes #only because it will be used immediately
+					}
+				}
+			}
+			else = {
+				random_character = {
+					limit = {
+						is_married = no
+						is_female = yes
+						OR = {
+							has_estate = estate_type:nobles_estate 
+							AND = {
+								has_estate = estate_type:crown_estate 
+								NOT = { is_eligible_heir_baseline = root }
+							}
+						}
+						age_in_years > 18
+						age_in_years < 25
+					}
+					save_scope_as = target_suitor
+					add_character_modifier = {
+						modifier = block_marriage
+						years = -1
+						mode = add_and_extend
+						recalculate_immediately = yes #only because it will be used immediately
+					}
+				}
+			}
+		}
+		custom_tooltip = { text = unmarried_royal_will_find_suitable_spouse.tt }
+		if = {	
+			limit = {
+				NOT = {
+					has_variable = hide_marriage_events
+				}
+			}
+			trigger_event_silently = {
+				id = noble_auto_marry.58
+				months = { 2 4 }
+			}
+		}
+		else = {
+			trigger_event_silently = {
+				id = noble_auto_marry.59
+				months = { 2 4 }
+			}
+		}
+	}
+}
+noble_auto_marry.58 = {
+	type = country_event
+	title = noble_auto_marry.3.t
+	desc = noble_auto_marry.3.d
+	
+	
+	option = {
+		name = noble_auto_marry.3.a
+		scope:target_suitor ?= { remove_character_modifier = block_marriage }
+		scope:unmarried_royal ?= { marry_character = scope:target_suitor }
+		remove_variable = noble_auto_marry_royal_planning_wedding
+	}
+}
+noble_auto_marry.59 = {
+	type = country_event
+	title = noble_auto_marry.3.t
+	desc = noble_auto_marry.3.d
+	
+	
+	hidden = yes
+	option = {
+		name = noble_auto_marry.3.a
+		scope:target_suitor ?= { remove_character_modifier = block_marriage }
+		scope:unmarried_royal ?= { remove_character_modifier = block_marriage }
+		scope:unmarried_royal ?= { marry_character = scope:target_suitor }
+		remove_variable = noble_auto_marry_royal_planning_wedding
+	}
+}
+ 
+ #population control measures
+ 
+ 
+noble_auto_marry.60 = {
+	type = country_event
+	title = noble_auto_marry.3.t
+	desc = noble_auto_marry.3.d
+	
+	trigger = {
+		is_ai = no # if the ai does it, whatever. not my problem
+		any_character = {
+			filter = { 
+				age_in_years > 40
+				total_abilities < 200
+				NOT = { is_eligible_heir_baseline = root }
+				is_courtier = yes
+			}
+			count > 100
+		}
+	}
+	hidden = yes
+	option = {
+		name = noble_auto_marry.3.a
+		random_character = { # literally just this 25 times.
+			limit = {
+				age_in_years > 40
+				total_abilities < 200
+				NOT = { is_eligible_heir_baseline = root }
+				is_courtier = yes
+			}
+			kill_character_silently = this
+		}
+		random_character = {
+			limit = {
+				age_in_years > 40
+				total_abilities < 200
+				NOT = { is_eligible_heir_baseline = root }
+				is_courtier = yes
+			}
+			kill_character_silently = this
+		}
+		random_character = {
+			limit = {
+				age_in_years > 40
+				total_abilities < 200
+				NOT = { is_eligible_heir_baseline = root }
+				is_courtier = yes
+			}
+			kill_character_silently = this
+		}
+		random_character = {
+			limit = {
+				age_in_years > 40
+				total_abilities < 200
+				NOT = { is_eligible_heir_baseline = root }
+				is_courtier = yes
+			}
+			kill_character_silently = this
+		}
+		random_character = {
+			limit = {
+				age_in_years > 40
+				total_abilities < 200
+				NOT = { is_eligible_heir_baseline = root }
+				is_courtier = yes
+			}
+			kill_character_silently = this
+		}
+		random_character = {
+			limit = {
+				age_in_years > 40
+				total_abilities < 200
+				NOT = { is_eligible_heir_baseline = root }
+				is_courtier = yes
+			}
+			kill_character_silently = this
+		}
+		random_character = {
+			limit = {
+				age_in_years > 40
+				total_abilities < 200
+				NOT = { is_eligible_heir_baseline = root }
+				is_courtier = yes
+			}
+			kill_character_silently = this
+		}
+		random_character = {
+			limit = {
+				age_in_years > 40
+				total_abilities < 200
+				NOT = { is_eligible_heir_baseline = root }
+				is_courtier = yes
+			}
+			kill_character_silently = this
+		}
+		random_character = {
+			limit = {
+				age_in_years > 40
+				total_abilities < 200
+				NOT = { is_eligible_heir_baseline = root }
+				is_courtier = yes
+			}
+			kill_character_silently = this
+		}
+		random_character = {
+			limit = {
+				age_in_years > 40
+				total_abilities < 200
+				NOT = { is_eligible_heir_baseline = root }
+				is_courtier = yes
+			}
+			kill_character_silently = this
+		}
+		random_character = {
+			limit = {
+				age_in_years > 40
+				total_abilities < 200
+				NOT = { is_eligible_heir_baseline = root }
+				is_courtier = yes
+			}
+			kill_character_silently = this
+		}
+		random_character = {
+			limit = {
+				age_in_years > 40
+				total_abilities < 200
+				NOT = { is_eligible_heir_baseline = root }
+				is_courtier = yes
+			}
+			kill_character_silently = this
+		}
+		random_character = {
+			limit = {
+				age_in_years > 40
+				total_abilities < 200
+				NOT = { is_eligible_heir_baseline = root }
+				is_courtier = yes
+			}
+			kill_character_silently = this
+		}
+		random_character = {
+			limit = {
+				age_in_years > 40
+				total_abilities < 200
+				NOT = { is_eligible_heir_baseline = root }
+				is_courtier = yes
+			}
+			kill_character_silently = this
+		}
+		random_character = {
+			limit = {
+				age_in_years > 40
+				total_abilities < 200
+				NOT = { is_eligible_heir_baseline = root }
+				is_courtier = yes
+			}
+			kill_character_silently = this
+		}
+		random_character = {
+			limit = {
+				age_in_years > 40
+				total_abilities < 200
+				NOT = { is_eligible_heir_baseline = root }
+				is_courtier = yes
+			}
+			kill_character_silently = this
+		}
+		random_character = {
+			limit = {
+				age_in_years > 40
+				total_abilities < 200
+				NOT = { is_eligible_heir_baseline = root }
+				is_courtier = yes
+			}
+			kill_character_silently = this
+		}
+		random_character = {
+			limit = {
+				age_in_years > 40
+				total_abilities < 200
+				NOT = { is_eligible_heir_baseline = root }
+				is_courtier = yes
+			}
+			kill_character_silently = this
+		}
+		random_character = {
+			limit = {
+				age_in_years > 40
+				total_abilities < 200
+				NOT = { is_eligible_heir_baseline = root }
+				is_courtier = yes
+			}
+			kill_character_silently = this
+		}
+		random_character = {
+			limit = {
+				age_in_years > 40
+				total_abilities < 200
+				NOT = { is_eligible_heir_baseline = root }
+				is_courtier = yes
+			}
+			kill_character_silently = this
+		}
+		random_character = {
+			limit = {
+				age_in_years > 40
+				total_abilities < 200
+				NOT = { is_eligible_heir_baseline = root }
+				is_courtier = yes
+			}
+			kill_character_silently = this
+		}
+		random_character = {
+			limit = {
+				age_in_years > 40
+				total_abilities < 200
+				NOT = { is_eligible_heir_baseline = root }
+				is_courtier = yes
+			}
+			kill_character_silently = this
+		}
+		random_character = {
+			limit = {
+				age_in_years > 40
+				total_abilities < 200
+				NOT = { is_eligible_heir_baseline = root }
+				is_courtier = yes
+			}
+			kill_character_silently = this
+		}
+		random_character = {
+			limit = {
+				age_in_years > 40
+				total_abilities < 200
+				NOT = { is_eligible_heir_baseline = root }
+				is_courtier = yes
+			}
+			kill_character_silently = this
+		}
+		random_character = {
+			limit = {
+				age_in_years > 40
+				total_abilities < 200
+				NOT = { is_eligible_heir_baseline = root }
+				is_courtier = yes
+			}
+			kill_character_silently = this
+		}		
+	}
+}
+
+ 
+noble_auto_marry.61 = { # more general population control measure
+	type = country_event
+	title = noble_auto_marry.3.t
+	desc = noble_auto_marry.3.d
+	
+	trigger = {
+		is_ai = no # if the ai does it, whatever. not my problem
+		any_character = {
+			filter = { 
+				NOT = { is_eligible_heir_baseline = root }
+				is_courtier = yes
+			}
+			count > 150
+		}
+	}
+	hidden = yes
+	option = {
+		name = noble_auto_marry.3.a
+		if = { # prioritise older characters if possible
+			limit = {
+				any_character = {
+					age_in_years > 40
+					NOT = { is_eligible_heir_baseline = root }
+					is_courtier = yes
+				}
+			}
+			random_character = { # literally just this 25 times.
+				limit = {
+					age_in_years > 40
+					NOT = { is_eligible_heir_baseline = root }
+					is_courtier = yes
+				}
+				kill_character_silently = this
+			}
+		}
+		else = {				
+			random_character = { # literally just this 25 times.
+				limit = {
+					NOT = { is_eligible_heir_baseline = root }
+					is_courtier = yes
+				}
+				kill_character_silently = this
+			}
+		}
+		if = { # prioritise older characters if possible
+			limit = {
+				any_character = {
+					age_in_years > 40
+					NOT = { is_eligible_heir_baseline = root }
+					is_courtier = yes
+				}
+			}
+			random_character = { # literally just this 25 times.
+				limit = {
+					age_in_years > 40
+					NOT = { is_eligible_heir_baseline = root }
+					is_courtier = yes
+				}
+				kill_character_silently = this
+			}
+		}
+		else = {				
+			random_character = { # literally just this 25 times.
+				limit = {
+					NOT = { is_eligible_heir_baseline = root }
+					is_courtier = yes
+				}
+				kill_character_silently = this
+			}
+		}
+		if = { # prioritise older characters if possible
+			limit = {
+				any_character = {
+					age_in_years > 40
+					NOT = { is_eligible_heir_baseline = root }
+					is_courtier = yes
+				}
+			}
+			random_character = { # literally just this 25 times.
+				limit = {
+					age_in_years > 40
+					NOT = { is_eligible_heir_baseline = root }
+					is_courtier = yes
+				}
+				kill_character_silently = this
+			}
+		}
+		else = {				
+			random_character = { # literally just this 25 times.
+				limit = {
+					NOT = { is_eligible_heir_baseline = root }
+					is_courtier = yes
+				}
+				kill_character_silently = this
+			}
+		}
+		if = { # prioritise older characters if possible
+			limit = {
+				any_character = {
+					age_in_years > 40
+					NOT = { is_eligible_heir_baseline = root }
+					is_courtier = yes
+				}
+			}
+			random_character = { # literally just this 25 times.
+				limit = {
+					age_in_years > 40
+					NOT = { is_eligible_heir_baseline = root }
+					is_courtier = yes
+				}
+				kill_character_silently = this
+			}
+		}
+		else = {				
+			random_character = { # literally just this 25 times.
+				limit = {
+					NOT = { is_eligible_heir_baseline = root }
+					is_courtier = yes
+				}
+				kill_character_silently = this
+			}
+		}
+		if = { # prioritise older characters if possible
+			limit = {
+				any_character = {
+					age_in_years > 40
+					NOT = { is_eligible_heir_baseline = root }
+					is_courtier = yes
+				}
+			}
+			random_character = { # literally just this 25 times.
+				limit = {
+					age_in_years > 40
+					NOT = { is_eligible_heir_baseline = root }
+					is_courtier = yes
+				}
+				kill_character_silently = this
+			}
+		}
+		else = {				
+			random_character = { # literally just this 25 times.
+				limit = {
+					NOT = { is_eligible_heir_baseline = root }
+					is_courtier = yes
+				}
+				kill_character_silently = this
+			}
+		}
+		if = { # prioritise older characters if possible
+			limit = {
+				any_character = {
+					age_in_years > 40
+					NOT = { is_eligible_heir_baseline = root }
+					is_courtier = yes
+				}
+			}
+			random_character = { # literally just this 25 times.
+				limit = {
+					age_in_years > 40
+					NOT = { is_eligible_heir_baseline = root }
+					is_courtier = yes
+				}
+				kill_character_silently = this
+			}
+		}
+		else = {				
+			random_character = { # literally just this 25 times.
+				limit = {
+					NOT = { is_eligible_heir_baseline = root }
+					is_courtier = yes
+				}
+				kill_character_silently = this
+			}
+		}
+		if = { # prioritise older characters if possible
+			limit = {
+				any_character = {
+					age_in_years > 40
+					NOT = { is_eligible_heir_baseline = root }
+					is_courtier = yes
+				}
+			}
+			random_character = { # literally just this 25 times.
+				limit = {
+					age_in_years > 40
+					NOT = { is_eligible_heir_baseline = root }
+					is_courtier = yes
+				}
+				kill_character_silently = this
+			}
+		}
+		else = {				
+			random_character = { # literally just this 25 times.
+				limit = {
+					NOT = { is_eligible_heir_baseline = root }
+					is_courtier = yes
+				}
+				kill_character_silently = this
+			}
+		}
+		if = { # prioritise older characters if possible
+			limit = {
+				any_character = {
+					age_in_years > 40
+					NOT = { is_eligible_heir_baseline = root }
+					is_courtier = yes
+				}
+			}
+			random_character = { # literally just this 25 times.
+				limit = {
+					age_in_years > 40
+					NOT = { is_eligible_heir_baseline = root }
+					is_courtier = yes
+				}
+				kill_character_silently = this
+			}
+		}
+		else = {				
+			random_character = { # literally just this 25 times.
+				limit = {
+					NOT = { is_eligible_heir_baseline = root }
+					is_courtier = yes
+				}
+				kill_character_silently = this
+			}
+		}
+		if = { # prioritise older characters if possible
+			limit = {
+				any_character = {
+					age_in_years > 40
+					NOT = { is_eligible_heir_baseline = root }
+					is_courtier = yes
+				}
+			}
+			random_character = { # literally just this 25 times.
+				limit = {
+					age_in_years > 40
+					NOT = { is_eligible_heir_baseline = root }
+					is_courtier = yes
+				}
+				kill_character_silently = this
+			}
+		}
+		else = {				
+			random_character = { # literally just this 25 times.
+				limit = {
+					NOT = { is_eligible_heir_baseline = root }
+					is_courtier = yes
+				}
+				kill_character_silently = this
+			}
+		}
+		if = { # prioritise older characters if possible
+			limit = {
+				any_character = {
+					age_in_years > 40
+					NOT = { is_eligible_heir_baseline = root }
+					is_courtier = yes
+				}
+			}
+			random_character = { # literally just this 25 times.
+				limit = {
+					age_in_years > 40
+					NOT = { is_eligible_heir_baseline = root }
+					is_courtier = yes
+				}
+				kill_character_silently = this
+			}
+		}
+		else = {				
+			random_character = { # literally just this 25 times.
+				limit = {
+					NOT = { is_eligible_heir_baseline = root }
+					is_courtier = yes
+				}
+				kill_character_silently = this
+			}
+		}
+		if = { # prioritise older characters if possible
+			limit = {
+				any_character = {
+					age_in_years > 40
+					NOT = { is_eligible_heir_baseline = root }
+					is_courtier = yes
+				}
+			}
+			random_character = { # literally just this 25 times.
+				limit = {
+					age_in_years > 40
+					NOT = { is_eligible_heir_baseline = root }
+					is_courtier = yes
+				}
+				kill_character_silently = this
+			}
+		}
+		else = {				
+			random_character = { # literally just this 25 times.
+				limit = {
+					NOT = { is_eligible_heir_baseline = root }
+					is_courtier = yes
+				}
+				kill_character_silently = this
+			}
+		}
+		if = { # prioritise older characters if possible
+			limit = {
+				any_character = {
+					age_in_years > 40
+					NOT = { is_eligible_heir_baseline = root }
+					is_courtier = yes
+				}
+			}
+			random_character = { # literally just this 25 times.
+				limit = {
+					age_in_years > 40
+					NOT = { is_eligible_heir_baseline = root }
+					is_courtier = yes
+				}
+				kill_character_silently = this
+			}
+		}
+		else = {				
+			random_character = { # literally just this 25 times.
+				limit = {
+					NOT = { is_eligible_heir_baseline = root }
+					is_courtier = yes
+				}
+				kill_character_silently = this
+			}
+		}
+		if = { # prioritise older characters if possible
+			limit = {
+				any_character = {
+					age_in_years > 40
+					NOT = { is_eligible_heir_baseline = root }
+					is_courtier = yes
+				}
+			}
+			random_character = { # literally just this 25 times.
+				limit = {
+					age_in_years > 40
+					NOT = { is_eligible_heir_baseline = root }
+					is_courtier = yes
+				}
+				kill_character_silently = this
+			}
+		}
+		else = {				
+			random_character = { # literally just this 25 times.
+				limit = {
+					NOT = { is_eligible_heir_baseline = root }
+					is_courtier = yes
+				}
+				kill_character_silently = this
+			}
+		}
+		if = { # prioritise older characters if possible
+			limit = {
+				any_character = {
+					age_in_years > 40
+					NOT = { is_eligible_heir_baseline = root }
+					is_courtier = yes
+				}
+			}
+			random_character = { # literally just this 25 times.
+				limit = {
+					age_in_years > 40
+					NOT = { is_eligible_heir_baseline = root }
+					is_courtier = yes
+				}
+				kill_character_silently = this
+			}
+		}
+		else = {				
+			random_character = { # literally just this 25 times.
+				limit = {
+					NOT = { is_eligible_heir_baseline = root }
+					is_courtier = yes
+				}
+				kill_character_silently = this
+			}
+		}
+		if = { # prioritise older characters if possible
+			limit = {
+				any_character = {
+					age_in_years > 40
+					NOT = { is_eligible_heir_baseline = root }
+					is_courtier = yes
+				}
+			}
+			random_character = { # literally just this 25 times.
+				limit = {
+					age_in_years > 40
+					NOT = { is_eligible_heir_baseline = root }
+					is_courtier = yes
+				}
+				kill_character_silently = this
+			}
+		}
+		else = {				
+			random_character = { # literally just this 25 times.
+				limit = {
+					NOT = { is_eligible_heir_baseline = root }
+					is_courtier = yes
+				}
+				kill_character_silently = this
+			}
+		}
+		if = { # prioritise older characters if possible
+			limit = {
+				any_character = {
+					age_in_years > 40
+					NOT = { is_eligible_heir_baseline = root }
+					is_courtier = yes
+				}
+			}
+			random_character = { # literally just this 25 times.
+				limit = {
+					age_in_years > 40
+					NOT = { is_eligible_heir_baseline = root }
+					is_courtier = yes
+				}
+				kill_character_silently = this
+			}
+		}
+		else = {				
+			random_character = { # literally just this 25 times.
+				limit = {
+					NOT = { is_eligible_heir_baseline = root }
+					is_courtier = yes
+				}
+				kill_character_silently = this
+			}
+		}
+		if = { # prioritise older characters if possible
+			limit = {
+				any_character = {
+					age_in_years > 40
+					NOT = { is_eligible_heir_baseline = root }
+					is_courtier = yes
+				}
+			}
+			random_character = { # literally just this 25 times.
+				limit = {
+					age_in_years > 40
+					NOT = { is_eligible_heir_baseline = root }
+					is_courtier = yes
+				}
+				kill_character_silently = this
+			}
+		}
+		else = {				
+			random_character = { # literally just this 25 times.
+				limit = {
+					NOT = { is_eligible_heir_baseline = root }
+					is_courtier = yes
+				}
+				kill_character_silently = this
+			}
+		}
+		if = { # prioritise older characters if possible
+			limit = {
+				any_character = {
+					age_in_years > 40
+					NOT = { is_eligible_heir_baseline = root }
+					is_courtier = yes
+				}
+			}
+			random_character = { # literally just this 25 times.
+				limit = {
+					age_in_years > 40
+					NOT = { is_eligible_heir_baseline = root }
+					is_courtier = yes
+				}
+				kill_character_silently = this
+			}
+		}
+		else = {				
+			random_character = { # literally just this 25 times.
+				limit = {
+					NOT = { is_eligible_heir_baseline = root }
+					is_courtier = yes
+				}
+				kill_character_silently = this
+			}
+		}
+		if = { # prioritise older characters if possible
+			limit = {
+				any_character = {
+					age_in_years > 40
+					NOT = { is_eligible_heir_baseline = root }
+					is_courtier = yes
+				}
+			}
+			random_character = { # literally just this 25 times.
+				limit = {
+					age_in_years > 40
+					NOT = { is_eligible_heir_baseline = root }
+					is_courtier = yes
+				}
+				kill_character_silently = this
+			}
+		}
+		else = {				
+			random_character = { # literally just this 25 times.
+				limit = {
+					NOT = { is_eligible_heir_baseline = root }
+					is_courtier = yes
+				}
+				kill_character_silently = this
+			}
+		}
+		if = { # prioritise older characters if possible
+			limit = {
+				any_character = {
+					age_in_years > 40
+					NOT = { is_eligible_heir_baseline = root }
+					is_courtier = yes
+				}
+			}
+			random_character = { # literally just this 25 times.
+				limit = {
+					age_in_years > 40
+					NOT = { is_eligible_heir_baseline = root }
+					is_courtier = yes
+				}
+				kill_character_silently = this
+			}
+		}
+		else = {				
+			random_character = { # literally just this 25 times.
+				limit = {
+					NOT = { is_eligible_heir_baseline = root }
+					is_courtier = yes
+				}
+				kill_character_silently = this
+			}
+		}
+		if = { # prioritise older characters if possible
+			limit = {
+				any_character = {
+					age_in_years > 40
+					NOT = { is_eligible_heir_baseline = root }
+					is_courtier = yes
+				}
+			}
+			random_character = { # literally just this 25 times.
+				limit = {
+					age_in_years > 40
+					NOT = { is_eligible_heir_baseline = root }
+					is_courtier = yes
+				}
+				kill_character_silently = this
+			}
+		}
+		else = {				
+			random_character = { # literally just this 25 times.
+				limit = {
+					NOT = { is_eligible_heir_baseline = root }
+					is_courtier = yes
+				}
+				kill_character_silently = this
+			}
+		}
+		if = { # prioritise older characters if possible
+			limit = {
+				any_character = {
+					age_in_years > 40
+					NOT = { is_eligible_heir_baseline = root }
+					is_courtier = yes
+				}
+			}
+			random_character = { # literally just this 25 times.
+				limit = {
+					age_in_years > 40
+					NOT = { is_eligible_heir_baseline = root }
+					is_courtier = yes
+				}
+				kill_character_silently = this
+			}
+		}
+		else = {				
+			random_character = { # literally just this 25 times.
+				limit = {
+					NOT = { is_eligible_heir_baseline = root }
+					is_courtier = yes
+				}
+				kill_character_silently = this
+			}
+		}
+		if = { # prioritise older characters if possible
+			limit = {
+				any_character = {
+					age_in_years > 40
+					NOT = { is_eligible_heir_baseline = root }
+					is_courtier = yes
+				}
+			}
+			random_character = { # literally just this 25 times.
+				limit = {
+					age_in_years > 40
+					NOT = { is_eligible_heir_baseline = root }
+					is_courtier = yes
+				}
+				kill_character_silently = this
+			}
+		}
+		else = {				
+			random_character = { # literally just this 25 times.
+				limit = {
+					NOT = { is_eligible_heir_baseline = root }
+					is_courtier = yes
+				}
+				kill_character_silently = this
+			}
+		}
+		if = { # prioritise older characters if possible
+			limit = {
+				any_character = {
+					age_in_years > 40
+					NOT = { is_eligible_heir_baseline = root }
+					is_courtier = yes
+				}
+			}
+			random_character = { # literally just this 25 times.
+				limit = {
+					age_in_years > 40
+					NOT = { is_eligible_heir_baseline = root }
+					is_courtier = yes
+				}
+				kill_character_silently = this
+			}
+		}
+		else = {				
+			random_character = { # literally just this 25 times.
+				limit = {
+					NOT = { is_eligible_heir_baseline = root }
+					is_courtier = yes
+				}
+				kill_character_silently = this
+			}
+		}
+		if = { # prioritise older characters if possible
+			limit = {
+				any_character = {
+					age_in_years > 40
+					NOT = { is_eligible_heir_baseline = root }
+					is_courtier = yes
+				}
+			}
+			random_character = { # literally just this 25 times.
+				limit = {
+					age_in_years > 40
+					NOT = { is_eligible_heir_baseline = root }
+					is_courtier = yes
+				}
+				kill_character_silently = this
+			}
+		}
+		else = {				
+			random_character = { # literally just this 25 times.
+				limit = {
+					NOT = { is_eligible_heir_baseline = root }
+					is_courtier = yes
+				}
+				kill_character_silently = this
+			}
+		}	
+	}
+}
+
+noble_auto_marry.62 = { # more general population control measure - for when you are really overpopulated!
+	type = country_event
+	title = noble_auto_marry.3.t
+	desc = noble_auto_marry.3.d
+	
+	trigger = {
+		is_ai = no # if the ai does it, whatever. not my problem
+		any_character = {
+			filter = { 
+				NOT = { is_eligible_heir_baseline = root }
+				is_courtier = yes
+			}
+			count > 200
+		}
+	}
+	hidden = yes
+	option = {
+		name = noble_auto_marry.3.a
+		if = { # prioritise older characters if possible
+			limit = {
+				any_character = {
+					age_in_years > 40
+					NOT = { is_eligible_heir_baseline = root }
+					is_courtier = yes
+				}
+			}
+			random_character = { # literally just this 25 times.
+				limit = {
+					age_in_years > 40
+					NOT = { is_eligible_heir_baseline = root }
+					is_courtier = yes
+				}
+				kill_character_silently = this
+			}
+		}
+		else = {				
+			random_character = { # literally just this 25 times.
+				limit = {
+					NOT = { is_eligible_heir_baseline = root }
+					is_courtier = yes
+				}
+				kill_character_silently = this
+			}
+		}
+		if = { # prioritise older characters if possible
+			limit = {
+				any_character = {
+					age_in_years > 40
+					NOT = { is_eligible_heir_baseline = root }
+					is_courtier = yes
+				}
+			}
+			random_character = { # literally just this 25 times.
+				limit = {
+					age_in_years > 40
+					NOT = { is_eligible_heir_baseline = root }
+					is_courtier = yes
+				}
+				kill_character_silently = this
+			}
+		}
+		else = {				
+			random_character = { # literally just this 25 times.
+				limit = {
+					NOT = { is_eligible_heir_baseline = root }
+					is_courtier = yes
+				}
+				kill_character_silently = this
+			}
+		}
+		if = { # prioritise older characters if possible
+			limit = {
+				any_character = {
+					age_in_years > 40
+					NOT = { is_eligible_heir_baseline = root }
+					is_courtier = yes
+				}
+			}
+			random_character = { # literally just this 25 times.
+				limit = {
+					age_in_years > 40
+					NOT = { is_eligible_heir_baseline = root }
+					is_courtier = yes
+				}
+				kill_character_silently = this
+			}
+		}
+		else = {				
+			random_character = { # literally just this 25 times.
+				limit = {
+					NOT = { is_eligible_heir_baseline = root }
+					is_courtier = yes
+				}
+				kill_character_silently = this
+			}
+		}
+		if = { # prioritise older characters if possible
+			limit = {
+				any_character = {
+					age_in_years > 40
+					NOT = { is_eligible_heir_baseline = root }
+					is_courtier = yes
+				}
+			}
+			random_character = { # literally just this 25 times.
+				limit = {
+					age_in_years > 40
+					NOT = { is_eligible_heir_baseline = root }
+					is_courtier = yes
+				}
+				kill_character_silently = this
+			}
+		}
+		else = {				
+			random_character = { # literally just this 25 times.
+				limit = {
+					NOT = { is_eligible_heir_baseline = root }
+					is_courtier = yes
+				}
+				kill_character_silently = this
+			}
+		}
+		if = { # prioritise older characters if possible
+			limit = {
+				any_character = {
+					age_in_years > 40
+					NOT = { is_eligible_heir_baseline = root }
+					is_courtier = yes
+				}
+			}
+			random_character = { # literally just this 25 times.
+				limit = {
+					age_in_years > 40
+					NOT = { is_eligible_heir_baseline = root }
+					is_courtier = yes
+				}
+				kill_character_silently = this
+			}
+		}
+		else = {				
+			random_character = { # literally just this 25 times.
+				limit = {
+					NOT = { is_eligible_heir_baseline = root }
+					is_courtier = yes
+				}
+				kill_character_silently = this
+			}
+		}
+		if = { # prioritise older characters if possible
+			limit = {
+				any_character = {
+					age_in_years > 40
+					NOT = { is_eligible_heir_baseline = root }
+					is_courtier = yes
+				}
+			}
+			random_character = { # literally just this 25 times.
+				limit = {
+					age_in_years > 40
+					NOT = { is_eligible_heir_baseline = root }
+					is_courtier = yes
+				}
+				kill_character_silently = this
+			}
+		}
+		else = {				
+			random_character = { # literally just this 25 times.
+				limit = {
+					NOT = { is_eligible_heir_baseline = root }
+					is_courtier = yes
+				}
+				kill_character_silently = this
+			}
+		}
+		if = { # prioritise older characters if possible
+			limit = {
+				any_character = {
+					age_in_years > 40
+					NOT = { is_eligible_heir_baseline = root }
+					is_courtier = yes
+				}
+			}
+			random_character = { # literally just this 25 times.
+				limit = {
+					age_in_years > 40
+					NOT = { is_eligible_heir_baseline = root }
+					is_courtier = yes
+				}
+				kill_character_silently = this
+			}
+		}
+		else = {				
+			random_character = { # literally just this 25 times.
+				limit = {
+					NOT = { is_eligible_heir_baseline = root }
+					is_courtier = yes
+				}
+				kill_character_silently = this
+			}
+		}
+		if = { # prioritise older characters if possible
+			limit = {
+				any_character = {
+					age_in_years > 40
+					NOT = { is_eligible_heir_baseline = root }
+					is_courtier = yes
+				}
+			}
+			random_character = { # literally just this 25 times.
+				limit = {
+					age_in_years > 40
+					NOT = { is_eligible_heir_baseline = root }
+					is_courtier = yes
+				}
+				kill_character_silently = this
+			}
+		}
+		else = {				
+			random_character = { # literally just this 25 times.
+				limit = {
+					NOT = { is_eligible_heir_baseline = root }
+					is_courtier = yes
+				}
+				kill_character_silently = this
+			}
+		}
+		if = { # prioritise older characters if possible
+			limit = {
+				any_character = {
+					age_in_years > 40
+					NOT = { is_eligible_heir_baseline = root }
+					is_courtier = yes
+				}
+			}
+			random_character = { # literally just this 25 times.
+				limit = {
+					age_in_years > 40
+					NOT = { is_eligible_heir_baseline = root }
+					is_courtier = yes
+				}
+				kill_character_silently = this
+			}
+		}
+		else = {				
+			random_character = { # literally just this 25 times.
+				limit = {
+					NOT = { is_eligible_heir_baseline = root }
+					is_courtier = yes
+				}
+				kill_character_silently = this
+			}
+		}
+		if = { # prioritise older characters if possible
+			limit = {
+				any_character = {
+					age_in_years > 40
+					NOT = { is_eligible_heir_baseline = root }
+					is_courtier = yes
+				}
+			}
+			random_character = { # literally just this 25 times.
+				limit = {
+					age_in_years > 40
+					NOT = { is_eligible_heir_baseline = root }
+					is_courtier = yes
+				}
+				kill_character_silently = this
+			}
+		}
+		else = {				
+			random_character = { # literally just this 25 times.
+				limit = {
+					NOT = { is_eligible_heir_baseline = root }
+					is_courtier = yes
+				}
+				kill_character_silently = this
+			}
+		}
+		if = { # prioritise older characters if possible
+			limit = {
+				any_character = {
+					age_in_years > 40
+					NOT = { is_eligible_heir_baseline = root }
+					is_courtier = yes
+				}
+			}
+			random_character = { # literally just this 25 times.
+				limit = {
+					age_in_years > 40
+					NOT = { is_eligible_heir_baseline = root }
+					is_courtier = yes
+				}
+				kill_character_silently = this
+			}
+		}
+		else = {				
+			random_character = { # literally just this 25 times.
+				limit = {
+					NOT = { is_eligible_heir_baseline = root }
+					is_courtier = yes
+				}
+				kill_character_silently = this
+			}
+		}
+		if = { # prioritise older characters if possible
+			limit = {
+				any_character = {
+					age_in_years > 40
+					NOT = { is_eligible_heir_baseline = root }
+					is_courtier = yes
+				}
+			}
+			random_character = { # literally just this 25 times.
+				limit = {
+					age_in_years > 40
+					NOT = { is_eligible_heir_baseline = root }
+					is_courtier = yes
+				}
+				kill_character_silently = this
+			}
+		}
+		else = {				
+			random_character = { # literally just this 25 times.
+				limit = {
+					NOT = { is_eligible_heir_baseline = root }
+					is_courtier = yes
+				}
+				kill_character_silently = this
+			}
+		}
+		if = { # prioritise older characters if possible
+			limit = {
+				any_character = {
+					age_in_years > 40
+					NOT = { is_eligible_heir_baseline = root }
+					is_courtier = yes
+				}
+			}
+			random_character = { # literally just this 25 times.
+				limit = {
+					age_in_years > 40
+					NOT = { is_eligible_heir_baseline = root }
+					is_courtier = yes
+				}
+				kill_character_silently = this
+			}
+		}
+		else = {				
+			random_character = { # literally just this 25 times.
+				limit = {
+					NOT = { is_eligible_heir_baseline = root }
+					is_courtier = yes
+				}
+				kill_character_silently = this
+			}
+		}
+		if = { # prioritise older characters if possible
+			limit = {
+				any_character = {
+					age_in_years > 40
+					NOT = { is_eligible_heir_baseline = root }
+					is_courtier = yes
+				}
+			}
+			random_character = { # literally just this 25 times.
+				limit = {
+					age_in_years > 40
+					NOT = { is_eligible_heir_baseline = root }
+					is_courtier = yes
+				}
+				kill_character_silently = this
+			}
+		}
+		else = {				
+			random_character = { # literally just this 25 times.
+				limit = {
+					NOT = { is_eligible_heir_baseline = root }
+					is_courtier = yes
+				}
+				kill_character_silently = this
+			}
+		}
+		if = { # prioritise older characters if possible
+			limit = {
+				any_character = {
+					age_in_years > 40
+					NOT = { is_eligible_heir_baseline = root }
+					is_courtier = yes
+				}
+			}
+			random_character = { # literally just this 25 times.
+				limit = {
+					age_in_years > 40
+					NOT = { is_eligible_heir_baseline = root }
+					is_courtier = yes
+				}
+				kill_character_silently = this
+			}
+		}
+		else = {				
+			random_character = { # literally just this 25 times.
+				limit = {
+					NOT = { is_eligible_heir_baseline = root }
+					is_courtier = yes
+				}
+				kill_character_silently = this
+			}
+		}
+		if = { # prioritise older characters if possible
+			limit = {
+				any_character = {
+					age_in_years > 40
+					NOT = { is_eligible_heir_baseline = root }
+					is_courtier = yes
+				}
+			}
+			random_character = { # literally just this 25 times.
+				limit = {
+					age_in_years > 40
+					NOT = { is_eligible_heir_baseline = root }
+					is_courtier = yes
+				}
+				kill_character_silently = this
+			}
+		}
+		else = {				
+			random_character = { # literally just this 25 times.
+				limit = {
+					NOT = { is_eligible_heir_baseline = root }
+					is_courtier = yes
+				}
+				kill_character_silently = this
+			}
+		}
+		if = { # prioritise older characters if possible
+			limit = {
+				any_character = {
+					age_in_years > 40
+					NOT = { is_eligible_heir_baseline = root }
+					is_courtier = yes
+				}
+			}
+			random_character = { # literally just this 25 times.
+				limit = {
+					age_in_years > 40
+					NOT = { is_eligible_heir_baseline = root }
+					is_courtier = yes
+				}
+				kill_character_silently = this
+			}
+		}
+		else = {				
+			random_character = { # literally just this 25 times.
+				limit = {
+					NOT = { is_eligible_heir_baseline = root }
+					is_courtier = yes
+				}
+				kill_character_silently = this
+			}
+		}
+		if = { # prioritise older characters if possible
+			limit = {
+				any_character = {
+					age_in_years > 40
+					NOT = { is_eligible_heir_baseline = root }
+					is_courtier = yes
+				}
+			}
+			random_character = { # literally just this 25 times.
+				limit = {
+					age_in_years > 40
+					NOT = { is_eligible_heir_baseline = root }
+					is_courtier = yes
+				}
+				kill_character_silently = this
+			}
+		}
+		else = {				
+			random_character = { # literally just this 25 times.
+				limit = {
+					NOT = { is_eligible_heir_baseline = root }
+					is_courtier = yes
+				}
+				kill_character_silently = this
+			}
+		}
+		if = { # prioritise older characters if possible
+			limit = {
+				any_character = {
+					age_in_years > 40
+					NOT = { is_eligible_heir_baseline = root }
+					is_courtier = yes
+				}
+			}
+			random_character = { # literally just this 25 times.
+				limit = {
+					age_in_years > 40
+					NOT = { is_eligible_heir_baseline = root }
+					is_courtier = yes
+				}
+				kill_character_silently = this
+			}
+		}
+		else = {				
+			random_character = { # literally just this 25 times.
+				limit = {
+					NOT = { is_eligible_heir_baseline = root }
+					is_courtier = yes
+				}
+				kill_character_silently = this
+			}
+		}
+		if = { # prioritise older characters if possible
+			limit = {
+				any_character = {
+					age_in_years > 40
+					NOT = { is_eligible_heir_baseline = root }
+					is_courtier = yes
+				}
+			}
+			random_character = { # literally just this 25 times.
+				limit = {
+					age_in_years > 40
+					NOT = { is_eligible_heir_baseline = root }
+					is_courtier = yes
+				}
+				kill_character_silently = this
+			}
+		}
+		else = {				
+			random_character = { # literally just this 25 times.
+				limit = {
+					NOT = { is_eligible_heir_baseline = root }
+					is_courtier = yes
+				}
+				kill_character_silently = this
+			}
+		}
+		if = { # prioritise older characters if possible
+			limit = {
+				any_character = {
+					age_in_years > 40
+					NOT = { is_eligible_heir_baseline = root }
+					is_courtier = yes
+				}
+			}
+			random_character = { # literally just this 25 times.
+				limit = {
+					age_in_years > 40
+					NOT = { is_eligible_heir_baseline = root }
+					is_courtier = yes
+				}
+				kill_character_silently = this
+			}
+		}
+		else = {				
+			random_character = { # literally just this 25 times.
+				limit = {
+					NOT = { is_eligible_heir_baseline = root }
+					is_courtier = yes
+				}
+				kill_character_silently = this
+			}
+		}
+		if = { # prioritise older characters if possible
+			limit = {
+				any_character = {
+					age_in_years > 40
+					NOT = { is_eligible_heir_baseline = root }
+					is_courtier = yes
+				}
+			}
+			random_character = { # literally just this 25 times.
+				limit = {
+					age_in_years > 40
+					NOT = { is_eligible_heir_baseline = root }
+					is_courtier = yes
+				}
+				kill_character_silently = this
+			}
+		}
+		else = {				
+			random_character = { # literally just this 25 times.
+				limit = {
+					NOT = { is_eligible_heir_baseline = root }
+					is_courtier = yes
+				}
+				kill_character_silently = this
+			}
+		}
+		if = { # prioritise older characters if possible
+			limit = {
+				any_character = {
+					age_in_years > 40
+					NOT = { is_eligible_heir_baseline = root }
+					is_courtier = yes
+				}
+			}
+			random_character = { # literally just this 25 times.
+				limit = {
+					age_in_years > 40
+					NOT = { is_eligible_heir_baseline = root }
+					is_courtier = yes
+				}
+				kill_character_silently = this
+			}
+		}
+		else = {				
+			random_character = { # literally just this 25 times.
+				limit = {
+					NOT = { is_eligible_heir_baseline = root }
+					is_courtier = yes
+				}
+				kill_character_silently = this
+			}
+		}
+		if = { # prioritise older characters if possible
+			limit = {
+				any_character = {
+					age_in_years > 40
+					NOT = { is_eligible_heir_baseline = root }
+					is_courtier = yes
+				}
+			}
+			random_character = { # literally just this 25 times.
+				limit = {
+					age_in_years > 40
+					NOT = { is_eligible_heir_baseline = root }
+					is_courtier = yes
+				}
+				kill_character_silently = this
+			}
+		}
+		else = {				
+			random_character = { # literally just this 25 times.
+				limit = {
+					NOT = { is_eligible_heir_baseline = root }
+					is_courtier = yes
+				}
+				kill_character_silently = this
+			}
+		}
+		if = { # prioritise older characters if possible
+			limit = {
+				any_character = {
+					age_in_years > 40
+					NOT = { is_eligible_heir_baseline = root }
+					is_courtier = yes
+				}
+			}
+			random_character = { # literally just this 25 times.
+				limit = {
+					age_in_years > 40
+					NOT = { is_eligible_heir_baseline = root }
+					is_courtier = yes
+				}
+				kill_character_silently = this
+			}
+		}
+		else = {				
+			random_character = { # literally just this 25 times.
+				limit = {
+					NOT = { is_eligible_heir_baseline = root }
+					is_courtier = yes
+				}
+				kill_character_silently = this
+			}
+		}	
+	}
+}

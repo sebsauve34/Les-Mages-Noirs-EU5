@@ -1,0 +1,16 @@
+﻿l_russian:
+ noble_auto_marry.1.t: "[target_male.GetNameWithNoTooltip] жениться на [target_female.GetNameWithNoTooltip]
+ noble_auto_marry.1.d: "После нескольких месяцев планирования и ухаживаний, [target_male.GetName] женился на [target_female.GetName], построив еще один мост между благородными домами [target_male.GetDynasty.GetName] и [target_female.GetDynasty.GetName]. Ожидается, что эти двое продолжат свою благородную линию, воспитав следующее поколение достойное их родов".
+ noble_auto_marry.1.a: "Наши поздравления жениху и невесте"
+ noble_auto_marry.1.b: "Оставим дворянство в покое с их праздниками"
+ hide_marriage_events.tt: "Вы больше не будете получать события о браках между дворянами"
+ noble_auto_marry.2.t: "[unmarried_royal.GetNameWithNoTooltip] ожидает [unmarried_royal.GetHerHis] пару"
+ noble_auto_marry.2.d: "[unmarried_royal.GetName] поднял вопрос о [ROOT.GetCountry.GetGovernment.GetRuler.GetName] что они еще не поженились и выразили свою обеспокоенность по поводу этой кажущейся нерешительности"
+ noble_auto_marry.2.a: "Мы найдём пару для [unmarried_royal.GetNameWithNoTooltip]
+ noble_auto_marry.2.b: "[unmarried_royal.GetNameWithNoTooltip] может выбрать из рядов нашей знати любого, кого пожелает монаршье сердце"
+ unmarried_royal_will_find_suitable_spouse.tt: "[unmarried_royal.GetName] выберет себе партнера среди местных дворян, а в следующем году состоится свадьба"
+ noble_auto_marry.3.t: "[unmarried_royal.GetNameWithNoTooltip] скрепляет узы брака с [target_suitor.GetNameWithNoTooltip]
+ noble_auto_marry.3.d: "После нескольких месяцев планирования и ухаживаний, [unmarried_royal.GetName] связывает узы брака с [target_suitor.GetName], построив еще один мост между дворянскими домами [unmarried_royal.GetDynasty.GetName] и [target_suitor.GetDynasty.GetName]. Ожидается, что эти двое продолжат свою благородную линию, воспитав следующее поколение достойное их родов."
+ noble_auto_marry.3.a: "Наши поздравления жениху и невесте"
+ auto_marry_reminder_sent: "Запросил брак"
+ auto_marry_reminder_sent_desc: "Этот персонаж ранее обратился к правителю с вопросом о своих шансах на брак"
