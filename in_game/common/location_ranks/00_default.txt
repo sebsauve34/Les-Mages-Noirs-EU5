@@ -68,7 +68,7 @@ town = {
 		local_integration_speed_modifier = -0.25
 		
 		local_monthly_food_modifier = -0.2
-		free_building_levels = 50
+		free_building_levels = 30
 	}
 	
 	country_modifier = {

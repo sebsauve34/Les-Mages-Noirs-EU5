@@ -4207,7 +4207,9 @@ eng_hyw_invasion_preparation = {
 		category = country
 	}
 	ship_build_speed = 0.33
-	army_movement_speed = 0.10
+	siege_ability = 0.25
+	army_movement_speed = 0.1
+	levy_combat_efficiency_modifier = 0.25
 }
 
 exploiting_the_franc_coinage = {

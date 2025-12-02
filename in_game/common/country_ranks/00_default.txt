@@ -4,11 +4,12 @@
 	rank_modifier = {
 		max_diplomats = 20
 		diplomatic_range = 1000
-		great_power_score_exempt_from_forfeit = 200
+		great_power_score_exempt_from_forfeit = 50
 		
 		num_possible_rivals = 4
 		num_possible_artists = 2
-		
+		monthly_diplomats = 0.5
+
 		fort_limit = 2
 		
 		cultures_capacity = 2
@@ -53,10 +54,11 @@ rank_kingdom = {
 	rank_modifier = {
 		max_diplomats = 10
 		diplomatic_range = 500
-		great_power_score_exempt_from_forfeit = 100
+		great_power_score_exempt_from_forfeit = 25
 		
 		num_possible_rivals = 3
-		
+		monthly_diplomats = 0.25
+
 		fort_limit = 1
 		
 		num_possible_artists = 1 
@@ -87,13 +89,14 @@ rank_kingdom = {
 rank_duchy = {
 	color = color_rank_duchy
 	rank_modifier = {
-		great_power_score_exempt_from_forfeit = 50
+		great_power_score_exempt_from_forfeit = 10
 		max_diplomats = 5
 		diplomatic_range = 200
 		
 		num_possible_rivals = 2
 		diplomatic_capacity = 1
 		cultures_capacity = 0.5
+		monthly_diplomats = 0.1
 
 		allowed_alliance = yes
 		allowed_guarantee = yes
