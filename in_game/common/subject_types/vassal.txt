@@ -98,7 +98,7 @@
 	institution_spread_to_subject = monthly_institution_spread_mild
 	
 	overlord_modifier = {
-		monthly_towards_decentralization = societal_value_tiny_monthly_move
+		monthly_towards_decentralization = 0.02
 	}
 
 	

@@ -4,7 +4,7 @@ res_publica_christiana = {
 	
 	potential = { religion.group = religion_group:christian }
 	
-	monthly_diplomats = 0.2
+	monthly_diplomats = 0.1
 	
 	requires = organized_religion
 }

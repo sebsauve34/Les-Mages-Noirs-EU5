@@ -187,7 +187,10 @@ flavor_hab.3 = { #Loss of the Habsburg
 	option = {
 		name = flavor_hab.3.a
 
-		add_prestige = prestige_severe_penalty
+				add_gold = {
+				value = 500
+			}
+
 		#add_legitimacy = legitimacy_severe_penalty
 	}
 }

@@ -189,6 +189,8 @@ diplomatic_range_age_1 = {
 	requires = merchants_and_trade
 	
 	diplomatic_range_modifier = 0.33
+	monthly_diplomats = 0.05
+
 }
 
 spy_construction_renaissance = {
@@ -315,7 +317,8 @@ improve_relation_impact_renaissance = {
 
 	requires = renaissance_development
 	
-	improve_relation_impact = 0.10
+	improve_relation_impact = 0.15
+	monthly_diplomats = 0.05
 
 	ai_weight = {
 		if = {

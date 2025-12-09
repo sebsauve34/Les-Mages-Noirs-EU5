@@ -126,7 +126,7 @@ countries = {
 			belligerent_vs_conciliatory = 10
 			quality_vs_quantity = -5
 			offensive_vs_defensive = -20
-			land_vs_naval = -10
+			land_vs_naval = 20
 			capital_economy_vs_traditional_economy = 90
 			individualism_vs_communalism = -20
 			outward_vs_inward = -30
@@ -294,10 +294,10 @@ countries = {
 		}
 		
 		# severly in debt, and a regency and such..
-		currency_data = {
-			gold = -500
-			government_power = 30
-		}
+		#currency_data = {
+		#	gold = -500
+		#	government_power = 30
+		#}
 		
 	}
 
@@ -2032,7 +2032,7 @@ countries = {
 				veche_republic
 				merchant_republic
 			}
-			ruler = mos_ivan_i_danilovich_kalita_rurikovich
+			ruler = yrv_yaroslav_ivanovich_rurikovich
 
 			ruler_term = { character = kie_rurik start_date = 862.1.1 end_date = 879.1.1 regnal_number = 1 }
 			ruler_term = { character = kie_igor_rurikovich start_date = 879.1.1 end_date = 945.1.1 regnal_number = 1 }
@@ -2943,6 +2943,8 @@ countries = {
 		own_control_core = {
 			suzdal gavrilovskoye ilyinskoye_khovanskoye
 			shuya ivanovo lezhnevo vichuga
+			yuryev_polsky
+
 		}
 
 		starting_technology_level = 3
@@ -3094,11 +3096,12 @@ countries = {
 			przemysl_moscow mushkov_pogost
 			#Principality of Pereyaslavl-Zalessky
 			pereyaslavl alexandrovskaya_sloboda bogorodskoye_pereyaslavl kirzhach poreevo yanovo
+			kolomna borovsk khatun koshira maloyaroslavets serpukhov vereya vysokoye
+
 		}
 
 		own_control_conquered = {
 			#Principality of Kolomna
-			kolomna borovsk khatun koshira maloyaroslavets serpukhov vereya vysokoye
 		}
 
 		starting_technology_level = 3
@@ -3238,7 +3241,7 @@ countries = {
 	#Principality of Yuriev
 	YRV = {
 		own_control_core = {
-			yuryev_polsky
+
 		}
 
 		starting_technology_level = 3
@@ -17522,6 +17525,8 @@ countries = {
 			graz feldbach furstenfeld judenburg kapfenberg leoben liezen maribor murau murzzuschlag rottenmann schladming slovenj_gradec voitsberg weiz #Duchy of Styria
 			linz bad_ischl freistadt gmunden kirchdorf perg rohrbach st_georgen steyr wels #Duchy of Upper Austria
 			st_polten waidhofen feldkirchen leibnitz friesach ptuj wolfsberg
+			skofja_loka
+
 
 		}
 
@@ -33559,6 +33564,8 @@ countries = {
 		own_control_core = {
 			munich ebersberg tolz andechs weilheim schongau landsberg indersdorf wasserburg parsberg
 			pfaffenhofen friedberg ingolstadt neuburg_an_der_donau kitzbuhel kufstein burglengenfeld
+			freising miesbach garmisch
+
 		}
 
 		starting_technology_level = 3
@@ -33930,7 +33937,7 @@ countries = {
 
 	PSS = {	#Passau
 		own_control_core = {
-			Passau
+			passau
 		}
 
 		starting_technology_level = 3
@@ -34413,8 +34420,7 @@ countries = {
 
 	FRE = {	#Freising
 		own_control_core = {
-			freising miesbach garmisch
-			skofja_loka
+
 		}
 
 		starting_technology_level = 3
@@ -57061,7 +57067,7 @@ countries = {
 			telavi alaverdi dusheti gremi omalo rustavi shatili
 			gagi kayen khunani jariekhi
 			hereti balakan bodbe khornabuji qakh
-			panaskerti tortum
+			panaskerti tortum lori spitak
 		}
 
 		own_control_integrated = {
@@ -57151,7 +57157,7 @@ countries = {
 
 	AAI = { #Alastani
 		own_control_core = {
-			akhalkalaki amberd artashavan kumayri lori spitak
+			akhalkalaki amberd artashavan kumayri
 		}
 
 		include = "expl_christian_caucasus"

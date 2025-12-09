@@ -2,8 +2,9 @@
 	left_modifier = {
 		global_crown_estate_power = 0.5
 		global_distance_from_capital_cost_modifier = -0.1
-		
-		counter_espionage = 0.3
+		diplomatic_capacity_modifier = -0.75
+		subject_pays_vassal_cost_modifier = -0.5
+		subject_pays_tributary_cost_modifier -0.5
 		
 		control_importance_modifier = 0.2
 
@@ -11,10 +12,10 @@
 	right_modifier = {
 		global_estate_target_satisfaction = medium_permanent_target_satisfaction
 		global_estate_satisfaction_recovery = 0.002
+		subject_pays_tributary_cost_modifier = 0.5
+		subject_loyalty = 30
+		subject_pays_vassal_cost_modifier = 0.5
 
-		subject_loyalty = 40
-		counter_espionage = -0.3
-		
 		control_importance_modifier = -0.1
 	}
 
@@ -207,7 +208,7 @@ quality_vs_quantity = {
 		bias_for_militarist_policies = 50
 	}
 	right_modifier = {
-		possible_frontage_modifier = 0.25
+		possible_frontage_modifier = 0.1
 		food_consumption_modifier = -0.1
 		
 		army_initiative = -0.25
@@ -225,22 +226,22 @@ offensive_vs_defensive = {
 		siege_ability = 0.1
 		assault_ability = 0.1
 		
-		global_defensive = -0.5
+		global_defensive = -0.25
 		army_movement_speed = 0.1
 		defence_importance_modifier = -0.2
 		bias_for_militarist_policies = 50
 
-		antagonism_declared_war_no_cb_giving_modifier = -0.1
+		army_artillery_maintenance_cost_modifier = -0.1
 	}
 	right_modifier = {
 		fort_maintenance_cost = -0.2
 		combat_speed_modifier = 0.1
 		
-		global_defensive = 0.5
+		global_defensive = 0.25
 		army_movement_speed = -0.1
 		defence_importance_modifier = 0.2
 		bias_for_diplomat_policies = 50
-		fort_limit_modifier = 0.5
+		fort_limit_modifier = 0.25
 	}
 }
 
