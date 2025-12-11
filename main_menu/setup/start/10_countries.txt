@@ -1184,6 +1184,7 @@ countries = {
 			stendal osterburg salzwedel gardelegen
 			wittenberge pritzwalk treuenbrietzen
 			angermunde prenzlau
+			lebus ruppin havelberg wittstock
 		}
 
 		own_control_integrated = {
@@ -1357,6 +1358,9 @@ countries = {
 		own_control_core = {
 			weissenfels zwickau rochlitz grimma delitzsch
 			leipzig chemnitz altenburg
+			wurzen
+			glauchau
+
 		}
 		starting_technology_level = 3
 		include = "expl_western_europe"
@@ -1404,6 +1408,8 @@ countries = {
 		own_control_core = {
 			meissen sayda freiberg dresden
 			pirna annaburg
+			torgau liebenwerda
+
 		}
 		starting_technology_level = 3
 		include = "expl_western_europe"
@@ -1556,7 +1562,7 @@ countries = {
 
 	BRG = {	#Berg
 		own_control_core = {
-			dusseldorf remscheid siegburg solingen
+			
 		}
 
 		starting_technology_level = 3
@@ -4346,7 +4352,7 @@ countries = {
 			abbeville montreuil #Ponthieu
 		}
 		own_control_conquered = {
-			berwick
+			
 		}
 
 		include = "catholic_monarchy"
@@ -4938,14 +4944,14 @@ countries = {
 		own_control_core = {
 			glasgow paisley dumbarton aberdeen dunbar banff dunfermline st_andrews dundee buchan mar inverurie stonehaven clackmannan aberfeldy irvine
 			oban inverary cowal forfar arbroath arran selkirk scone
-			dornoch durness tongue	
+			dornoch durness tongue thurso berwick
+			perth strathearn cupar stirling
 		}	
 		own_control_conquered = {
-			thurso
+			
 		}
 
 		our_cores_conquered_by_others = {
-			berwick
 			perth kirkcudbright kenmure stranraer
 			edinburgh stirling roxburgh dumfries lanark ayr
 			strathearn cupar
@@ -5073,8 +5079,8 @@ countries = {
 
 	SBL = { # Balliol Pretender
 		own_control_core = {
-			kirkcudbright kenmure stranraer ayr perth edinburgh stirling roxburgh linlithgow duns dumfries lanark
-			strathearn cupar
+			kirkcudbright kenmure stranraer ayr edinburgh roxburgh linlithgow duns dumfries lanark
+			 
 		}
 		our_cores_conquered_by_others = {
 			glasgow paisley dumbarton aberdeen dunbar elgin banff dunfermline st_andrews dundee buchan mar inverurie stonehaven clackmannan aberfeldy irvine dornoch durness tongue
@@ -34542,7 +34548,7 @@ countries = {
 
 	BMS = {  # Bishopric of Meissen
 		own_control_core = {
-			wurzen
+			
 		}
 		starting_technology_level = 3
 		include = "expl_western_europe"
@@ -34566,7 +34572,7 @@ countries = {
 
 	BLB = {  # Bishopric of Lebus
 		own_control_core = {
-			lebus
+			
 		}
 		starting_technology_level = 3
 		include = "expl_western_europe"
@@ -34629,7 +34635,7 @@ countries = {
 
 	BSK = {  # Beeskow-Starkow
 		own_control_core = {
-			beeskow
+			
 		}
 		starting_technology_level = 3
 		include = "expl_western_europe"
@@ -34786,7 +34792,7 @@ countries = {
 
 	WDE = {  # Waldeck (North Germany)
 		own_control_core = {
-			korbach
+			
 		}
 		starting_technology_level = 3
 		include = "expl_western_europe"
@@ -35408,7 +35414,7 @@ countries = {
 
 	FUR = {  # Fürstenberg (South Germany)
 		own_control_core = {
-			furstenberg
+			
 		}
 		starting_technology_level = 3
 		include = "expl_western_europe"
@@ -35646,7 +35652,7 @@ countries = {
 
 	TUB = {  # Tübingen (South Germany)
 		own_control_core = {
-			tubingen
+			
 		}
 		starting_technology_level = 3
 		include = "expl_western_europe"
@@ -35897,6 +35903,11 @@ countries = {
 			stuttgart goppingen sigmaringen welzheim backnang urach nagold riedlingen oberndorf calw
 			bonndorf villingen waldshut #Landgraviate of Breisgau
 			schaffhausen
+			tubingen
+			vaihingen
+			hohenberg horb
+			furstenberg
+
 
 		}
 
@@ -35924,7 +35935,7 @@ countries = {
 
 	OET = {	#Oettingen
 		own_control_core = {
-			oettingen vaihingen
+			oettingen
 		}
 
 		starting_technology_level = 3
@@ -36123,7 +36134,7 @@ countries = {
 
 	HHB = {	#Hohenberg
 		own_control_core = {
-			hohenberg horb
+			
 		}
 
 		starting_technology_level = 3
@@ -36606,6 +36617,7 @@ countries = {
 	SOR = { #Lusatia
 		own_control_core = {
 			cottbus guben lubben luckau calau zossen
+			beeskow
 		}
 		starting_technology_level = 3
 		include = "expl_western_europe"
@@ -36655,7 +36667,7 @@ countries = {
 
 	GLA = { #Glauchau
 		own_control_core = {
-			glauchau
+
 		}
 
 		starting_technology_level = 3
@@ -36687,8 +36699,7 @@ countries = {
 
 	SWB = { #Saxe-Wittenberg
 		own_control_core = {
-			wittenberg belzig schweinitz bitterfeld torgau liebenwerda
-		}
+			wittenberg belzig schweinitz bitterfeld 		}
 
 		starting_technology_level = 3
 		include = "catholic_monarchy_no_coast"
@@ -36719,7 +36730,7 @@ countries = {
 
 	RUP = { #Ruppin
 		own_control_core = {
-			ruppin
+			
 		}
 
 		starting_technology_level = 3
@@ -36749,7 +36760,7 @@ countries = {
 
 	HVB = {	#Havelberg
 		own_control_core = {
-			havelberg wittstock
+			
 		}
 
 		starting_technology_level = 3
@@ -37541,6 +37552,8 @@ countries = {
 		own_control_core = {
 			kassel rotenburg eschwege frankenberg marburg alsfeld
 			giessen melsungen
+			ziegenhain
+			korbach
 		}
 
 		starting_technology_level = 3
@@ -37600,7 +37613,7 @@ countries = {
 
 	ZIG = {	#Ziegenhain
 		own_control_core = {
-			ziegenhain
+			
 		}
 
 		starting_technology_level = 3
@@ -37939,6 +37952,7 @@ countries = {
 		own_control_core = {
 			cologne ahrweiler neuss attendorn brilon soest recklinghausen
 			bonn
+			dusseldorf remscheid siegburg solingen
 		}
 
 		starting_technology_level = 3

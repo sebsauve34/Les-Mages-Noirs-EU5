@@ -168,7 +168,6 @@ diplomacy_manager = {
 
     #-------France-------
 	#Auld Alliance
-	scripted_oneway = { first = FRA second = SCO type = guarantee }
 	scripted_mutual = { first = FRA second = BRI type = alliance }
 
     #Appanages
@@ -235,12 +234,14 @@ diplomacy_manager = {
     scripted_mutual = { first = RIM second = CES type = alliance }
 
     dependency = { first = PAP second = FAE subject_type = vassal }
-
+	
     dependency = { first = SAV second = CEV subject_type = vassal }
     dependency = { first = SAV second = AOS subject_type = fiefdom }
     dependency = { first = SAV second = GNV subject_type = vassal start_date = 1329.1.1 }
     dependency = { first = SAV second = PIE subject_type = appanage }
     dependency = { first = SAV second = VUD subject_type = appanage }
+    dependency = { first = SAV second = DAU subject_type = appanage }
+
 
     dependency = { first = VER second = PAD subject_type = vassal }
     dependency = { first = VER second = PAR subject_type = vassal }

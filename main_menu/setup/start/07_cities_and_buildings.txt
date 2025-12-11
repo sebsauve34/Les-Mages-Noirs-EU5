@@ -296,7 +296,9 @@ locations={
 	ravensburg = { rank = town town_setup = german_town }
 	rothenburg = { rank = town town_setup = german_town }
 	soest = { rank = town town_setup = german_town }
-	stuttgart = { rank = town town_setup = german_town }
+	stuttgart = { rank = city town_setup = german_city }
+	tubingen = { rank = town town_setup = german_town }
+	kassel = { rank = town town_setup = german_town }
 	ulm = { rank = town town_setup = german_town }
 	trier = { rank = town town_setup = german_town }
 	dusseldorf = { rank = town town_setup = german_town }

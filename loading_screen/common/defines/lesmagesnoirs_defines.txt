@@ -1,7 +1,7 @@
 NCountry = {
 
  	PREVIOUS_AGE_REDUCTION = -10
-	MERCHANT_MAINTENANCE_COST = 0.05
+	MERCHANT_MAINTENANCE_COST = 0.25
 
 
 }
@@ -9,7 +9,6 @@ NCountry = {
 
 NAI = {
 	USE_REGULARS_IN_WAR_WEIGHT_MULT = 50
-	AI_HEAVY_DEBT_THRESHOLD = 0.9		#if total debt is >% of max debt
 	MONTHLY_MANPOWER_PER_BASE_TAX_REFERENCE = 0.015 # This is how big manpower pool AI wants based on their tax base
 	MAXIMUM_MANPOWER_MAXIMUM_VALUE = 10 # This is how hard they will try to reach their manpower pool target
 	AI_ESSENTIAL_MANPOWER_UTILITY_VALUE = 0.5 # This is how hard they will try to reach their essential manpower pool target, which is enough to maintain their armies and have enough replenishment to rebuild them fast

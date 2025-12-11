@@ -492,7 +492,7 @@ diplomatic_capacity_traditions = {
 
 	requires = guilds
 	diplomatic_capacity_modifier = 0.2
-	monthly_diplomats = 0.1
+	monthly_diplomats = 0.05
 }
 
 rural_rgo_traditions = {
