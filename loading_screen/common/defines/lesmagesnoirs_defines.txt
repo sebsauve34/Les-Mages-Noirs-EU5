@@ -9,11 +9,6 @@ NCountry = {
 
 NAI = {
 	USE_REGULARS_IN_WAR_WEIGHT_MULT = 50
-	MONTHLY_MANPOWER_PER_BASE_TAX_REFERENCE = 0.015 # This is how big manpower pool AI wants based on their tax base
-	MAXIMUM_MANPOWER_MAXIMUM_VALUE = 10 # This is how hard they will try to reach their manpower pool target
-	AI_ESSENTIAL_MANPOWER_UTILITY_VALUE = 0.5 # This is how hard they will try to reach their essential manpower pool target, which is enough to maintain their armies and have enough replenishment to rebuild them fast
-	MAX_LOAN_FOR_TROOPS = 0.25 # How many % in debt the AI can be before they stop buying troops with loans
-	AI_ALLOWED_ARMY_CONSTRUCTIONS_TAX_BASE_DIVIDER = 80 # Taxbase divided by this is how many parallel armies constructions AI is allowed
 
 
 }

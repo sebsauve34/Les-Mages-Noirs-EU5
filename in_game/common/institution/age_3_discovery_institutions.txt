@@ -22,7 +22,7 @@
 				has_owner = yes
 				is_port = yes
 				num_pop_type:burghers >= 2.0
-				dominant_culture = owner.culture
+				#dominant_culture = owner.culture
 				owner = {
 					OR = {
 						has_discovered_area = area:azores_area
@@ -62,9 +62,9 @@ printing_press = {
 	can_spawn = {
 
 		OR = {
-					sub_continent = sub_continent:western_europe
-					sub_continent = sub_continent:north_africa
-				}
+			sub_continent = sub_continent:western_europe
+			sub_continent = sub_continent:north_africa
+		}
 	
 		OR = {
 			AND = {

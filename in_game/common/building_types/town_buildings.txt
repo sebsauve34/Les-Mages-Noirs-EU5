@@ -360,7 +360,7 @@ fortress_granary = { #https://en.wikipedia.org/wiki/Agadir_(granary)
 
 wharf = {
 	is_foreign = no
-	max_levels = 1
+	max_levels = 2
 	pop_type = burghers
 
 	employment_size = small_burgher_employment
