@@ -6,8 +6,8 @@
 	pop_type = burghers
 	country_potential = {
 		OR = {
-		tag = HSA
-		tag = GEN
+		has_or_had_tag = HSA
+		has_or_had_tag = GEN
 		has_reform = government_reform:merchant_republic 
 		}
 	}
@@ -208,8 +208,8 @@ overseas_trading_post = {
 	category = colonial_category
 	country_potential = {
 		OR = {
-		tag = HSA
-		tag = GEN
+		has_or_had_tag = HSA
+		has_or_had_tag = GEN
 		has_reform = government_reform:merchant_republic 
 		}
 	}
