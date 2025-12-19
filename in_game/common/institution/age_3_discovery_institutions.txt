@@ -18,6 +18,8 @@
 				OR = {
 					sub_continent = sub_continent:western_europe
 					sub_continent = sub_continent:north_africa
+					sub_continent = sub_continent:eastern_europe
+
 				}
 				has_owner = yes
 				is_port = yes
@@ -64,6 +66,8 @@ printing_press = {
 		OR = {
 			sub_continent = sub_continent:western_europe
 			sub_continent = sub_continent:north_africa
+			sub_continent = sub_continent:eastern_europe
+
 		}
 	
 		OR = {

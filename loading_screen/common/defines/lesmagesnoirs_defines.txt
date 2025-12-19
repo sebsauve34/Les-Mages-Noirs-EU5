@@ -1,19 +1,24 @@
 NCountry = {
 
- 	PREVIOUS_AGE_REDUCTION = -10
-	MERCHANT_MAINTENANCE_COST = 0.25
-
+ 	PREVIOUS_AGE_REDUCTION = -10 #-8 vanilla
+	MERCHANT_MAINTENANCE_COST = 0.25 #changed every patch vanilla
+	
 
 }
 
 
 NAI = {
-	USE_REGULARS_IN_WAR_WEIGHT_MULT = 50
+	USE_REGULARS_IN_WAR_WEIGHT_MULT = 50 #20 vanilla
+	TARGET_SAFE_ANTAGONISM_FOR_AI = 40 #How much antagonism Ai is willing to take before getting a too much antagonism modifier #50 vanilla
+	MINIMUM_MONTHS_BETWEEN_EXPANSION = 18 #6 vanilla
+	NO_CASUS_BELLI_AND_NO_PARLIAMENT_CONQUEST_FACTOR = 0.1 #0.25 vanilla
 
 
 }
 
 NCombat = {
-	GARRISON_AFTER_OCCUPATION = 0.200
+	GARRISON_AFTER_OCCUPATION = 0.200 #im not paying mp for garrison you retards
+	BOMBARD_HOURS = 10 #testing for now 5 vanilla
+	BOMBARD_BASE_CHANCE = 0.15 # 0.2 vanilla too high
 
 }

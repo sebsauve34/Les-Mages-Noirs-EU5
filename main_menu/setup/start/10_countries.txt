@@ -115,7 +115,9 @@ countries = {
 				marriage_law = monogamous_marriage
 				heir_religion_law = heir_same_religion
 			}
-
+			reforms = {
+				alsno_stadga
+			}
 
 			centralization_vs_decentralization = 25
 			traditionalist_vs_innovative = 30
@@ -262,7 +264,7 @@ countries = {
 				name_olaf = 1
 				name_eric = 6
 				name_nicholas = 1
-				name_valdemar = 3
+				name_waldemar = 3
 				name_abel = 1
 				name_christopher = 2
 			}
@@ -1560,39 +1562,7 @@ countries = {
 		dynasty = nassau_dynasty
 	}
 
-	BRG = {	#Berg
-		own_control_core = {
-			
-		}
-
-		starting_technology_level = 3
-		include = "expl_western_europe"
-		include = "catholic_monarchy_no_coast"
-		include = "expl_northern_europe"
-		include = "german_principality"
-		government = {
-
-			ruler = brg_adolf_ix_berg
-
-			ruler_term = {	character = brg_adolf_ix_berg start_date = 1334.1.1 regnal_number = 1	}
-
-			regnal_numbers = {
-				name_adolf = 9
-				name_engelbert = 2
-				name_henry = 4
-				name_william = 1
-			}
-		}
-
-		accepted_cultures = {
-			low_franconian
-		}
-
-		country_rank = rank_county
-		capital = dusseldorf
-		dynasty = limbourg_dynasty
-	}
-
+	
 	MAI = {	#Mainz
 		own_control_core = {
 			mainz aschaffenburg miltenberg buchen tauberbischofsheim
@@ -3244,34 +3214,7 @@ countries = {
 		include = "expl_novgorod"
 	}
 
-	#Principality of Yuriev
-	YRV = {
-		own_control_core = {
-
-		}
-
-		starting_technology_level = 3
-		country_rank = rank_duchy
-
-		government = {
-			type = monarchy
-			heir_selection = cognatic_primogeniture
-			ruler = yrv_yaroslav_ivanovich_rurikovich
-
-			#ruler_term = { character = nov_svyatoslav_iii_vsevolodovich_rurikovich start_date = 1214.1.1 end_date = 1230.1.1 regnal_number = 1 }
-			ruler_term = { character = yrv_dmitriy_svyatoslavich_rurikovich start_date = 1253.1.1 end_date = 1269.1.1 regnal_number = 1 }
-			ruler_term = { character = yrv_yaroslav_dmitrevich_rurikovich start_date = 1269.1.1 end_date = 1279.1.1 regnal_number = 1 }
-			ruler_term = { character = yrv_ivan_dmitrevich_rurikovich start_date = 1279.1.1 end_date = 1310.1.1 regnal_number = 1 }
-			ruler_term = { character = yrv_yaroslav_ivanovich_rurikovich start_date = 1310.1.1 regnal_number = 1 }
-		}
-
-		liturgical_language = church_slavonic_language
-
-		capital = yuryev_polsky
-		include = "russian_principality_no_coast"
-		include = "expl_novgorod"
-	}
-
+	
 	ORE = {
 		own_control_core = {
 			oreshek toksovo korela konevets neva
@@ -4171,12 +4114,12 @@ countries = {
 
 		accepted_cultures = {
 			crimean
-
 		}
 
 
 		tolerated_cultures = {
 			mishar
+			mongolian_culture
 			bashkir
 			uzbek_culture
 			yerle_qaliq_culture
@@ -4423,10 +4366,12 @@ countries = {
 				noble_marriage_rights
 				noble_fortification_licenses
 				manorial_courts
+				primacy_of_nobility
 
 				#burghers
 				formal_guilds
 				market_fairs
+				shipwright_contracts
 
 				#clergy
 				clergy_literacy_rights
@@ -4435,6 +4380,7 @@ countries = {
 				#peasants
 				peasants_yeomanry
 				access_to_royal_and_ecclesiastical_courts
+				peasants_allowed_weapons_privilege
 			}
 			laws = {
 				distribution_of_power_law = dop_law_english_parliament
@@ -9608,49 +9554,7 @@ countries = {
 		capital = cremona
 	}
 
-	CRR = {
-		own_control_core = {
-
-		}
-
-		starting_technology_level = 3
-		include = "expl_mediterranean"
-		include = "expl_silk_road_west"
-		include = "expl_silk_road_center"
-		include = "expl_silk_road_east"
-		include = "expl_indian_trade_route"
-		include = "catholic_monarchy"
-		government = {
-			ruler = crr_giorgio_del_carretto
-			consort = crr_leonora_fieschi
-
-			ruler_term = { character = crr_enrico_i_del_carretto start_date = 1162.1.1 end_date = 1185.1.1 regnal_number = 1 }
-			ruler_term = { character = crr_enrico_ii_del_carretto start_date = 1185.1.1 end_date = 1231.1.1 regnal_number = 2 }
-			ruler_term = { character = crr_giacomo_i_del_carretto start_date = 1231.1.1 end_date = 1268.10.21 regnal_number = 1 }
-			ruler_term = { character = crr_antonio_del_carretto start_date = 1268.10.21 end_date = 1313.1.1 regnal_number = 1 }
-			ruler_term = { character = crr_giorgio_del_carretto start_date = 1313.1.1 regnal_number = 1 }
-
-			regnal_numbers = {
-				name_henry = 2
-				name_james = 1
-				name_anthony = 1
-				name_george = 1
-			}
-
-			laws = {
-				mining_law = nobles_mining_law
-			}
-		}
-
-		tolerated_cultures = {
-			ligurian
-		}
-
-		country_rank = rank_county
-		capital = cairo_montenotte
-		dynasty = aleramici_dynasty
-	}
-
+	
 	FAB = { #Annexed by Urbino on 1327, Alberghetto II restored independence in 1344
 		our_cores_conquered_by_others = {
 			fabriano
@@ -13042,12 +12946,13 @@ countries = {
 			krusevac kucevo branicevo rudnik smederevo krupanj valjevo uzice pljevlja
 			gradac zica trgoviste_SER sjenica velbuzd
 			arilje brvenik medveda
+			belgrad debrc sabac
 		}
 		own_control_integrated = {
 			koman has dukagjini lezha florina
 		}
 		our_cores_conquered_by_others = {
-			slano mostar konjic belgrad debrc sabac
+			slano mostar konjic
 		}
 		starting_technology_level = 3
 		include = "expl_mediterranean"
@@ -13109,6 +13014,7 @@ countries = {
 			vrhbosna konjic srebrenica doboj soli
 			jajce livno drijeva zenica kljuc srebrenik
 			kozara glaz teocak olovo borac nevesinje
+			gradiski_brod
 		}
 
 		starting_technology_level = 3
@@ -13262,6 +13168,7 @@ countries = {
 		own_control_core = {
 			sibenik kaseg knin novigrad crikvenica senj
 			bihac krk makarska srb sinj otocac
+			dubica petrinja slunj karlovac
 		}
 		our_cores_conquered_by_others = {
 			zadar split
@@ -13273,14 +13180,13 @@ countries = {
 			type = monarchy
 			heir_selection = cognatic_primogeniture
 
-			ruler = hun_karoly_robert
+			ruler = random
 
 			ruler_term = { character = hun_bela_iv_arpad start_date = 1235.9.21 end_date = 1270.5.3 }
 			ruler_term = { character = hun_stephen_v_arpad start_date = 1270.5.3 end_date = 1272.1.1 }
 			ruler_term = { character = hun_ladislaus_iv_arpad start_date = 1272.1.1 end_date = 1290.1.1 }
 			ruler_term = { character = cro_martell_karoly start_date = 1290.1.1 end_date = 1295.1.1 }
 			ruler_term = { character = hun_andrew_iii_arpad start_date = 1295.1.1 end_date = 1301.1.14 }
-			ruler_term = { character = hun_karoly_robert start_date = 1301.1.14 regnal_number = 1 }
 		}
 
 		tolerated_cultures = {
@@ -17181,7 +17087,7 @@ countries = {
 		include = "catholic_monarchy_no_coast"
 		include = "german_principality"
 		government = {
-			ruler = boh_john_luxembourg
+			ruler = cjk_otto_van_cuijk
 
 			ruler_term = { character = fcb_otton_hohenstaufen start_date = 1196.8.14 end_date = 1197.1.1 regnal_number = 1 }
 
@@ -17420,7 +17326,7 @@ countries = {
 	BRB = {
 		own_control_core = {
 			brussels nivelles leuven mechelen antwerp turnhout eindhoven
-			bergen_zoom breda hertogenbosch helmond
+			bergen_zoom breda hertogenbosch helmond cuijk
 		}
 
 		starting_technology_level = 3
@@ -17531,7 +17437,7 @@ countries = {
 			graz feldbach furstenfeld judenburg kapfenberg leoben liezen maribor murau murzzuschlag rottenmann schladming slovenj_gradec voitsberg weiz #Duchy of Styria
 			linz bad_ischl freistadt gmunden kirchdorf perg rohrbach st_georgen steyr wels #Duchy of Upper Austria
 			st_polten waidhofen feldkirchen leibnitz friesach ptuj wolfsberg
-			skofja_loka
+			skofja_loka bled
 
 
 		}
@@ -17602,10 +17508,8 @@ countries = {
 	HUN = {	#Hungary
 		own_control_core = {
 			osijek
-			aiud hunedoara cincu
-			cristuru_secuiesc reghin
 			mezhorje sighet
-			baita carei hodod
+			carei hodod
 			recas semlacu_mare
 			cheresig ineu lipova mako oradea szarvas
 			baja_hungary
@@ -17620,8 +17524,6 @@ countries = {
 			povazska_bystrica zilina
 			pancevo
 			kikinda titel modos
-			belgrad debrc sabac
-			gradiski_brod dubica
 			buda pest kalocsa felegyhaza
 			sopron vasvar magyarovar zalavar
 			veszprem gyor komarom fehervar esztergom
@@ -17632,22 +17534,19 @@ countries = {
 			trencin oravsky_podzamok turciansky_svaty_martin liptovsky_mikulas
 			gemer rimavska_sobota levoca lubica presov turna
 			zemplin kosice humenne uzhorod beregovo
-			miercurea_cluc chezdi_osorheiu covasna odorhei gheorgheni
-			bistrita cuhea rakhiv khust sic dej
-			turda targu_mures cetatea_balta felvint cluj
-			fagaras sibiu sebes alba_iulia medias sighisoara brasov sfantu_gheorghe
-			hateg caransebes lugoj deva
-			bihar beius baia_de_aries huedin crasna
+			cuhea rakhiv khust
+			caransebes lugoj
+			bihar beius crasna
 			debrecen nagyboszormeny nagykallo nagyecsed varda szatmar syvlyush zalau baia_mare
 			szolnok eger karcag borsod
 			bekes csanad szeged
 			kovin veliky_beckerek carasova mihalt
 			timisoara arad zarand
-			dabaca baia_crisului gurghiu
+			baia_crisului
 			#Banate of Croatia
 			bjelovar koprivnica kutina pakrac vaska virovitica
 			vukovar ilok pozega sremska_mitrovica petrovaradin
-			zagreb cakovec karlovac petrinja sisak slunj varazdin
+			zagreb cakovec sisak varazdin
 		}
 
 		own_control_integrated = {
@@ -17893,14 +17792,15 @@ countries = {
 	}
 
 	TRA = { #Transylvania
-		our_cores_conquered_by_others = {
+				own_control_core = {
 			dabaca baita bistrita dej sic #doboka_province
 			alba_iulia aiud cetatea_balta deva felvint hateg hunedoara #feher_province
 			turda baia_de_aries cluj huedin reghin #torda_province
 			sibiu brasov cincu fagaras medias sebes sighisoara #kiralyfold_province
 			targu_mures chezdi_osorheiu covasna cristuru_secuiesc gheorgheni gurghiu odorhei sfantu_gheorghe miercurea_cluc #szekelyfold_province
+
 		}
-		starting_technology_level = 3
+				starting_technology_level = 3
 		include = "expl_eastern_europe"
 		include = "eastern_european_catholic_monarchy_no_auxilium_no_coast_not_present"
 		government = {
@@ -18145,6 +18045,9 @@ countries = {
 
 		capital = rodos
 		dynasty = villeneuve_dynasty
+
+		country_rank = rank_duchy
+
 	}
 
 	NEG = { #Negroponte https://en.wikipedia.org/wiki/Triarchy_of_Negroponte
@@ -32753,9 +32656,11 @@ countries = {
 		country_rank = rank_kingdom
 		capital = baghdad
 		court_language = persian_language
+
+
 		tolerated_cultures = {
 			iraqi_culture
-			adhari_culture
+			mongolian_culture
 			azeri_culture
 			kurdish_culture
 			armenian_culture
@@ -33788,38 +33693,14 @@ countries = {
 		capital = augsburg
 	}
 
-	BXN = {	#Brixen
-		own_control_core = {
-			brixen bled
-		}
 
-		starting_technology_level = 3
-		include = "expl_western_europe"
-		include = "catholic_german_bishopric_no_coast"
-		include = "expl_northern_europe"
-		government = {
-			ruler = bxn_matthaus_an_der_Gassen
-
-			reforms = {
-				prince_bishopric_reform
-			}
-
-			ruler_term = { character = bxn_matthaus_an_der_Gassen start_date = 1336.11.2 regnal_number = 0 }
-		}
-
-		tolerated_cultures = {
-			slovene
-		}
-
-		country_rank = rank_county
-		capital = brixen
-	}
 
 	TIR = {	#Tirol
 		own_control_core = {
 			schwaz innsbruck
 			imst reutte landeck
 			merano sterzing villandro bolzano silandro
+			brixen
 		}
 
 		starting_technology_level = 3
@@ -34424,33 +34305,7 @@ countries = {
 		dynasty = turn_dynasty
 	}
 
-	FRE = {	#Freising
-		own_control_core = {
-
-		}
-
-		starting_technology_level = 3
-		include = "expl_western_europe"
-		include = "catholic_german_bishopric_no_coast"
-		include = "expl_northern_europe"
-		capital = freising
-		government = {
-			ruler = random
-
-			reforms = {
-				prince_bishopric_reform
-			}
-		}
-
-		tolerated_cultures = {
-			southern_bavarian
-			slovene
-		}
-
-		country_rank = rank_county
-
-	}
-
+	
 	BRC = {	#Berchtesgaden
 		own_control_core = {
 			berchtesgaden
@@ -34546,57 +34401,7 @@ countries = {
 
 	}
 
-	BMS = {  # Bishopric of Meissen
-		own_control_core = {
-			
-		}
-		starting_technology_level = 3
-		include = "expl_western_europe"
-		include = "catholic_german_bishopric_no_coast"
-		include = "expl_northern_europe"
-		government = {
-			ruler = bms_withego_ii_colditz
-			ruler_term = {	character = bms_withego_ii_colditz start_date = 1312.1.1 }
-			reforms = {
-				prince_bishopric_reform
-			}
-		}
-
-		tolerated_cultures = {
-			sorbian
-		}
-
-		country_rank = rank_county
-		capital = wurzen
-	}
-
-	BLB = {  # Bishopric of Lebus
-		own_control_core = {
-			
-		}
-		starting_technology_level = 3
-		include = "expl_western_europe"
-		include = "catholic_german_bishopric_no_coast"
-		include = "expl_northern_europe"
-		government = {
-			ruler = blb_stefan_ii
-			ruler_term = {	character = blb_stefan_ii start_date = 1326.1.1 }
-
-			laws = {
-				mining_law = nobles_mining_law
-			}
-			reforms = {
-				prince_bishopric_reform
-			}
-		}
-		tolerated_cultures = {
-			greater_polish
-			brandenburgish
-		}
-		country_rank = rank_county
-		capital = lebus
-	}
-
+		
 	BBD = {  # Bishopric of Brandenburg
 		our_cores_conquered_by_others = {
 			brandenburg
@@ -34633,25 +34438,7 @@ countries = {
 		capital = pinneberg
 	}
 
-	BSK = {  # Beeskow-Starkow
-		own_control_core = {
-			
-		}
-		starting_technology_level = 3
-		include = "expl_western_europe"
-		include = "expl_northern_europe"
-		include = "catholic_monarchy_no_coast"
-		include = "german_principality"
-		government = {
-			ruler = random
-		}
-		tolerated_cultures = {
-			sorbian
-		}
-		country_rank = rank_county
-		capital = beeskow
-	}
-
+	
 	MSO = {  # Mesocco
 		own_control_core = {
 			mesocco
@@ -34790,37 +34577,7 @@ countries = {
 		capital = aosta
 	}
 
-	WDE = {  # Waldeck (North Germany)
-		own_control_core = {
-			
-		}
-		starting_technology_level = 3
-		include = "expl_western_europe"
-		include = "expl_northern_europe"
-		include = "catholic_monarchy_no_coast"
-		include = "german_principality"
-		government = {
-			ruler = wde_henry_iv_von_waldeck
-
-			ruler_term = { character = wde_adolph_i_von_waldeck start_date = 1214.1.1 end_date = 1267.1.1 regnal_number = 1 }
-			ruler_term = { character = wde_henry_iii_von_waldeck start_date = 1267.1.1 end_date = 1270.10.3 regnal_number = 3 }
-			ruler_term = { character = wde_adolph_ii_von_waldeck start_date = 1270.10.3 end_date = 1302.12.13 regnal_number = 2 }
-			ruler_term = { character = wde_otto_i_von_waldeck start_date = 1302.12.13 end_date = 1305.11.11 regnal_number = 1 }
-			ruler_term = { character = wde_henry_iv_von_waldeck start_date = 1305.11.11 regnal_number = 4 }
-
-			regnal_numbers = {
-				name_adolf = 2
-				name_henry = 4
-				name_otto = 1
-			}
-		}
-		tolerated_cultures = {
-			angrian
-		}
-		country_rank = rank_county
-		capital = korbach
-	}
-
+	
 	RBG = {  # Rietberg (North Germany)
 		own_control_core = {
 			rietberg
@@ -35412,34 +35169,8 @@ countries = {
 		capital = holzminden
 	}
 
-	FUR = {  # Fürstenberg (South Germany)
-		own_control_core = {
-			
-		}
-		starting_technology_level = 3
-		include = "expl_western_europe"
-		include = "expl_northern_europe"
-		include = "catholic_monarchy_no_coast"
-		include = "german_principality"
-		government = { ruler = random }
-		country_rank = rank_county
-		capital = furstenberg
-	}
-
-	GRK = {  # Gurk (South Germany)
-		own_control_core = {
-			
-		}
-		starting_technology_level = 3
-		include = "expl_western_europe"
-		include = "expl_northern_europe"
-		include = "catholic_monarchy_no_coast"
-		include = "german_principality"
-		government = { ruler = random }
-		country_rank = rank_county
-		capital = feldkirchen
-	}
-
+	
+	
 	HAC = {  # Hachberg (Baden) (South Germany)
 		own_control_core = {
 			hachberg
@@ -35650,20 +35381,7 @@ countries = {
 		capital = stockach
 	}
 
-	TUB = {  # Tübingen (South Germany)
-		own_control_core = {
-			
-		}
-		starting_technology_level = 3
-		include = "expl_western_europe"
-		include = "expl_northern_europe"
-		include = "catholic_monarchy_no_coast"
-		include = "german_principality"
-		government = { ruler = random }
-		country_rank = rank_county
-		capital = tubingen
-	}
-
+	
 	REG = {	#Regensburg
 		own_control_core = {
 			regensburg
@@ -36132,39 +35850,7 @@ countries = {
 		capital = uberlingen
 	}
 
-	HHB = {	#Hohenberg
-		own_control_core = {
-			
-		}
 
-		starting_technology_level = 3
-		include = "expl_western_europe"
-		include = "catholic_monarchy_no_coast"
-		include = "expl_northern_europe"
-		include = "german_principality"
-		government = {
-			regency = consort_regency
-			active_regent = hhb_margaretha_nassau_hademar
-			start_regency_date = 1336.1.11
-			end_regency_date = 1348.1.1
-			heir = hhb_rudolf_iii_hohenberg_rotenburg
-
-			ruler_term = { character = hhb_burkhard_ii_hohenberg start_date = 1139.1.1 end_date = 1152.1.1 regnal_number = 2 }
-			ruler_term = { character = hhb_burkhard_iii_hohenberg start_date = 1152.1.1 end_date = 1193.7.4 regnal_number = 3 }
-			ruler_term = { character = hhb_burkhard_iv_hohenberg start_date = 1193.7.4 end_date = 1225.1.1 regnal_number = 4 }
-			ruler_term = { character = hhb_burkhard_v_hohenberg start_date = 1225.1.1 end_date = 1253.7.14 regnal_number = 5 }
-			ruler_term = { character = hhb_albrecht_ii_hohenberg_rotenburg start_date = 1253.7.14 end_date = 1298.4.17 regnal_number = 2 }
-			ruler_term = { character = hhb_rudolf_hohenberg_rotenburg start_date = 1298.4.17 end_date = 1336.1.11 regnal_number = 1 }
-
-			regnal_numbers = {
-				name_burchard = 5
-				name_albert = 2
-				name_rudolf = 2
-			}
-		}
-		country_rank = rank_county
-		capital = hohenberg
-	}
 
 	FBG = {	#Freiburg
 		own_control_core = {
@@ -36665,38 +36351,7 @@ countries = {
 		country_rank = rank_county
 	}
 
-	GLA = { #Glauchau
-		own_control_core = {
-
-		}
-
-		starting_technology_level = 3
-		include = "expl_western_europe"
-		include = "catholic_monarchy_no_coast"
-		include = "expl_northern_europe"
-		include = "german_principality"
-		government = {
-
-			ruler = gla_friedrich_vii_schonberg
-
-			ruler_term = {	character = gla_friedrich_vi_schonberg start_date = 1310.1.1 end_date = 1328.1.1 regnal_number = 6	}
-			ruler_term = {	character = gla_friedrich_vii_schonberg start_date = 1328.1.1 regnal_number = 7	}
-
-			regnal_numbers = {
-				name_frederick = 7
-			}
-		}
-
-		tolerated_cultures = {
-			east_franconian
-			sorbian
-		}
-
-		country_rank = rank_county
-		capital = glauchau
-		dynasty = schonburg_dynasty
-	}
-
+	
 	SWB = { #Saxe-Wittenberg
 		own_control_core = {
 			wittenberg belzig schweinitz bitterfeld 		}
@@ -36728,63 +36383,8 @@ countries = {
 		dynasty = askanier_dynasty
 	}
 
-	RUP = { #Ruppin
-		own_control_core = {
-			
-		}
-
-		starting_technology_level = 3
-		include = "catholic_monarchy_no_coast"
-		include = "expl_northern_europe"
-		include = "german_principality"
-		government = {
-
-			ruler = rup_ulrich_ii_ruppin
-
-			ruler_term = {	character = rup_ulrich_i_ruppin start_date = 1270.1.1 end_date = 1316.1.1 regnal_number = 1	}
-			ruler_term = {	character = rup_ulrich_ii_ruppin start_date = 1316.1.1 regnal_number = 2	}
-
-			regnal_numbers = {
-				name_gebhard = 1
-				name_ulrick = 2
-			}
-		}
-
-		tolerated_cultures = {
-			polabian
-		}
-
-		capital = ruppin
-		dynasty = lindow_ruppin_dynasty
-	}
-
-	HVB = {	#Havelberg
-		own_control_core = {
-			
-		}
-
-		starting_technology_level = 3
-		include = "expl_western_europe"
-		include = "catholic_german_bishopric_no_coast"
-		include = "expl_northern_europe"
-		government = {
-
-			ruler = hvb_dietrich_i_kothe
-			ruler_term = {	character = hvb_dietrich_i_kothe start_date = 1324.1.1 regnal_number = 1	}
-
-			regnal_numbers = {
-				name_henry = 3
-				name_john = 2
-			}
-		}
-
-		tolerated_cultures = {
-			polabian
-		}
-
-		capital = havelberg
-	}
-
+	
+	
 	SWR = { #Schwerin
 		own_control_core = {
 			schwerin butzow
@@ -37611,33 +37211,7 @@ countries = {
 		capital = paderborn
 	}
 
-	ZIG = {	#Ziegenhain
-		own_control_core = {
-			
-		}
-
-		starting_technology_level = 3
-		include = "expl_western_europe"
-		include = "catholic_monarchy_no_coast"
-		include = "expl_northern_europe"
-		include = "german_principality"
-		government = {
-
-			ruler = zig_johann_i_ziegenhain
-			ruler_term = {	character = zig_gottfried_vi_ziegenhain start_date = 1272.1.1 end_date = 1304.11.30 regnal_number = 6	}
-			ruler_term = {	character = zig_johann_i_ziegenhain start_date = 1304.11.30 regnal_number = 1	}
-
-			regnal_numbers = {
-				name_godfrey = 6
-				name_engelbert = 1
-				name_john = 1
-			}
-		}
-		country_rank = rank_county
-		capital = ziegenhain
-		dynasty = ziegenhain_dynasty
-	}
-
+	
 	HNA = {	#Hanau
 		own_control_core = {
 			hanau
@@ -39164,35 +38738,7 @@ countries = {
 		dynasty = horne_dynasty
 	}
 
-	CJK = { #Cuijk
-		own_control_core = {
-			cuijk
-		}
-
-		starting_technology_level = 3
-		include = "expl_western_europe"
-		include = "catholic_monarchy_no_coast"
-		include = "german_principality"
-		government = {
-
-			ruler = cjk_otto_van_cuijk
-			ruler_term = {	character = cjk_jan_i_van_cuijk start_date = 1285.1.1 end_date = 1320.1.1 regnal_number = 1	}
-			ruler_term = {	character = cjk_otto_van_cuijk start_date = 1320.1.1 regnal_number = 1	}
-
-			regnal_numbers = {
-				name_otto = 1
-				name_john = 1
-			}
-
-			aristocracy_vs_plutocracy = -20
-			capital_economy_vs_traditional_economy = -10
-			land_vs_naval = -20
-		}
-		country_rank = rank_county
-		capital = cuijk
-		dynasty = cuijk_dynasty
-	}
-
+	
 	UTR = {	#Utrecht
 		own_control_core = {
 			utrecht amersfoort oldenzaal zwolle deventer kampen assen coevorden meppel
@@ -39972,27 +39518,7 @@ countries = {
 		dynasty = piast_dynasty
 	}
 
-	WRC = {	#Wrocław
-		own_control_core = {
-		}
-		starting_technology_level = 3
-		include = "catholic_monarchy_no_coast"
-		include = "expl_northern_europe"
-		country_rank = rank_duchy
-		government = {
-			type = monarchy
-			heir_selection = cognatic_primogeniture
-			ruler = boh_john_luxembourg
-			ruler_term = {	character = boh_john_luxembourg start_date = 1335.11.24 regnal_number = 1	}
-		}
-
-		tolerated_cultures = {
-			silesian
-		}
-
-		capital = wroclaw
-	}
-
+	
 	NYS = {	#Nysa
 		own_control_core = {
 			nysa grodkow fryvaldov
@@ -44099,7 +43625,9 @@ countries = {
 		court_language = nahuatl_language
 		capital = itzocan
 	}
-
+	reforms = {
+				alsno_stadga
+			}
 	#Axochiapan - AXC
 	AXC = {
 		own_control_core = {
@@ -55701,7 +55229,7 @@ countries = {
 		tolerated_cultures = {
 			turkmen_culture
 			khorasani_culture
-			farsi_culture
+			mongolian_culture
 			adhari_culture
 			semnani_culture	
 		}
@@ -56690,7 +56218,7 @@ countries = {
 
 		court_language = persian_language
 		tolerated_cultures = {
-			iraqi_culture
+			mongolian_culture
 			lur_culture
 		}
 
@@ -57060,9 +56588,6 @@ countries = {
 			}
 		}
 
-		tolerated_cultures = {
-			khorezmian_culture
-		}
 
 		religious_school = shafii_school
 		government = { mysticism_vs_jurisprudence = 20 }

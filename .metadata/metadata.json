@@ -1,8 +1,8 @@
 ﻿{
 	"name":	"Les Mages Noirs",
 	"id":	"lesmagesnoirs",
-	"version":	"0.*",
-	"supported_game_version":	"1.*",
+	"version":	"1.0.10",
+	"supported_game_version":	"1.0.10",
 	"short_description":	"Les Mages Noirs soon. ",
 	"tags":	["Balance", "Translation"],
 	"relationships":	[],

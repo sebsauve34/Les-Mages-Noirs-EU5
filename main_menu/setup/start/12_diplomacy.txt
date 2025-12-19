@@ -168,7 +168,7 @@ diplomacy_manager = {
 
     #-------France-------
 	#Auld Alliance
-	scripted_mutual = { first = FRA second = BRI type = alliance }
+	 dependency = { first = FRA second = BRI subject_type = appanage  }
 
     #Appanages
     dependency = { first = FRA second = BUR subject_type = appanage }
@@ -295,6 +295,8 @@ diplomacy_manager = {
     dependency = { first = TRI second = PSZ subject_type = vassal }
     dependency = { first = KMM second = NWG subject_type = fiefdom }
     dependency = { first = BRA second = SOR subject_type = fiefdom }
+    dependency = { first = HAB second = CLI subject_type = vassal }
+
     scripted_mutual = { first = MEI second = HES type = alliance }
     scripted_oneway = { first = FLA second = HOL type = trade_access }
 
@@ -366,7 +368,6 @@ diplomacy_manager = {
     dependency = { first = ALB second = MTR subject_type = vassal }
     dependency = { first = ALB second = MZK subject_type = vassal }
     dependency = { first = ALB second = THP subject_type = vassal }
-    dependency = { first = HUN second = CRO subject_type = vassal }
 
     #Anatolia
     dependency = { first = AYD second = INA subject_type = vassal }
@@ -382,7 +383,6 @@ diplomacy_manager = {
     dependency = { first = JAL second = ARD subject_type = vassal }
     dependency = { first = JAL second = ATZ subject_type = vassal }
     dependency = { first = JAL second = DML subject_type = vassal }
-    dependency = { first = JAL second = ERE subject_type = vassal }
     dependency = { first = JAL second = HBN subject_type = vassal }
     dependency = { first = JAL second = HDR subject_type = vassal }
     dependency = { first = JAL second = HNY subject_type = vassal }
@@ -418,8 +418,6 @@ diplomacy_manager = {
     dependency = { first = SUT second = ZZR subject_type = vassal }
 
     scripted_mutual = { first = BYZ second = TRE type = alliance }
-    scripted_mutual = { first = MAM second = CND type = alliance }
-    scripted_mutual = { first = MAM second = KAR type = alliance }
     scripted_mutual = { first = HBN second = KTW type = alliance }
     scripted_mutual = { first = MKW second = ZZR type = alliance }
 
