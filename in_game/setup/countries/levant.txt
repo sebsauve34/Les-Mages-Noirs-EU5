@@ -1,0 +1,19 @@
+﻿SYR = {
+	color = rgb { 75 34 207 }
+   	culture_definition = levantine_culture
+   	religion_definition = sunni
+   	is_historic = yes
+}
+
+
+JOR = {
+	color = rgb { 21 86 145 }
+   	culture_definition = levantine_culture
+   	religion_definition = sunni
+}
+
+TAB = {
+	color = rgb { 43 196 94 }
+   	culture_definition = hijazi_culture
+   	religion_definition = sunni
+}

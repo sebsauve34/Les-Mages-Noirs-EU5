@@ -78,6 +78,7 @@ cathedral = {
 		local_clergy_max_literacy = 20
 		local_migration_attraction = 0.1
 		local_pop_conversion_speed_modifier = 0.2
+		local_pop_assimilation_speed_modifier = 0.05
 	}
 
 }

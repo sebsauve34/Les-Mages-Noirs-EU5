@@ -13,8 +13,15 @@
 	food_storage_per_strength = 2
 	food_consumption_per_strength = 2
 
+	
+	damage_taken = 0.9		#cavalry vs infantry in size
+	combat = {
+		hills = -0.1
+		wetlands = -0.1
+		mountains = -0.1
+		forest = -0.1
+		}
 
-	damage_taken = 0.75		#cavalry vs infantry in size
 	
 	frontage = 1
 	initiative = 2

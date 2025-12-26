@@ -453,6 +453,7 @@ countries = {
 		own_control_core = {
 			gardr brattahlid dyrnes hvalsey einarsfjord vatnahverfi
 			herjolfsnes petursvik lundey altafjord ketilsfjord siglufjord
+			eggers_o
 		}
 		capital = gardr
 
@@ -698,6 +699,7 @@ countries = {
 	TEU = { #Teutonic Order
 		own_control_core = {
 			 balga   ostroda  dzierzgon elblag morag
+			
 		}
 		own_control_integrated = {
 			ragnit tilsit mergentheim gumbinnen barten wegorzewo
@@ -706,9 +708,6 @@ countries = {
 			elk nibork ryn_poland szczytno 
 			malbork
 			konigsberg brandenburg_prussia
-		}
-		
-		own_control_conquered = {
 			#Chełmno Land
 			brodnica grudziadz torun
 			#Pomerelia
@@ -716,17 +715,9 @@ countries = {
 			tuchola bialobork czluchow nowe swiecie
 
 			bytow lebork
-		}
-		control = {
-			#Samogitia
-			palanga rietavas silale skuodas taurage
-			mazeikiai
-			##Dobrzyń Land
-			#dobrzyn lipno rypin
-			##Kujavia
-			#wloclawek bydgoszcz inowroclaw kowal radziejow
-		}
 
+		}
+		
 		include = "catholic_military_order"
 		include = "expl_northern_europe"
 		include = "eastern_european_catholic"
@@ -8810,6 +8801,7 @@ countries = {
 			aquileia tolmezzo pordenone spilimbergo udine gemona
 			tolmin pieve
 			ilirska_bistrica #Counts of Duino
+			cividale
 		}
 
 		own_control_integrated = {
@@ -12074,7 +12066,6 @@ countries = {
 
 		own_control_conquered = {
 			asola brescia palazzolo salo_ita breno nozza
-			cividale
 			ceneda conegliano
 			feltre
 			castelfranco treviso belluno
@@ -12947,6 +12938,7 @@ countries = {
 			gradac zica trgoviste_SER sjenica velbuzd
 			arilje brvenik medveda
 			belgrad debrc sabac
+			sremska_mitrovica petrovaradin
 		}
 		own_control_integrated = {
 			koman has dukagjini lezha florina
@@ -13014,7 +13006,6 @@ countries = {
 			vrhbosna konjic srebrenica doboj soli
 			jajce livno drijeva zenica kljuc srebrenik
 			kozara glaz teocak olovo borac nevesinje
-			gradiski_brod
 		}
 
 		starting_technology_level = 3
@@ -13169,6 +13160,11 @@ countries = {
 			sibenik kaseg knin novigrad crikvenica senj
 			bihac krk makarska srb sinj otocac
 			dubica petrinja slunj karlovac
+			sisak varazdin zagreb cakovec osijek
+			#Banate of Croatia
+			bjelovar koprivnica kutina pakrac vaska virovitica
+			vukovar ilok pozega gradiski_brod
+
 		}
 		our_cores_conquered_by_others = {
 			zadar split
@@ -13190,7 +13186,8 @@ countries = {
 		}
 
 		tolerated_cultures = {
-			dalmatian
+			dalmatian 
+			hungarian
 		}
 
 		capital = knin
@@ -13870,6 +13867,7 @@ countries = {
 			almeria almanzora baza gergal mojacar velez_rubio
 			granada adra almunecar guadix huescar illora loja pinar orgiva
 			malaga antequera velez_malaga
+			ronda algeciras gibraltar marbella
 		}
 
 		our_cores_conquered_by_others = {
@@ -17507,7 +17505,6 @@ countries = {
 
 	HUN = {	#Hungary
 		own_control_core = {
-			osijek
 			mezhorje sighet
 			carei hodod
 			recas semlacu_mare
@@ -17543,10 +17540,7 @@ countries = {
 			kovin veliky_beckerek carasova mihalt
 			timisoara arad zarand
 			baia_crisului
-			#Banate of Croatia
-			bjelovar koprivnica kutina pakrac vaska virovitica
-			vukovar ilok pozega sremska_mitrovica petrovaradin
-			zagreb cakovec sisak varazdin
+						 
 		}
 
 		own_control_integrated = {
@@ -17619,10 +17613,8 @@ countries = {
 		court_language = latin_language
 
 		tolerated_cultures = {
-			croatian
 			cuman_culture
 			german_carpathian
-			german_transylvanian
 			slovak
 			szekely_culture
 			transylvanian
@@ -17808,6 +17800,14 @@ countries = {
 			heir_selection = cognatic_primogeniture
 			ruler = random
 		}
+		tolerated_cultures = { 
+			transylvanian	
+			szekely_culture
+			german_transylvanian
+
+		}
+
+
 		country_rank = rank_duchy
 		capital = huedin
 	}
@@ -18195,11 +18195,11 @@ countries = {
 			jerada taourirt debdou echemmaia sidi_bennour
 			nedroma tegeget kalaat_sraghna midelt
 			aouint_yghomane afso ifrane
-			ronda algeciras gibraltar marbella
+					
 		}
 
 		control = {
-			arshgul madinat_alawiyyin saida ras_al_ain
+			arshgul madinat_alawiyyin saida ras_al_ain 
 		}
 
 		include = "expl_muslim_mediterranean"
@@ -18235,7 +18235,7 @@ countries = {
 			#https://en.wikipedia.org/wiki/Barbary_Coast
 			land_vs_naval = 30
 			belligerent_vs_conciliatory = -30
-			quality_vs_quantity = 30
+			quality_vs_quantity = 10
 			laws = {
 				piracy_law = state_piracy_policy
 			}
@@ -18244,7 +18244,7 @@ countries = {
 				#Nobles
 				noble_sponsored_navy
 				#Ulama
-				waqf_payments
+				
 				#Burghers
 				land_of_commerce
 				allow_trade_center_sponsorship
@@ -18253,7 +18253,6 @@ countries = {
 				#Tribes
 				tribes_tribal_levies
 				tribes_allow_gatherings
-				local_tribal_strongholds
 			}
 			laws = {
 				amazigh_familial_connections = reliance_on_local_tribes
@@ -18286,7 +18285,7 @@ countries = {
 			el_bayadh ain_sefra naama messaad ksar_el_boukhari el_abiodh_sidi_cheikh brezina
 			mazouna miliana qal_at_ibn_salama yellel chlef al_khadra_ALG
 			laghouat ksar_el_kaoua medrissa
-			azeffoun tedelles kuku charef qutb ain_madhi
+			charef qutb ain_madhi
 		}
 
 		own_core = {
@@ -18367,6 +18366,7 @@ countries = {
 			feriana
 			bordj_bou_arreridj jama_TUN
 			el_ksour medjez_el_bab sbikha
+			kuku azeffoun tedelles
 
 		}
 
@@ -21656,27 +21656,12 @@ countries = {
 			asyut el_balyana el_buwit akhmim manfalut
 			minya ashmunayn el_bahnasa sharuna tahna
 			kharga bahariyya baris el_qasr qasr_farafra siwa
-		}
+			matruh sallum tobruk el_jundi faran saint_katrine nuweiba 
+			qatya warrada el_arish nekhel 
+			aswan kom_ombo 
+			el_qoseir safaga ras_gharib 
+		}	
 
-		own_control_integrated = {
-			el_arish nekhel qatya warrada
-			matruh sallum tobruk
-			el_qoseir ras_gharib safaga
-			el_jundi faran nuweiba saint_katrine
-			ayntab dluk
-			jerusalem acre amman aqaba beersheba gaza hebron karak maan majdal nablus safed sughar jaffa al_quwayrah
-			beirut baalbek deir_qamar sidon tripoli_syria shoubak madaba
-			damascus al_bab aleppo antioch arsuz artah baniyas dabiq hama homs idlib jabbul jableh kafartab latakia manbij maskanah masyaf nabek qusayr tartus zardana
-			umluj al_hawra al_manjur al_maramiyah
-			al_ula al_bleiteh al_farah_ula al_marwa az_zubayir mughayra
-			duba ad_disah al_azlam al_wajh bada_yaqub bir_al_qurr
-			tabuk_arabia al_khanbarah al_muazzam al_ukhaydir bajdah bir_ibn_hermas dhat_al_hajj
-			aynuna al_bad al_muwaylih haql makna
-		}
-
-		own_control_conquered = {
-			iskenderun
-		}
 
 		include = "expl_muslim_mediterranean"
 		include = "expl_horn_of_africa"
@@ -21741,37 +21726,104 @@ countries = {
 
 	capital = cairo
 	}
-
-	#Banu Kanz - BKZ
-	BKZ = {
+	#Syria - SYR
+	SYR = {
 		own_control_core = {
-			aswan  aydhab kom_ombo
-			deraheib #suakin_province
+			al_bab aleppo dabiq jabbul manbij maskanah zardana marrat
+			damascus burraq jayrud qutayfah nabek
+			hama homs masyaf kafartab qusayr khanaser qastal salamiyya
+			latakia
+			antioch arsuz artah idlib afrin
+			ithriya sukhnah taybah deir_ez_zor tabqah
+			arak huwwarin qaryatayn tadmur
+			baalbek tripoli_syria beirut deir_qamar sidon 
+			tartus baniyas jableh 
 		}
 
-		starting_technology_level = 3
 		include = "expl_muslim_mediterranean"
-		include = "subsaharan_advanced_muslim_tribe"
+		include = "expl_middle_east"
+		include = "muslim_monarchy"
+
+
 		government = {
-			ruler = bkz_alam_al_din_ali
-			ruler_term = { character = bkz_sayf_al_din_abu_abdallah_muhammad start_date = 1317.1.1 end_date = 1333.1.1 regnal_number = 2 }
-			ruler_term = { character = bkz_alam_al_din_ali start_date = 1333.1.1 regnal_number = 1 }
+			type = monarchy
+			heir_selection = cognatic_primogeniture
+			ruler = random
 		}
-		religious_school = maliki_school
-		government = { mysticism_vs_jurisprudence = -5 }
 
 		tolerated_cultures = {
-			upper_egyptian_culture
-			beja_culture
+			syriac_culture
+			alawite_culture
 		}
 
-		capital = aswan
+		capital = aleppo
+		religious_school = shafii_school 
+	}
+	#Jordan - JOR
+	JOR = {
+		own_control_core = {
+			jerusalem acre beersheba gaza hebron jaffa nablus majdal safed
+			amman karak sughar shoubak madaba maan al_quwayrah aqaba
+
+		}
+
+		include = "expl_muslim_mediterranean"
+		include = "expl_middle_east"
+		include = "muslim_monarchy"
+
+
+		government = {
+			type = monarchy
+			heir_selection = cognatic_primogeniture
+			ruler = random
+		}
+
+		tolerated_cultures = {
+			syriac_culture
+			bedouin_culture
+			mizrahi
+		}
+
+		capital = karak	
+		religious_school = shafii_school 
+	}
+	
+	#Tabuk - TAB
+	TAB = {
+		own_control_core = {
+			tabuk_arabia bir_ibn_hermas dhat_al_hajj bajdah al_khanbarah al_ukhaydir al_muazzam
+			haql al_bad makna aynuna al_muwaylih
+			duba ad_disah al_azlam bada_yaqub al_wajh bir_al_qurr
+			al_bleiteh al_ula al_farah_ula mughayra az_zubayir al_marwa
+			al_manjur al_hawra al_maramiyah umluj
+			
+		}
+
+		include = "expl_middle_east"
+		include = "muslim_monarchy_no_coast"
+
+
+		government = {
+			type = monarchy
+			heir_selection = cognatic_primogeniture
+			ruler = random
+		}
+
+		tolerated_cultures = {
+			levantine_culture
+		}
+
+		capital = tabuk_arabia	
+		religious_school = shafii_school 
 	}
 
 	#Suakin - SKN
 	SKN = {
 		own_control_core = {
 			suakin
+			aydhab 
+			deraheib #suakin_province
+
 		}
 
 		starting_technology_level = 3
@@ -31256,7 +31308,7 @@ countries = {
 			anavarza kars_armenia
 			sis caxud hargan molevon
 			tarsus candir_cil corycus
-			ayas kapan
+			ayas kapan iskenderun 
 		}
 
 		our_cores_conquered_by_others = {
@@ -31266,7 +31318,7 @@ countries = {
 			develi
 			ayntab
 			kilis trapessac
-			iskenderun
+			
 		}
 
 		starting_technology_level = 3
@@ -32368,7 +32420,7 @@ countries = {
 	#Kilis - KIL
 	KIL = {
 		own_control_core = {
-			kilis afrin trapessac
+			kilis afrin trapessac dluk ayntab 
 		}
 
 		include = "expl_middle_east"
@@ -40214,17 +40266,16 @@ countries = {
 			lahoysk begoml byerazino ilya krasnoe smalyavichy
 			minsk chervyen koidanova marjina_horka rakau stowbtsy svislach
 			mogilev bykhaw
+			palanga rietavas silale skuodas taurage
+			mazeikiai
+	
 		}
 		own_control_integrated = {
 			grodek
 			#Podlasie
 			drohiczyn bielsk_podlaski mielnik sokolow suraz
 		}
-		own_core = {
-			palanga rietavas silale skuodas taurage
-			mazeikiai
-		}
-
+		
 		include = "expl_eastern_europe"
 		include = "lithuanian_monarchy"
 		government = {

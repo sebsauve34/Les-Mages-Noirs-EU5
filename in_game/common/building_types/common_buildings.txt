@@ -345,7 +345,7 @@ lumber_mill = {
 			produced = lumber
 			output = 1
 
-			tools = 0.4
+			tools = 0.35
 			
 			category = building_maintenance
 		}

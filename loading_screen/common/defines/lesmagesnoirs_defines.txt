@@ -3,6 +3,8 @@ NCountry = {
  	PREVIOUS_AGE_REDUCTION = -10 #-8 vanilla
 	MERCHANT_MAINTENANCE_COST = 0.25 #changed every patch vanilla
 	
+	MONTHLY_PRIVATEER_SLAVE_CHANCE = 999 #less than this on a d1000
+
 
 }
 
@@ -10,8 +12,8 @@ NCountry = {
 NAI = {
 	USE_REGULARS_IN_WAR_WEIGHT_MULT = 50 #20 vanilla
 	TARGET_SAFE_ANTAGONISM_FOR_AI = 40 #How much antagonism Ai is willing to take before getting a too much antagonism modifier #50 vanilla
-	MINIMUM_MONTHS_BETWEEN_EXPANSION = 18 #6 vanilla
-	NO_CASUS_BELLI_AND_NO_PARLIAMENT_CONQUEST_FACTOR = 0.1 #0.25 vanilla
+	MINIMUM_MONTHS_BETWEEN_EXPANSION = 24 #6 vanilla
+	NO_CASUS_BELLI_AND_NO_PARLIAMENT_CONQUEST_FACTOR = 0 #0.25 vanilla
 
 
 }
@@ -20,5 +22,15 @@ NCombat = {
 	GARRISON_AFTER_OCCUPATION = 0.200 #im not paying mp for garrison you retards
 	BOMBARD_HOURS = 10 #testing for now 5 vanilla
 	BOMBARD_BASE_CHANCE = 0.15 # 0.2 vanilla too high
+
+}
+
+NDiplomacy = {
+    PEACE_SEPERATE_BLOCK_MONTHS = 0 #seperate peace delay
+    PEACE_MAX_MONTHS_AT_WAR_BEFORE_START_DATE = 0 
+    OPINION_GOOD_RELATIONS = 201 #stab hit bald
+    OPINION_GREAT_RELATIONS = 201    #stab hit bald
+    INFILTRATE_ADMINISTRATION_DURATION = 6 #too op 24 vanilla
+    MIN_WARSCORE_TO_DEMAND = -10 #10 vanilla and retarded
 
 }

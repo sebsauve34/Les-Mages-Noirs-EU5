@@ -1,0 +1,53 @@
+german_minor_expansion = {
+	game_data = {
+		category = country 
+	}
+	
+	global_integration_speed_modifier = 0.2
+    diplomatic_annexation_cost = -0.1
+    global_population_growth = 0.002
+    antagonism_received_modifier = -0.2
+	country_cabinet_efficiency = 0.20
+	legislative_efficiency = 0.1
+}
+call_for_peace = {
+	game_data = {
+		category = country
+	}
+	monthly_war_exhaustion = 0
+	monthly_diplomats = 0
+}
+bra_wittelsbacher_neglect_1 = {
+	game_data = {
+		category = country
+	}
+	global_estate_target_satisfaction = -0.05
+	monthly_towards_decentralization = 0.1
+}
+
+
+annexing_countries = {
+	game_data = {
+		category = country
+	}
+	monthly_diplomats = -0.25
+	subject_opinions = -25
+	antagonism_monthly_change_modifier = -0.01
+}
+
+is_great_power = {
+	game_data = {
+		category = country
+	}
+	diplomatic_capacity = 2
+	monthly_diplomats = 0.2
+	power_projection = 10
+	court_spending_cost = 0.1
+	monthly_prestige = 0.1
+	mercenary_range_modifier = 0.5
+	
+	
+	#allowed_enforce_peace = yes
+	#allowed_intervene_in_war = yes
+	#allowed_threaten_war = yes
+}

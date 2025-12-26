@@ -431,7 +431,12 @@ locations={
 	tlemcen = { rank = city 	town_setup = maghreb_city }
 	tunis = { rank = city 		town_setup = maghreb_city }
 	oran = { rank = city 		town_setup = maghreb_city }
+	hammamet = { rank = city 		town_setup = maghreb_city }
+
 	
+	ceuta = { rank = town 	town_setup = maghreb_town }
+	larache = { rank = town 	town_setup = maghreb_town }
+	sale = { rank = town 	town_setup = maghreb_town }
 	algiers = { rank = town 	town_setup = maghreb_town }
 	kairouan = { rank = town town_setup = maghreb_town }
 	azemmour = { rank = town 		town_setup = maghreb_town }

@@ -1,1 +1,1 @@
-﻿
+﻿namespace = volcano_events
