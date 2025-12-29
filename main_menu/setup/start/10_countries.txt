@@ -13383,9 +13383,7 @@ countries = {
 			valencia gandia ayora bunol chelva lliria
 		}
 
-		own_control_integrated = {
-			jumilla
-		}
+		
 
 		own_control_conquered = {
 			cagliari tratalias villa_di_chiesa isili muravera seddori tortoli orosei terranova_pausania posada tempiopausania
@@ -13547,10 +13545,6 @@ countries = {
 			badajoz albuquerque azuaga barcarrota jerez_de_los_caballeros llerena merida monesterio villanueva_del_fresno zafra
 			caceres alcantara arroyo brozas galisteo granadilla montanchez valencia_de_alcantara
 			plasencia belalcazar escurial herrera jaraicejo medellin puebla_de_alcocer trujillo valverde villanueva_de_la_serena zalamea
-			coruna betanzos ferrol mondonedo vivero
-			lugo monforte_de_lemos navia_de_suarna sarria villalba
-			ourense barco_de_valdeorras ginzo_de_limia monterrey ribadavia viana_bolo
-			santiago_compostela finisterre lalin mellid noya pontevedra tuy
 			oviedo aviles cangas castropol llanes mieres tineo villaviciosa
 			leon astorga castrocalbon mansilla ponferrada riano sahagun villablino villafranca_bierzo
 			salamanca alba_de_tormes bejar ciudad_rodrigo coria ledesma matilla_de_canos piedrahita san_felices yecla_de_yeltes
@@ -13560,12 +13554,10 @@ countries = {
 			murcia albacete caravaca cartagena chinchilla cieza hellin lorca mula segura_de_la_sierra villena
 			sevilla arcos_de_la_frontera cadiz carmona constantina ecija jerez_de_la_frontera medina_sidonia moron olvera osuna sanlucar tarifa
 			huelva almonaster_la_real aracena aroche ayamonte coria_del_rio niebla puebla_de_guzman sanlucar_la_mayor
-			
-		}
-
-		our_cores_conquered_by_others = {
 			jumilla
 		}
+
+		
 
 		starting_technology_level = 3
 		include = "expl_mediterranean"
@@ -13828,13 +13820,15 @@ countries = {
 	}
 
 	GLC = {
-		our_cores_conquered_by_others = {
-			coruna betanzos ferrol mondonedo vivero #A Coruña
-			lugo monforte_de_lemos navia_de_suarna sarria villalba #Lugo
-			ourense barco_de_valdeorras ginzo_de_limia monterrey ribadavia viana_bolo #Ourense
-			santiago_compostela finisterre lalin mellid noya pontevedra tuy #Santiago de Compostela
-		}
+		own_control_core = {
+		coruna betanzos ferrol mondonedo vivero #A Coruña
+		lugo monforte_de_lemos navia_de_suarna sarria villalba #Lugo
+		ourense barco_de_valdeorras ginzo_de_limia monterrey ribadavia viana_bolo #Ourense
+		santiago_compostela finisterre lalin mellid noya pontevedra tuy #Santiago de Compostela
 
+	
+	}
+		
 		starting_technology_level = 3
 		include = "expl_mediterranean"
 		include = "expl_silk_road_west"
@@ -13846,6 +13840,7 @@ countries = {
 		country_rank = rank_kingdom
 		capital = santiago_compostela
 		government = {
+			ruler = random
 
 			ruler_term = { character = lon_ordono_ii_leon start_date = 910.1.1 end_date = 914.1.1 regnal_number = 2 }
 			ruler_term = { character = glc_sancho_ordonez start_date = 926.2.12 end_date = 929.6.10 regnal_number = 0 }
@@ -32663,7 +32658,7 @@ countries = {
 			al_sinn
 			eyvan
 			tabriz heris maragheh sarab tufarqan
-			ganja barda beylagan lemberan gardman shamkir
+			beylagan lemberan
 			mughan baciravan bilasuvar germi salyan varsan
 			ahar aslanduz kaleybar khiyav mardanaqom qahqaheh
 			hadishahr marand
@@ -32673,7 +32668,6 @@ countries = {
 			zanjan mahneshan sarcham sojas
 			bijar bashqurtaran dehgolan divandarreh ghorveh sohrevard yasukand
 			goroz shusha
-			julfa nakhchivan
 		}
 
 		our_cores_conquered_by_others = {
@@ -32724,7 +32718,7 @@ countries = {
 	#Artaz - ATZ
 	ATZ = {
 		own_control_core = {
-			maku bayazit igdir khor_virap nazok_olya qarahziaoddin siah_cheshmeh surmali
+			maku bayazit nazok_olya qarahziaoddin siah_cheshmeh
 		}
 
 		include = "expl_christian_caucasus"
@@ -56658,15 +56652,11 @@ countries = {
 			gagi kayen khunani jariekhi
 			hereti balakan bodbe khornabuji qakh
 			panaskerti tortum lori spitak
-		}
-
-		own_control_integrated = {
+			shamkir gardman ganja barda
 			costa tuapse 
 		}
 
-		our_cores_conquered_by_others = {
-			gardman shamkir
-		}
+
 
 		include = "expl_christian_caucasus"
 		include = "eastern_european_monarchy"
@@ -56740,6 +56730,11 @@ countries = {
 			mingrelian_culture
 			svan_culture
 			lezgin_culture
+			mongolian_culture
+			azeri_culture
+			abazin_culture
+			gurji
+			circassian_culture
 		}
 
 		capital = tbilisi
@@ -56780,6 +56775,8 @@ countries = {
 			hasankale ispir khupati rize
 			artanuji khikhani oltu parkhali savsat
 			ani kars kagizman tmogvi
+			surmali
+
 		}
 
 		include = "expl_christian_caucasus"
@@ -56926,11 +56923,17 @@ countries = {
 
 	ARM = { #Armenia
 		own_control_core = {
-			yerevan bjni
+			yerevan bjni igdir khor_virap
+			gladzor
+			sotk
+			gandzasar haterk	
+			kapan_armenia goris kashatagh tatev
+			julfa nakhchivan
+
 		}
 
 		our_cores_conquered_by_others = {
-			amberd ani artashavan igdir kars kagizman khor_virap kumayri surmali
+			amberd ani artashavan kars kagizman kumayri
 
 		}
 
@@ -56979,26 +56982,6 @@ countries = {
 		capital = amberd
 	}
 
-	VDZ = { #Vayots Dzor
-		own_control_core = {
-			gladzor
-			sotk
-		}
-
-		include = "expl_christian_caucasus"
-		starting_technology_level = 3
-		include = "eastern_european_monarchy_no_coast"
-		government = {
-			type = monarchy
-			heir_selection = cognatic_primogeniture
-			ruler = random
-
-		}
-		liturgical_language = armenian_language
-
-		dynasty = proshyan_dynasty
-		capital = gladzor
-	}
 
 	CIR = { #Circassia
 		own_control_core = {
@@ -57163,65 +57146,8 @@ countries = {
 		}
 	}
 
-	KCN = { #Khachen
-		own_control_core = {
-			gandzasar haterk
-		}
-
-		our_cores_conquered_by_others = {
-			goroz kashatagh shusha
-		}
-
-		include = "expl_christian_caucasus"
-		starting_technology_level = 3
-		include = "eastern_european_monarchy_no_coast"
-		government = {
-			type = monarchy
-			heir_selection = cognatic_primogeniture
-			ruler = kcn_ivane_ii
-			ruler_term = { character = kcn_ivane_ii start_date = 1318.1.1 regnal_number = 2 }
-			regnal_numbers = {
-				name_john = 2
-			}
-		}
-		liturgical_language = armenian_language
-
-		tolerated_cultures = {
-			adhari_culture
-		}
-
-		capital = gandzasar
-	}
-
-	SYU = { #Syunik
-		own_control_core = {
-			kapan_armenia goris kashatagh tatev
-		}
-
-		our_cores_conquered_by_others = {
-			julfa nakhchivan
-		}
-
-		include = "expl_christian_caucasus"
-		starting_technology_level = 3
-		include = "eastern_european_monarchy_no_coast"
-		government = {
-			type = monarchy
-			heir_selection = cognatic_primogeniture
-
-			ruler_term = { character = syu_biurtel start_date = 1300.1.1 regnal_number = 1 }
-
-			ruler = syu_biurtel
-		}
-		liturgical_language = armenian_language
-
-		tolerated_cultures = {
-			azeri_culture
-		}
-
-		capital = kapan_armenia
-	}
-
+	
+	
 	ALN = { #Alania
 		own_control_core = {
 			arkhyz khumar mamiya_kala rim_gora

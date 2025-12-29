@@ -82,7 +82,7 @@ dry_dock = {
 
 	modifier = {
 		max_ships_built_at_same_time = 2
-		local_sailors = 0.025
+		local_sailors = 0.03
 		can_build_ships_in_this_location = yes
 		harbor_suitability = 0.15
 	}
@@ -130,7 +130,7 @@ shipyard = {
 
 	modifier = {
 		max_ships_built_at_same_time = 4
-		local_sailors = 0.05
+		local_sailors = 0.06
 		can_build_ships_in_this_location = yes
 		harbor_suitability = 0.2
 	}
@@ -175,7 +175,7 @@ grand_shipyard = {
 
 	modifier = {
 		max_ships_built_at_same_time = 8
-		local_sailors = 0.1
+		local_sailors = 0.12
 		can_build_ships_in_this_location = yes
 		harbor_suitability = 0.25
 	}

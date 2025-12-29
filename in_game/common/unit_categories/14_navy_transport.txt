@@ -1,7 +1,7 @@
 ﻿navy_transport = {
 	is_army = no
 	
-	transport_capacity = 0.2
+	transport_capacity = 0.25
 	
 	build_time = transport_build_time
 

@@ -64,3 +64,16 @@ winter_severe = {
 	max_attrition = 4	
 	local_monthly_food_modifier = -2.0
 }
+
+total_population = {
+	game_data = {
+		category = location
+	}
+	supply_limit = 0.02
+	blockade_force_required = 0.02
+	
+	local_max_rgo_size = 0.025
+	
+	free_building_levels = 0.1
+}
+

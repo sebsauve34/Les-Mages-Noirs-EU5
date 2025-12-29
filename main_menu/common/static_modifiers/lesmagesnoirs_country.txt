@@ -7,7 +7,7 @@ german_minor_expansion = {
     diplomatic_annexation_cost = -0.1
     global_population_growth = 0.002
     antagonism_received_modifier = -0.2
-	country_cabinet_efficiency = 0.20
+	country_cabinet_efficiency = 0.2
 	legislative_efficiency = 0.1
 }
 call_for_peace = {
@@ -50,4 +50,12 @@ is_great_power = {
 	#allowed_enforce_peace = yes
 	#allowed_intervene_in_war = yes
 	#allowed_threaten_war = yes
+}
+average_literacy = {
+	game_data = {
+		category = country
+	}
+	research_speed_modifier = 1.25
+	monthly_towards_innovative = societal_value_monthly_move
+	skill_of_new_artists = 0.25
 }

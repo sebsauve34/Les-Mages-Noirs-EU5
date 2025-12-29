@@ -1,0 +1,23 @@
+﻿# Auto Child Education - Scripted Triggers v2.3
+
+# Helper trigger to check if a child should be auto-educated
+# Scope: character (the child)
+ace_should_auto_educate_child = {
+	# Must be a child
+	is_child = yes
+	
+	# Exclusion checks based on settings (variables on owner)
+	trigger_if = {
+		limit = { owner = { has_variable = ace_skip_heirs } }
+		NOT = { is_heir = yes }
+	}
+	trigger_if = {
+		limit = { owner = { has_variable = ace_skip_crown } }
+		NOT = { has_estate = estate_type:crown_estate }
+	}
+	trigger_if = {
+		limit = { owner = { has_variable = ace_skip_prodigy } }
+		NOT = { has_trait = child_prodigy }
+		NOT = { has_trait = child_gifted }
+	}
+}

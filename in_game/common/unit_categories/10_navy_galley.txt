@@ -5,10 +5,10 @@
 
 	max_strength = 1.0
 
-	transport_capacity = 0.025
+	transport_capacity = 0.05
 
 
-	frontage = 0.5
+	frontage = 0.4
 	initiative = 2
 	combat_speed = 1
 

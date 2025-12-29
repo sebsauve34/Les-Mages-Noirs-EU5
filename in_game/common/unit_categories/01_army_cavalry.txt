@@ -14,7 +14,7 @@
 	food_consumption_per_strength = 2
 
 	
-	damage_taken = 0.9		#cavalry vs infantry in size
+	damage_taken = 1		#cavalry vs infantry in size
 	combat = {
 		hills = -0.1
 		wetlands = -0.1
