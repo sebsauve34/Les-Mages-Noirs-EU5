@@ -18,7 +18,7 @@ city = {
 		
 		local_integration_speed_modifier = -0.5
 		
-		local_monthly_food_modifier = -0.33
+		local_monthly_food_modifier = -0.5
 		
 		local_pop_promotion_speed_modifier = 0.25
 		
@@ -67,8 +67,8 @@ town = {
 		local_food_capacity = 250
 		local_integration_speed_modifier = -0.25
 		
-		local_monthly_food_modifier = -0.2
-		free_building_levels = 30
+		local_monthly_food_modifier = -0.25
+		free_building_levels = 35
 	}
 	
 	country_modifier = {
@@ -94,7 +94,7 @@ town = {
 rural_settlement = {
 	rank_modifier = {
 		local_max_rgo_size_modifier = 1.0
-		local_monthly_food_modifier = 0.1
+		local_monthly_food_modifier = 0.25
 		
 		local_population_growth = 0.001
 	}

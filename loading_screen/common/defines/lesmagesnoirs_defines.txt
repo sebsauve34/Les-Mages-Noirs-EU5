@@ -1,6 +1,8 @@
 NCountry = {
 
  	PREVIOUS_AGE_REDUCTION = -10 #-8 vanilla
+	AGE_RESEARCH_MODIFIER = 0.125		#multiplied per age.. #-0.15 vanilla trying it 
+
 	MERCHANT_MAINTENANCE_COST = 0.25 #changed every patch vanilla
 	
 	MONTHLY_PRIVATEER_SLAVE_CHANCE = 999 #less than this on a d1000
@@ -23,7 +25,7 @@ NCombat = {
 	BOMBARD_HOURS = 10 #testing for now 5 vanilla
 	BOMBARD_BASE_CHANCE = 0.15 # 0.2 vanilla too high
 	MINIMUM_COMBAT_DURATION = 20
-	COMBAT_DICE_SIDE = 8
+	COMBAT_DICE_SIDE = 7
 
 }
 

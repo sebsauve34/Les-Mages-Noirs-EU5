@@ -6,6 +6,7 @@ renaissance_advance = {
 	icon = renaissance_advance
 	
 	cultural_influence_modifier = 0.05
+	global_monthly_literacy = 0.02
 
 	depth = 0
 	

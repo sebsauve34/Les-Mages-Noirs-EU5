@@ -246,7 +246,6 @@ diplomacy_manager = {
     dependency = { first = VEN second = PAD subject_type = vassal }
     dependency = { first = VER second = PAR subject_type = vassal }
     dependency = { first = VER second = LUC subject_type = vassal }
-
     dependency = { first = SIC second = ATH subject_type = vassal }
     dependency = { first = SIC second = NEO subject_type = vassal }
     dependency = { first = SIC second = SAO subject_type = vassal }
@@ -305,6 +304,8 @@ diplomacy_manager = {
 
     #-------Low Lands-------
     dependency = { first = HOL second = ZEE subject_type = fiefdom }
+    dependency = { first = FLA second = HAI subject_type = fiefdom }
+
 
     #-------Baltics-------
     dependency = { first = TEU second = ERM subject_type = vassal }
