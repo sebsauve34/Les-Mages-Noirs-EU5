@@ -18120,7 +18120,7 @@ countries = {
 			#https://en.wikipedia.org/wiki/Barbary_Coast
 			land_vs_naval = 30
 			belligerent_vs_conciliatory = -30
-			quality_vs_quantity = 10
+			quality_vs_quantity = 0
 			laws = {
 				piracy_law = state_piracy_policy
 			}
@@ -18283,6 +18283,7 @@ countries = {
 
 			#https://en.wikipedia.org/wiki/Barbary_Coast
 			land_vs_naval = 30
+			quality_vs_quantity = 0
 			laws = {
 				piracy_law = state_piracy_policy
 			}
@@ -20504,31 +20505,6 @@ countries = {
 		capital = bilo
 	}
 
-	#Dobe'a - DBE
-	DBE = {
-		own_control_core = {
-			manadeley amora_gadal chercher hayq #dobea_province
-		}
-
-		starting_technology_level = 3
-		include = "expl_horn_of_africa"
-		include = "subsaharan_monarchy_no_coast"
-		government = {
-			type = monarchy
-			heir_selection = cognatic_primogeniture
-			ruler = random
-		}
-
-		tolerated_cultures = {
-			amhara
-			afar_culture
-		}
-
-		liturgical_language = geez_language
-
-		capital = manadeley
-	}
-
 	#Ethiopia - ETH (TAG/Reformable)
 	ETH = {
 		own_control_core = {
@@ -20543,19 +20519,19 @@ countries = {
 			ankober gendebelo nora_eth #argobba_province
 			dima bahir_dar dangila debra_warq enjebara #gojjam_province
 			gonder #begemder_province
+			
 		}
 
 		own_control_integrated = {
 			maldarede gambo #damot_province
 			barara ziqwala #shewa_province
 			waldeba debarq kosoge #semien_province
-		}
-
-		own_control_conquered = {
-			 seru #bale_province
+			manadeley amora_gadal chercher hayq #dobea_province
+			seru #bale_province
 			abala adigrat agula mekele #enderta_province
 			harro_walabu #oromia_province
 			bossa worabe#sidamo_province
+	
 		}
 
 		our_cores_conquered_by_others = {
@@ -20594,7 +20570,7 @@ countries = {
 			offensive_vs_defensive = -30
 			outward_vs_inward = 0
 		}
-		capital = ankober #Marade/Tegulet, made capital by Amda Seyon I
+		capital = axum #Marade/Tegulet, made capital by Amda Seyon I
 		country_rank = rank_empire
 
 		liturgical_language = geez_language

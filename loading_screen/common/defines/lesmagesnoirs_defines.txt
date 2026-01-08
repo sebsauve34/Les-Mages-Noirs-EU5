@@ -20,12 +20,16 @@ NAI = {
 
 }
 
+
+NEconomy = {
+	OVER_FORT_LIMIT_MULTIPLIER = 10.0
+}
 NCombat = {
 	GARRISON_AFTER_OCCUPATION = 0.200 #im not paying mp for garrison you retards
 	BOMBARD_HOURS = 10 #testing for now 5 vanilla
 	BOMBARD_BASE_CHANCE = 0.15 # 0.2 vanilla too high
 	MINIMUM_COMBAT_DURATION = 20
-	COMBAT_DICE_SIDE = 7
+	COMBAT_DICE_SIDE = 6
 
 }
 

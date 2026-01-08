@@ -272,16 +272,16 @@ diplomacy_manager = {
     #-------Maghreb-------
     dependency = { first = KBO second = FZA subject_type = vassal }
     dependency = { first = MOR second = TFL subject_type = vassal }
-    dependency = { first = TFL second = TAT subject_type = vassal }
+    dependency = { first = MOR second = TAT subject_type = vassal }
     dependency = { first = TUN second = GBS subject_type = vassal }
     dependency = { first = TUN second = GFS subject_type = vassal }
     dependency = { first = TUN second = TGT subject_type = vassal }
     dependency = { first = TUN second = TRP subject_type = vassal }
-    dependency = { first = TUN second = BTL subject_type = tributary }
-    dependency = { first = TUN second = DJE subject_type = tributary }
-    dependency = { first = TUN second = MZB subject_type = tributary }
-    dependency = { first = TUN second = ZAB subject_type = tributary }
-    dependency = { first = ZAB second = OGL subject_type = tributary }
+    dependency = { first = TUN second = BTL subject_type = vassal }
+    dependency = { first = TUN second = DJE subject_type = vassal }
+    dependency = { first = TUN second = MZB subject_type = vassal }
+    dependency = { first = TUN second = ZAB subject_type = vassal }
+    dependency = { first = TUN second = OGL subject_type = vassal }
     scripted_mutual = { first = MOR second = TUN type = alliance }
 
     #-------Germany-------
