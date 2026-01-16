@@ -24,11 +24,13 @@
 			data = population
 		}
 		visible = {
-			province_average_development < 20
-			population < 10
+			province_average_development < 25
+			population < 15
 			OR = {
 				area = area:finland_area
 				area = area:norrland_area
+				area = area:kola_area
+				area = area:karelia_area
 			}
 			province_definition != province_definition:finland_province
 			province_definition != province_definition:nyland_province
@@ -54,14 +56,13 @@
 
 	is_finished = {
 		scope:target ?= {
-			population > 15
+			population > 20
 		}
 	}
 	
 	location_modifier = {
-		local_population_growth = 0.03
-		local_monthly_development = 0.015
-		local_migration_attraction = 0.25
+		local_population_growth = 0.05
+		local_monthly_development = 0.02
 	}
 
 	map_marker = {

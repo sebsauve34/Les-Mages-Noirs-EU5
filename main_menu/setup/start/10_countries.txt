@@ -56535,6 +56535,7 @@ countries = {
 			offensive_vs_defensive = 40
 			aristocracy_vs_plutocracy = -25
 			belligerent_vs_conciliatory = -35
+			quality_vs_quantity = 0
 
 
 

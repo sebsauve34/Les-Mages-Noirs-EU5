@@ -40,5 +40,6 @@ NDiplomacy = {
     OPINION_GREAT_RELATIONS = 201    #stab hit bald
     INFILTRATE_ADMINISTRATION_DURATION = 6 #too op 24 vanilla
     MIN_WARSCORE_TO_DEMAND = -10 #10 vanilla and retarded
+    PEACE_COST_MODIFIER_UNOCCUPIED_FORT = 0
 
 }
