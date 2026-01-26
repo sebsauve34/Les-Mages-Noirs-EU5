@@ -12454,7 +12454,7 @@ countries = {
 			traianopolis demotica lemnos imbros molyvos mitilene gallipoli kesan
 			edirne hayrabolu corlu
 			rodoscuk enez kiyikoy ahtopol constantinople silivri catalca luleburgaz kirklareli
-			malgara alasehir
+			malgara
 			monemvasia mystras oitylo leuktron astros ostrovo
 			uskudar silli biga eregli
 			chios vize
@@ -27886,7 +27886,7 @@ countries = {
 	CHI = { #Yuán
 		own_control_core = {
 			#Proper China
-			ningde fuan changshi
+			ningde fuan changshi tixi tongren youyang leibo
 			minxian lianjiang luoyuan fuqing houguan minqing changle_fujian gutian yongfu_fuzhou
 			ouning jianan pucheng_jianning songxi jianyang chongan zhenghe
 			jinjiang tongan anxi dehua huian yongchun nanan_quanzhou
@@ -27894,18 +27894,35 @@ countries = {
 			changting ninghua_tingzhou liancheng shanghang qingliu wuping mingxi yongding_shanghang
 			nanping datian shaxian jiangle shunchang yongan_sha youxi
 			longxi zhaoan huafeng longyan pinghe nansheng zhangpu changtai zhangping
+			chongshan longzhou_longzhou mingying doukang guwan
+			shizhu xiushan bozhou wujiang_bozhou shaxi suiyang bochuan zizhou renhuai
+			mangbu luojiao guihua yunlian luoji rongxian qiongshui
+			yanhe longquanping rongshan baini wengshui huangping
+			tonggu_liping yongcong liping xiajiang
+			wumeng luozuoguan yongshan daguan
 
+ 
 			zhongxiang fengle shipai fushui jingshan
 			baicang baima longhui chengbu xiakou xinning_wugang shaoyang suxi wugang xinhua
 			wuling taoyuan longyang yuanjiang yuannan
-			changsha anhua_anhua chaling dongping yiyang_changsha yongan_youzhou liling liuyang loudi ningxiang qiaokou xiangtan xiangxiang xiangyin yongfeng_xiangxiang youzhou lukou
+			changsha anhua_anhua chaling dongping yiyang_changsha yongan_youzhou liling liuyang loudi ningxiang qiaokou xiangtan xiangxiang xiangyin yongfeng_xiangxiang youzhou lukou qijiang
 			chenyang guidong guiyang_chenzhou yizhang yongxing xinning_chen hanyang hanchuan
 			yuanling qianyang_yuanzhou chenxi mayang huaihua xupu madi_yuanling luxi luyang
 			hengyang anren changning pingyang_guiyang hengshan lanshan leiyang lingxian linwu xincheng
 			huanggang qichun luotian huangan huangpi huangmei macheng qishui guangji
 			yongping suining_jing huitong tongdao tianzhu yusha jingling xindi
-			jiangling dangyang gongan xingshan zigui changlin changyang songzi xinhua_guizhou yuanan qianjiang jianli shayang shishou jinzhuping yiling zhijiang badong yidu
-			shizhou
+			jiangling dangyang gongan xingshan zigui changlin changyang songzi xinhua_guizhou yuanan qianjiang jianli shayang shishou jinzhuping yiling zhijiang badong yidu sanmao
+			taipengruodong panqiao zhenyuan_sizhou shuitejiang shiqian yinjiang dejiang wuchuan_sinan
+			baojing wuluo wuzhai zhenzhou zhengan gulin yongning
+
+
+			shizhou zhonglu lichuan shixi
+			datian_shizhou shinan
+			rongmei wufeng
+			beishe lizhou_mahu zhenxi_lizhou qiongbu suzhou lugu jianchang_sichuan
+			mabian muchuan mahu tianping
+			yongshun_yongshun guzhang shangxi
+
 			suixian anlu gaocheng_suizhou yingshan tangcheng meiqiu xiaogan yingcheng yunmeng
 			jiangxia daye wuchang jinkou tongcheng_wuchang puqi chongyang tongshan xianning yongxing_xingguo jiayu
 			xiangyang banqiao baokang wudang fangling gucheng huanglong jinxiangping guanghua lutoudian nanzhang shangjin baihekou bomoping fancheng yicheng yun yunxi zaoyang zhushan zhuxi fengxi
@@ -27947,6 +27964,7 @@ countries = {
 			shangyuan jiangning jurong luhe liyang lishui_yingtian wujiang_yingtian
 			yingzhou qiaoxian yingshui chengfu mengcheng yingshang shenqiu taihe
 			dantu danyang jintan
+			siming pingxiang_pingxiang qianlong_siming
 
 			lishui daxue qingtian minghe longquan suichang qingyuan_chuzhou jinyun songyang yunhe
 			hangzhou fuyang_hangzhou haining linan yuhang
@@ -28091,7 +28109,17 @@ countries = {
 
 		own_control_integrated = {
 			chit nurchuu tura uldurga kuenga uryum
-			
+			huncun kahari tulazi guide jishi hezhou dingqiang
+			minzhou tanchang xigu
+			wenxian_gongchang fuzhou_songpan lidian
+			amchok taktsang sangqu tso_gon
+			kedang kuntokling liulin
+			jiangyou pingwu
+			songzhou_songpan heishui hongyuan muge rinpung dazhasi gurkyang tewo
+			wenshan lushan_yazhou wenchuan
+			diaomen hanyuan shimian
+			baoning_maozhou maerkang qiongxi
+			shangsi
 			lingfang xuanhua_nanning ningpu
 		}
 
@@ -28127,7 +28155,7 @@ countries = {
 			anchun hulin namunka noto_ussuri yiman
 			lahasusu futi nuoluo shuangyashan tulguur
 			kaiyuan_warka anju_nurgan nogule shili yongmingcheng
-			huncun kahari tulazi
+
 		}
 
 		include = "far_east_asia_monarchy"
@@ -29027,18 +29055,6 @@ countries = {
 		capital = xisha
 	}
 
-	LLS = { #Luóluósī
-		own_control_core = {
-			beishe lizhou_mahu zhenxi_lizhou qiongbu suzhou lugu jianchang_sichuan
-		}
-
-		include = "south_east_asia_monarchy_no_mandala_no_coast"
-		government = {
-			ruler = random
-		}
-		capital = jianchang_sichuan
-	}
-
 	CGZ = { #Chāngzhōu
 		own_control_core = {
 			dechang
@@ -29097,78 +29113,6 @@ countries = {
 			ruler = random
 		}
 		capital = dongchuan
-	}
-
-	WNG = { #Wumeng
-		own_control_core = {
-			wumeng luozuoguan yongshan daguan
-		}
-
-		include = "south_east_asia_monarchy_no_mandala_no_coast"
-		government = {
-			ruler = random
-		}
-		tolerated_cultures = {
-			shu_culture
-		}
-		capital = wumeng
-	}
-
-	MHU = { #Mahu
-		own_control_core = {
-			mabian muchuan mahu
-		}
-
-		include = "south_east_asia_monarchy_no_mandala_no_coast"
-		government = {
-			ruler = random
-		}
-		tolerated_cultures = {
-			shu_culture
-		}
-		capital = mabian
-	}
-
-	LBO = { #Leibo
-		own_control_core = {
-			leibo
-		}
-
-		include = "south_east_asia_monarchy_no_mandala_no_coast"
-		government = {
-			ruler = random
-		}
-		capital = leibo
-	}
-
-	YNL = { #Yunlian
-		own_control_core = {
-			yunlian
-		}
-
-		include = "south_east_asia_monarchy_no_mandala_no_coast"
-		government = {
-			ruler = random
-		}
-		tolerated_cultures = {
-			shu_culture
-		}
-		capital = yunlian
-	}
-
-	ZNX = { #Zhenxiong
-		own_control_core = {
-			mangbu luojiao guihua
-		}
-
-		include = "south_east_asia_monarchy_no_mandala_no_coast"
-		government = {
-			ruler = random
-		}
-		tolerated_cultures = {
-			hmong_culture
-		}
-		capital = mangbu
 	}
 
 	WSA = { #Wusa
@@ -29298,395 +29242,6 @@ countries = {
 			hmong_culture
 		}
 		capital = shuicheng
-	}
-
-	CLE = { #Chelei
-		own_control_core = {
-			gulin yongning
-		}
-
-		include = "south_east_asia_monarchy_no_mandala_no_coast"
-		government = {
-			ruler = random
-		}
-		tolerated_cultures = {
-			hmong_culture
-		}
-		capital = gulin
-	}
-
-	BZU = { #Bozhou
-		own_control_core = {
-			bozhou wujiang_bozhou shaxi suiyang bochuan zizhou renhuai
-		}
-
-		include = "south_east_asia_monarchy_no_mandala_no_coast"
-		government = {
-			ruler = random
-		}
-		tolerated_cultures = {
-			shu_culture
-			hmong_culture
-		}
-		capital = bozhou
-	}
-
-	NPG = { #Nanping
-		own_control_core = {
-			qijiang
-		}
-
-		include = "south_east_asia_monarchy_no_mandala_no_coast"
-		government = {
-			ruler = random
-		}
-		tolerated_cultures = {
-			shu_culture
-		}
-		capital = qijiang
-	}
-
-	RNG = { #Rong
-		own_control_core = {
-			rongxian
-		}
-
-		include = "south_east_asia_monarchy_no_mandala_no_coast"
-		government = {
-			ruler = random
-		}
-		tolerated_cultures = {
-			shu_culture
-		}
-		capital = rongxian
-	}
-
-	GNG = { #Gong
-		own_control_core = {
-			luoji
-		}
-
-		include = "south_east_asia_monarchy_no_mandala_no_coast"
-		government = {
-			ruler = random
-		}
-		tolerated_cultures = {
-			shu_culture
-		}
-		capital = luoji
-	}
-
-	ZNZ = { #Zhenzhou
-		own_control_core = {
-			zhenzhou zhengan
-		}
-
-		include = "south_east_asia_monarchy_no_mandala_no_coast"
-		government = {
-			ruler = random
-		}
-		tolerated_cultures = {
-			hmong_culture
-			gelao_culture
-		}
-		capital = zhenzhou
-	}
-
-	SZU = { #Shizu
-		own_control_core = {
-			shizhu
-		}
-
-		include = "south_east_asia_monarchy_no_mandala_no_coast"
-		government = {
-			ruler = random
-		}
-		capital = shizhu
-	}
-
-	ZGL = { #Zhonglu
-		own_control_core = {
-			zhonglu lichuan
-		}
-
-		include = "south_east_asia_monarchy_no_mandala_no_coast"
-		government = {
-			ruler = random
-		}
-		capital = zhonglu
-	}
-
-	TGY = { #Tangya
-		own_control_core = {
-			datian_shizhou
-		}
-
-		include = "south_east_asia_monarchy_no_mandala_no_coast"
-		government = {
-			ruler = random
-		}
-		capital = datian_shizhou
-	}
-
-	GLU = { #Gaoluo
-		own_control_core = {
-			shinan
-		}
-
-		include = "south_east_asia_monarchy_no_mandala_no_coast"
-		government = {
-			ruler = random
-		}
-		capital = shinan
-	}
-
-	RGM = { #Rongmei
-		own_control_core = {
-			rongmei wufeng
-		}
-
-		include = "south_east_asia_monarchy_no_mandala_no_coast"
-		government = {
-			ruler = random
-		}
-		capital = rongmei
-	}
-
-	TNP = { #Tianping
-		own_control_core = {
-			tianping
-		}
-
-		include = "south_east_asia_monarchy_no_mandala_no_coast"
-		government = {
-			ruler = random
-		}
-		capital = tianping
-	}
-
-	SGZ = { #Sangzhi
-		own_control_core = {
-			shixi
-		}
-
-		include = "south_east_asia_monarchy_no_mandala_no_coast"
-		government = {
-			ruler = random
-		}
-		capital = shixi
-	}
-
-	DWG = { #Dawang
-		own_control_core = {
-			sanmao
-		}
-
-		include = "south_east_asia_monarchy_no_mandala_no_coast"
-		government = {
-			ruler = random
-		}
-		capital = sanmao
-	}
-
-	YGS = { #Yongshun
-		own_control_core = {
-			yongshun_yongshun guzhang shangxi
-		}
-
-		include = "south_east_asia_monarchy_no_mandala_no_coast"
-		government = {
-			ruler = random
-		}
-		capital = yongshun_yongshun
-	}
-
-	BJG = { #Baojing
-		own_control_core = {
-			baojing
-		}
-
-		include = "south_east_asia_monarchy_no_mandala_no_coast"
-		government = {
-			ruler = random
-		}
-		capital = baojing
-	}
-
-	YYG = { #Youyang
-		own_control_core = {
-			youyang
-		}
-
-		include = "south_east_asia_monarchy_no_mandala_no_coast"
-		government = {
-			ruler = random
-		}
-		capital = youyang
-	}
-
-	PCD = { #Pingchadong
-		own_control_core = {
-			xiushan
-		}
-
-		include = "south_east_asia_monarchy_no_mandala_no_coast"
-		government = {
-			ruler = random
-		}
-		capital = xiushan
-	}
-
-	SZH = { #Sizhou
-		own_control_core = {
-			taipengruodong panqiao zhenyuan_sizhou shuitejiang shiqian yinjiang dejiang wuchuan_sinan
-		}
-
-		include = "south_east_asia_monarchy_no_mandala_no_coast"
-		government = {
-			ruler = random
-		}
-		tolerated_cultures = {
-			hmong_culture
-			kam_culture
-			gelao_culture
-		}
-		capital = taipengruodong
-	}
-
-	YNH = { #Yanhe
-		own_control_core = {
-			yanhe
-		}
-
-		include = "south_east_asia_monarchy_no_mandala_no_coast"
-		government = {
-			ruler = random
-		}
-		capital = yanhe
-	}
-
-	TXI = { #Tixi
-		own_control_core = {
-			tixi
-		}
-
-		include = "south_east_asia_monarchy_no_mandala_no_coast"
-		government = {
-			ruler = random
-		}
-		capital = tixi
-	}
-
-	TGR = { #Tongren
-		own_control_core = {
-			tongren
-		}
-
-		include = "south_east_asia_monarchy_no_mandala_no_coast"
-		government = {
-			ruler = random
-		}
-		capital = tongren
-	}
-
-	QGS = { #Qiongshui
-		own_control_core = {
-			qiongshui
-		}
-
-		include = "south_east_asia_monarchy_no_mandala_no_coast"
-		government = {
-			ruler = random
-		}
-		capital = qiongshui
-	}
-
-	WZH = { #Wuzhai
-		own_control_core = {
-			wuzhai
-		}
-
-		include = "south_east_asia_monarchy_no_mandala_no_coast"
-		government = {
-			ruler = random
-		}
-		capital = wuzhai
-	}
-
-	PTZ = { #Pingtouzheke
-		own_control_core = {
-			wuluo
-		}
-
-		include = "south_east_asia_monarchy_no_mandala_no_coast"
-		government = {
-			ruler = random
-		}
-		capital = wuluo
-	}
-
-	LGQ = { #Longquan
-		own_control_core = {
-			longquanping
-		}
-
-		include = "south_east_asia_monarchy_no_mandala_no_coast"
-		government = {
-			ruler = random
-		}
-		capital = longquanping
-	}
-
-	RGS = { #Rongshan
-		own_control_core = {
-			rongshan
-		}
-
-		include = "south_east_asia_monarchy_no_mandala_no_coast"
-		government = {
-			ruler = random
-		}
-		capital = rongshan
-	}
-
-	BNI = { #Baini
-		own_control_core = {
-			baini
-		}
-
-		include = "south_east_asia_monarchy_no_mandala_no_coast"
-		government = {
-			ruler = random
-		}
-		capital = baini
-	}
-
-	COG = { #Caotang
-		own_control_core = {
-			wengshui
-		}
-
-		include = "south_east_asia_monarchy_no_mandala_no_coast"
-		government = {
-			ruler = random
-		}
-		tolerated_cultures = {
-			zhuang_culture
-			kam_culture
-		}
-		capital = wengshui
-	}
-
-	XNL = { #Xinlong
-		own_control_core = {
-			huangping
-		}
-
-		include = "south_east_asia_monarchy_no_mandala_no_coast"
-		government = {
-			ruler = random
-		}
-		capital = huangping
 	}
 
 	ALI = { #Kaili
@@ -29976,42 +29531,6 @@ countries = {
 		capital = zhenan_guishun
 	}
 
-	TPG = { #Taiping
-		own_control_core = {
-			chongshan longzhou_longzhou mingying doukang guwan
-		}
-
-		include = "south_east_asia_monarchy_no_mandala_no_coast"
-		government = {
-			ruler = random
-		}
-		capital = chongshan
-	}
-
-	SMG = { #Siming
-		own_control_core = {
-			siming pingxiang_pingxiang qianlong_siming
-		}
-
-		include = "south_east_asia_monarchy_no_mandala_no_coast"
-		government = {
-			ruler = random
-		}
-		capital = chongshan
-	}
-
-	SGS = { #Shangsi
-		own_control_core = {
-			shangsi
-		}
-
-		include = "south_east_asia_monarchy_no_mandala_no_coast"
-		government = {
-			ruler = random
-		}
-		capital = shangsi
-	}
-
 	GNN = { #Guangnan
 		own_control_core = {
 			guangnan zhehong bangban
@@ -30112,54 +29631,6 @@ countries = {
 			ruler = random
 		}
 		capital = guzhou
-	}
-
-	LPG = { #Liping
-		own_control_core = {
-			liping
-		}
-
-		include = "south_east_asia_monarchy_no_mandala_no_coast"
-		government = {
-			ruler = random
-		}
-		capital = liping
-	}
-
-	ZLD = { #Zhonglindong
-		own_control_core = {
-			tonggu_liping
-		}
-
-		include = "south_east_asia_monarchy_no_mandala_no_coast"
-		government = {
-			ruler = random
-		}
-		capital = tonggu_liping
-	}
-
-	HZH = { #Hongzhou Poli
-		own_control_core = {
-			yongcong
-		}
-
-		include = "south_east_asia_monarchy_no_mandala_no_coast"
-		government = {
-			ruler = random
-		}
-		capital = yongcong
-	}
-
-	XSY = { #Xisanyang
-		own_control_core = {
-			xiajiang
-		}
-
-		include = "south_east_asia_monarchy_no_mandala_no_coast"
-		government = {
-			ruler = random
-		}
-		capital = xiajiang
 	}
 
 	#Anatolia
@@ -30272,6 +29743,7 @@ countries = {
 		own_control_core = {
 			smyrna ayasuluk cesme menemen urla
 			tire balat birgi guzelhisar nazilli
+			alasehir
 		}
 
 		starting_technology_level = 3
@@ -42556,196 +42028,6 @@ countries = {
 		}
 
 		capital = nixi
-		government = {
-			ruler = random
-		}
-	}
-
-	TNQ = { #Tianquan
-		own_control_core = {
-			diaomen hanyuan shimian
-		}
-
-		include = "asia_advanced_no_pagan_tribe"
-
-		tolerated_cultures = {
-			shu_culture
-		}
-
-		capital = diaomen
-		government = {
-			ruler = random
-		}
-	}
-
-	MCI = { #Muchi
-		own_control_core = {
-			lushan_yazhou wenchuan
-		}
-
-		include = "asia_advanced_no_pagan_tribe"
-
-		tolerated_cultures = {
-			shu_culture
-		}
-
-		capital = lushan_yazhou
-		government = {
-			ruler = random
-		}
-	}
-
-	WMO = { #Weimao
-		own_control_core = {
-			wenshan
-		}
-
-		include = "asia_advanced_tribe"
-
-		capital = wenshan
-		government = {
-			ruler = random
-		}
-	}
-
-	TSK = { #TSK
-		own_control_core = {
-			baoning_maozhou maerkang qiongxi
-		}
-
-		include = "asia_advanced_no_pagan_tribe"
-
-		tolerated_cultures = {
-			amdowa_culture
-		}
-
-		capital = baoning_maozhou
-		government = {
-			ruler = random
-		}
-	}
-
-	SNP = { #Songpan
-		own_control_core = {
-			songzhou_songpan heishui hongyuan muge rinpung dazhasi gurkyang tewo
-		}
-
-		include = "asia_advanced_no_pagan_tribe"
-
-		tolerated_cultures = {
-			rma_culture
-			tebbu_culture
-		}
-
-		capital = songzhou_songpan
-		government = {
-			ruler = random
-		}
-	}
-
-	LGZ = { #Longzhou
-		own_control_core = {
-			jiangyou pingwu
-		}
-
-		include = "asia_advanced_tribe"
-
-		tolerated_cultures = {
-			baima_culture
-		}
-
-		capital = jiangyou
-		government = {
-			ruler = random
-		}
-	}
-
-	MNZ = { #Minzhou
-		own_control_core = {
-			minzhou tanchang xigu
-			wenxian_gongchang fuzhou_songpan lidian
-		}
-
-		include = "asia_advanced_no_pagan_tribe"
-
-		capital = minzhou
-		government = {
-			ruler = random
-		}
-	}
-
-	TAZ = { #Taozhou
-		own_control_core = {
-			kedang kuntokling liulin
-		}
-
-		include = "asia_advanced_no_pagan_tribe"
-
-		capital = kedang
-		government = {
-			ruler = random
-		}
-	}
-
-	KHG = { #Khagya
-		own_control_core = {
-			amchok taktsang sangqu tso_gon
-		}
-
-		include = "asia_advanced_no_pagan_tribe"
-
-		tolerated_cultures = {
-			sarta_culture
-		}
-
-		capital = amchok
-		government = {
-			ruler = random
-		}
-	}
-
-	HEZ = { #Hezhou
-		own_control_core = {
-			hezhou dingqiang
-		}
-
-		include = "asia_advanced_no_pagan_tribe"
-
-		tolerated_cultures = {
-			sarta_culture
-		}
-
-		capital = hezhou
-		government = {
-			ruler = random
-		}
-	}
-
-	JIZ = { #Jishizhou
-		own_control_core = {
-			jishi
-		}
-
-		include = "asia_advanced_no_pagan_tribe"
-
-		tolerated_cultures = {
-			salar_culture
-		}
-
-		capital = jishi
-		government = {
-			ruler = random
-		}
-	}
-
-	BIR = { #Biri
-		own_control_core = {
-			guide
-		}
-
-		include = "asia_advanced_no_pagan_tribe"
-
-		capital = guide
 		government = {
 			ruler = random
 		}
