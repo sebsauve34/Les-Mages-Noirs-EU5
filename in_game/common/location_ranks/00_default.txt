@@ -28,7 +28,6 @@ city = {
 	}
 	
 	country_modifier = {
-		monthly_doom = 0.02
 		fort_limit = 1
 	}
 	
@@ -72,7 +71,7 @@ town = {
 	}
 	
 	country_modifier = {
-		monthly_doom = 0.01
+		
 	}
 	
 	allow = {
@@ -100,7 +99,7 @@ rural_settlement = {
 	}
 	
 	country_modifier = {
-		monthly_doom = 0.005
+		
 	}
 	
 	color = color_rank_county

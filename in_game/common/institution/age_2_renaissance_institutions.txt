@@ -27,10 +27,10 @@
 					location_rank = location_rank:city
 					has_building_with_at_least_one_level = university
 				}
-				custom_tooltip = {
-					text = dominant_culture_is_owners_culture
-					dominant_culture = owner.culture
-				}
+				#custom_tooltip = {
+				#	text = dominant_culture_is_owners_culture
+				#	dominant_culture = owner.culture
+				#}
 			}
 		}
 	}
@@ -75,10 +75,10 @@ banking = {
 				has_game_rule = institution_spawn_plausible
 				has_owner = yes
 				num_pop_type:burghers > 1.0
-				custom_tooltip = {
-					text = dominant_culture_is_owners_culture
-					dominant_culture = owner.culture
-				}
+				#custom_tooltip = {
+				#	text = dominant_culture_is_owners_culture
+				#	dominant_culture = owner.culture
+				#}
 				OR = {
 					continent = continent:europe
 					sub_continent = sub_continent:north_africa
@@ -138,10 +138,10 @@ professional_armies = {
 
 				has_owner = yes
 
-				custom_tooltip = {
-					text = dominant_culture_is_owners_culture
-					dominant_culture = owner.culture
-				}
+				#custom_tooltip = {
+				#	text = dominant_culture_is_owners_culture
+				#	dominant_culture = owner.culture
+				#}
 				modifier:local_manpower > 0
 				
 				owner = {

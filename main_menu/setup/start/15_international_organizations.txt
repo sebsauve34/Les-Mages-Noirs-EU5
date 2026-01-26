@@ -217,11 +217,11 @@ international_organization_manager = {
 			HNE HUL JEC JUS MAO NEY ODO SSH URY YAL WGG WRK
 			SNP MNZ TAZ HEZ JIZ SYG TMN SSG MLM LNG
 			#Tusi
-			GYT YNG TNQ MCI WMO TSK LGZ KHG BIR MHK MHN MTG MGN MHA MWO MGK YNJ NWU NYZ NLU YJI BZH YAN HQG NNN AGN MLE JSI SPG NGZ
+			GYT TNQ MCI WMO TSK LGZ KHG BIR MHK MHN MTG MGN MHA MWO MGK YNJ NWU NYZ NLU YJI BZH YAN HQG NNN AGN MLE JSI SPG NGZ
 			LLS CGZ XLG WDG RND DCN WNG MHU LBO YNL ZNX WSA ZYI QJG YZO MLG LLN LXG GGX SZG SXI CLE BZU NPG RNG GNG ZNZ SZU ZGL TGY
 			GLU RGM TNP SGZ DWG YGS BJG YYG PCD SZH YNH TXI TGR QGS WZH PTZ LGQ RGS BNI COG XNL ALI SDG PYE DZH XNG PDG PDN PGB PAN
-			YNN LIN NLG SHG QYN NDN DLN XCG YSN TNZ ADG DYG ZNN TPG SMG SGS GNN LZO FZH LZI SZI DYN LTU GZH LPG ZLD HZH XSY AMD CKL
-			GOL GYE NYA HOR
+			YNN LIN NLG SHG QYN NDN DLN XCG YSN TNZ ADG DYG ZNN TPG SMG SGS GNN LZO FZH LZI SZI DYN LTU GZH LPG ZLD HZH XSY
+		
 		}
 
 		# If changed, apply changes too to set_up_proper_china_for_middle_kingdom effect
@@ -1382,7 +1382,7 @@ international_organization_manager = {
 		type = sect
 		creation_date = 1.1.1
 		members = {
-			DRG
+			
 		}
 		laws = { 
 			nyigma_policy
@@ -1401,7 +1401,7 @@ international_organization_manager = {
 		creation_date = 1030.1.1
 		members = {
 			#Clear
-			KHS PUR MAR #Purang capital, Tholing Monastery, is Kadam
+			KHS #Purang capital, Tholing Monastery, is Kadam
 			
 		}
 		laws = { 
@@ -1420,7 +1420,7 @@ international_organization_manager = {
 		creation_date = 1050.1.1
 		members = {
 			#Clear
-			ZNK NCN LMN SKK LHL
+			LMN SKK LHL
 		}
 		laws = { 
 			kagyu_policy
@@ -1438,11 +1438,11 @@ international_organization_manager = {
 		creation_date = 1073.1.1
 		members = {
 			#Clear
-			TIB CHI GUG MGG LGT LNG
+			TIB CHI LNG
 
 			#Unclear
 			KTU #Newar Buddhism
-			POO HOR GNJ NYA GYT GYE CKL
+			GYT
 		}
 		laws = { 
 			sakya_policy
@@ -1460,7 +1460,7 @@ international_organization_manager = {
 		creation_date = 1120.1.1
 		members = {
 			#Unclear
-			GOL AMD SNP MNZ TAZ KHG HEZ JIZ BIR
+			SNP MNZ TAZ KHG HEZ JIZ BIR
 		}
 		laws = { 
 			jonang_policy

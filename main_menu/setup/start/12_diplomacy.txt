@@ -191,14 +191,14 @@ diplomacy_manager = {
     #dependency = { first = FRA second = BRI subject_type = vassal }
     dependency = { first = FRA second = FOI subject_type = vassal }
     dependency = { first = FRA second = AMG subject_type = vassal }
-    dependency = { first = FRA second = FRZ subject_type = vassal }
+    #dependency = { first = FRA second = FRZ subject_type = vassal }
     dependency = { first = FRA second = BAR subject_type = vassal }
     dependency = { first = FRA second = BLS subject_type = vassal }
     dependency = { first = FRA second = AST subject_type = vassal }
     dependency = { first = FRA second = COM subject_type = vassal }
     dependency = { first = FRA second = IJO subject_type = vassal }
     dependency = { first = FRA second = MRT subject_type = vassal }
-    dependency = { first = FRA second = VLN subject_type = vassal }
+    #dependency = { first = FRA second = VLN subject_type = vassal }
     dependency = { first = FRA second = PER subject_type = vassal }
     dependency = { first = FRA second = TON subject_type = vassal }
     dependency = { first = FRA second = MON subject_type = vassal }
@@ -234,7 +234,8 @@ diplomacy_manager = {
     scripted_mutual = { first = RIM second = CES type = alliance }
 
     dependency = { first = PAP second = FAE subject_type = vassal }
-	
+
+    dependency = { first = SAV second = MFA subject_type = vassal }
     dependency = { first = SAV second = CEV subject_type = vassal }
     dependency = { first = SAV second = AOS subject_type = fiefdom }
     dependency = { first = SAV second = GNV subject_type = vassal start_date = 1329.1.1 }
@@ -478,20 +479,6 @@ diplomacy_manager = {
     dependency = { first = IFA second = WAR subject_type = tributary }
     dependency = { first = IFA second = TDE subject_type = tributary }
 
-    #Kilwa
-    dependency = { first = ZAN second = MLI subject_type = tributary }
-    dependency = { first = ZAN second = MBA subject_type = tributary }
-    dependency = { first = ZAN second = GED subject_type = tributary }
-    dependency = { first = ZAN second = PEM subject_type = tributary }
-    dependency = { first = ZAN second = NTL subject_type = tributary }
-    dependency = { first = ZAN second = MTO subject_type = tributary }
-    dependency = { first = ZAN second = AHY subject_type = tributary }
-    dependency = { first = ZAN second = MHL subject_type = tributary }
-    dependency = { first = ZAN second = VOH subject_type = tributary }
-    dependency = { first = ZAN second = NYM subject_type = tributary }
-    dependency = { first = ZAN second = MOZ subject_type = tributary }
-    dependency = { first = ZAN second = ZZB subject_type = tributary }
-
     #Zimbabwe
     dependency = { first = ZMW second = KLG subject_type = tributary }
     dependency = { first = ZMW second = TNA subject_type = tributary }
@@ -524,11 +511,6 @@ diplomacy_manager = {
     dependency = { first = KBO second = RAN subject_type = tributary }
     dependency = { first = KBO second = ZAM subject_type = tributary }
     dependency = { first = KBO second = ZZZ subject_type = tributary }
-
-    #-------------Mesoamerica------------
-    dependency = { first = TEP second = TNC subject_type = vassal }
-    dependency = { first = TEP second = TCP subject_type = vassal }
-
 
     #-------------China------------
     dependency = { first = CHI second = MMA subject_type = vassal }
@@ -607,12 +589,12 @@ diplomacy_manager = {
     dependency = { first = CHI second = WDG subject_type = tusi }
     dependency = { first = CHI second = RND subject_type = tusi }
     dependency = { first = CHI second = DCN subject_type = tusi }
-    dependency = { first = CHI second = HOR subject_type = tusi }
-    dependency = { first = CHI second = NYA subject_type = tusi }
-    dependency = { first = CHI second = GYE subject_type = tusi }
-    dependency = { first = CHI second = GOL subject_type = tusi }
-    dependency = { first = CHI second = AMD subject_type = tusi }
-    dependency = { first = CHI second = CKL subject_type = tusi }
+    #dependency = { first = CHI second = HOR subject_type = tusi }
+    #dependency = { first = CHI second = NYA subject_type = tusi }
+    #dependency = { first = CHI second = GYE subject_type = tusi }
+    #dependency = { first = CHI second = GOL subject_type = tusi }
+    #dependency = { first = CHI second = AMD subject_type = tusi }
+    #dependency = { first = CHI second = CKL subject_type = tusi }
     dependency = { first = CHI second = WNG subject_type = tusi }
     dependency = { first = CHI second = MHU subject_type = tusi }
     dependency = { first = CHI second = YNL subject_type = tusi }
@@ -655,7 +637,7 @@ diplomacy_manager = {
     dependency = { first = CHI second = DYN subject_type = tusi }
     dependency = { first = CHI second = LTU subject_type = tusi }
     #Vassals of Tusi
-    dependency = { first = BZH second = YNG subject_type = vassal }
+    #dependency = { first = BZH second = YNG subject_type = vassal }
     dependency = { first = YNJ second = NWU subject_type = vassal }
     dependency = { first = MHU second = LBO subject_type = vassal }
     dependency = { first = QJG second = YZO subject_type = vassal }
@@ -715,20 +697,20 @@ diplomacy_manager = {
     dependency = { first = CHG second = JLY subject_type = vassal }
 
     #------------Tibet-------------
-    dependency = { first = TIB second = GUG subject_type = vassal }
-    dependency = { first = TIB second = PUR subject_type = vassal }
-    dependency = { first = TIB second = MGG subject_type = vassal }
-    dependency = { first = TIB second = POO subject_type = vassal }
-    dependency = { first = TIB second = LGT subject_type = vassal }
-    dependency = { first = TIB second = DRG subject_type = vassal }
-    dependency = { first = TIB second = NCN subject_type = vassal }
-    dependency = { first = TIB second = GNJ subject_type = vassal }
-    dependency = { first = TIB second = BTG subject_type = vassal }
-    dependency = { first = TIB second = NBH subject_type = vassal }
-    dependency = { first = TIB second = LTN subject_type = vassal }
+    #dependency = { first = TIB second = GUG subject_type = vassal }
+    #dependency = { first = TIB second = PUR subject_type = vassal }
+    #dependency = { first = TIB second = MGG subject_type = vassal }
+    #dependency = { first = TIB second = POO subject_type = vassal }
+    #dependency = { first = TIB second = LGT subject_type = vassal }
+    #dependency = { first = TIB second = DRG subject_type = vassal }
+    #dependency = { first = TIB second = NCN subject_type = vassal }
+    #dependency = { first = TIB second = GNJ subject_type = vassal }
+    #dependency = { first = TIB second = BTG subject_type = vassal }
+    #dependency = { first = TIB second = NBH subject_type = vassal }
+    #dependency = { first = TIB second = LTN subject_type = vassal }
     dependency = { first = TIB second = LMN subject_type = vassal }
-    dependency = { first = TIB second = MAR subject_type = vassal }
-    dependency = { first = TIB second = ZNK subject_type = vassal }
+    #dependency = { first = TIB second = MAR subject_type = vassal }
+    #dependency = { first = TIB second = ZNK subject_type = vassal }
 
     #------------South East Asia-------------
     dependency = { first = CHI second = CHA subject_type = tributary }
@@ -750,7 +732,7 @@ diplomacy_manager = {
     dependency = { first = MAJ second = TJP subject_type = vassal }
     dependency = { first = TJP second = SMB subject_type = vassal }
     dependency = { first = MAJ second = BAI subject_type = tributary }
-    dependency = { first = MAJ second = KAM subject_type = tributary }
+    #dependency = { first = MAJ second = KAM subject_type = tributary }
     dependency = { first = BEI second = SUL subject_type = vassal }
     dependency = { first = BEI second = MYI subject_type = vassal }
     dependency = { first = BEI second = MNA subject_type = vassal }
@@ -776,10 +758,7 @@ diplomacy_manager = {
     
     scripted_mutual = { first = QHT second = DWS type = alliance }
 
-    #------------Maya-------------
-    #Represents the League of Mayapan for the time being
-    dependency = { first = COC second = XIU subject_type = vassal }
-    dependency = { first = COC second = HEL subject_type = vassal }
+   
 
     #------------Japan-------------
     dependency = { first = HSK second = KAG subject_type = vassal }

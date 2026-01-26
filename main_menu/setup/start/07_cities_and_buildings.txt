@@ -1,7 +1,7 @@
 locations={
 	
 	#sweden
-	stockholm = { rank = town 		town_setup = important_scandinavian_town }
+	stockholm = { rank = city 		town_setup = german_coastal_city }
 	linkoping = { rank = town 		town_setup = scandinavian_town }
 	soderkoping = { rank = town 	town_setup = scandinavian_town }
 	kalmar = { rank = town 			town_setup = scandinavian_town }
@@ -20,7 +20,7 @@ locations={
 	oslo = { rank = town 			town_setup = important_scandinavian_town }
 	
 	#denmark
-	kobenhavn = { rank = town 		town_setup = important_scandinavian_town }
+	kobenhavn = { rank = city 		town_setup = german_coastal_city }
 	roskilde = { rank = town 		town_setup = important_scandinavian_town }
 	viborg = { rank = town			town_setup = important_scandinavian_town }
 	randers = { rank = town 		town_setup = important_scandinavian_town }
@@ -32,7 +32,7 @@ locations={
 	
 	# britain
 	london = { rank = city			town_setup = british_town_port}
-	edinburgh = { rank = town 		town_setup = british_town_port}
+	edinburgh = { rank = city 		town_setup = british_town_port}
 	york = { rank = town 			town_setup = british_town}
 	bristol = { rank = town 		town_setup = british_town_port}
 	coventry = { rank = town 		town_setup = british_town}
@@ -51,7 +51,7 @@ locations={
 	#cardiff = { rank = town 		town_setup = british_town_port}
 	
 	# ireland
-	dublin = { rank = town 			town_setup = british_town_port}
+	dublin = { rank = city 			town_setup = british_town_port}
 	cork = { rank = town 			town_setup = british_town_port}
 	waterford = { rank = town 		town_setup = british_town_port}
 	new_ross = { rank = town 		town_setup = british_town_port}
@@ -92,11 +92,11 @@ locations={
 	vidin = { rank = town 			town_setup = balkan_town }	
 	
 	#ex-yugoslavia
-	belgrad = { rank = town 		town_setup = balkan_town }
+	belgrad = { rank = city 		town_setup = balkan_town }
 	nis = { rank = town 			town_setup = balkan_town }	
 	ohrid = { rank = town 			town_setup = balkan_town }	
 	prizren = { rank = town 		town_setup = balkan_town }	
-	skopje = { rank = town 			town_setup = balkan_town }	
+	skopje = { rank = city 			town_setup = balkan_town }	
 	dubrovnik = { rank = town 		town_setup = balkan_town }	
 	knin = { rank = town 			town_setup = balkan_town }	
 	rijeka = { rank = town 			town_setup = balkan_town }	
@@ -204,7 +204,9 @@ locations={
 	toulouse = { rank = city 	town_setup = french_city }
 	tours = { rank = city 		town_setup = french_city }
 	troyes = { rank = city 		town_setup = french_city }
-	
+	chambery = { rank = city 	town_setup = french_city }
+	bourg_en_bresse = { rank = city 		town_setup = french_city }
+
 	agen = { rank = town 			town_setup = french_town }
 	aix_en_provence = { rank = town town_setup = french_town }
 	albi = { rank = town town_setup = french_town }
@@ -268,7 +270,7 @@ locations={
 	aachen = { rank = town town_setup = german_town }
 	bamberg = { rank = town town_setup = german_town }
 	brandenburg = { rank = town town_setup = german_town }
-	berlin = { rank = town town_setup = german_town }
+	berlin = { rank = city town_setup = german_city }
 	bremen = { rank = town town_setup = german_town }
 	brunswick = { rank = town town_setup = german_town }
 	dortmund = { rank = town town_setup = german_town }
@@ -286,7 +288,7 @@ locations={
 	leipzig = { rank = town town_setup = german_town }
 	luneburg = { rank = town town_setup = german_town }
 	magdeburg = { rank = city town_setup = german_city }
-	munich = { rank = town town_setup = german_town }
+	munich = { rank = city town_setup = german_city }
 	munster = { rank = town town_setup = german_town }
 	oettingen = { rank = town town_setup = german_town }
 	nuremberg = { rank = town town_setup = german_town }
@@ -298,7 +300,7 @@ locations={
 	soest = { rank = town town_setup = german_town }
 	stuttgart = { rank = city town_setup = german_city }
 	tubingen = { rank = town town_setup = german_town }
-	kassel = { rank = town town_setup = german_town }
+	kassel = { rank = city town_setup = german_city }
 	ulm = { rank = town town_setup = german_town }
 	trier = { rank = town town_setup = german_town }
 	dusseldorf = { rank = town town_setup = german_town }
@@ -307,7 +309,7 @@ locations={
 	wurzburg = { rank = town town_setup = german_town }
 	zerbst = { rank = town town_setup = german_town }
 	zurich = { rank = town town_setup = german_town }
-	geneve = { rank = town town_setup = german_town }
+	geneve = { rank = town town_setup = german_town } 
 	bern = { rank = town town_setup = german_town }
 	graz = { rank = town town_setup = german_town }
 	innsbruck = { rank = town town_setup = german_town }
@@ -381,7 +383,7 @@ locations={
 	tallinn = { rank = town 		town_setup = baltic_town }
 	tartu = { rank = town 			town_setup = baltic_town }
 	trakai = { rank = town 	town_setup = baltic_town }
-	vilnius = { rank = town 	town_setup = baltic_town }
+	vilnius = { rank = city 	town_setup = baltic_town }
 
 	# Ruthenia
 	chernihiv = { rank = town 	town_setup = ruthenian_town }
@@ -986,13 +988,13 @@ locations={
 	soltaniyeh = { rank = city town_setup = levant_city }
 	tabriz = { rank = city town_setup = levant_city }
 	tbilisi = { rank = city 	town_setup = anatolian_city }
+	bodbe = { rank = town town_setup = anatolian_city }
 	gladzor = { rank = town town_setup = anatolian_city }
 	yazd = { rank = city town_setup = levant_city }
 
 	zaranj = { rank = town town_setup = levant_city }
 	kabul = { rank = town town_setup = levant_city }
 
-	ganja = { rank = town town_setup = levant_city }
 	ani = { rank = town town_setup = levant_city }
 	astarabad = { rank = town town_setup = levant_city }
 	siraf = { rank = town town_setup = levant_city }
