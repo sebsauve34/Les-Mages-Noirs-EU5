@@ -56,7 +56,7 @@ printing_press_shop = {
 	
 	unique_production_methods = {
 		printing_press_maintenance = {
-			lead = 0.25 #Types
+			dyes = 0.25 #Types
 			paper = 1.0
 			tools = 0.2
 			lumber = 0.4
@@ -101,7 +101,7 @@ printing_manufactory = {
 	
 	unique_production_methods = {
 		printing_manufactory_maintenance = {
-			lead = 0.4 #Types
+			dyes = 0.5 #Types
 			paper = 2.0
 			tools = 0.5
 			lumber = 0.5
@@ -143,7 +143,7 @@ printing_mill = {
 	
 	unique_production_methods = {
 		printing_mill_maintenance = {
-			lead = 0.5 #Types
+			dyes = 0.75 #Types
 			paper = 3.5
 			tools = 1.0
 			lumber = 1.0

@@ -8,7 +8,7 @@
 		
 		num_possible_rivals = 3
 		num_possible_artists = 2
-
+		monthly_prestige = 0.25
 		fort_limit = 2
 		
 		cultures_capacity = 2
@@ -56,6 +56,7 @@ rank_kingdom = {
 		
 		num_possible_rivals = 3
 		government_size = 1
+		monthly_prestige = 0.1
 
 		fort_limit = 1
 
@@ -91,6 +92,7 @@ rank_duchy = {
 		max_diplomats = 10
 		diplomatic_range = 200
 		government_size = 1
+		monthly_prestige = 0.05
 
 		num_possible_rivals = 3
 		diplomatic_capacity = 1

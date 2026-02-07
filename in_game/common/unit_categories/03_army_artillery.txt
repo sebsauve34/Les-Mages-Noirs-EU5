@@ -13,7 +13,7 @@
 	food_storage_per_strength = 2
 	food_consumption_per_strength = 2
 	
-	damage_taken = 0.75
+	damage_taken = 0.9
 
 
 	

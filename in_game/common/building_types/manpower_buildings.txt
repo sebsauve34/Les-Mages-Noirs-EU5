@@ -28,7 +28,7 @@
 	}
 	
 	capital_modifier = {
-		local_manpower = 0.005
+		local_manpower = 0.01
 		can_recruit_regiment_in_this_location = yes
 		local_crown_estate_power = 0.25
 	}
@@ -102,7 +102,7 @@ armory = {
 	
 	
 	modifier = {
-		local_manpower = 0.01
+		local_manpower = 0.0075
 		can_recruit_regiment_in_this_location = yes
 	}
 	
@@ -146,7 +146,7 @@ training_fields = {
 	}
 	
 	modifier = {
-		local_manpower = 0.01
+		local_manpower = 0.0075
 		can_recruit_regiment_in_this_location = yes
 	}
 	
@@ -234,7 +234,7 @@ regimental_camp = {
 	}	
 
 	modifier = {
-		local_manpower = 0.02
+		local_manpower = 0.015
 		can_recruit_regiment_in_this_location = yes
 	}
 	
@@ -407,7 +407,7 @@ city_guard = {
 	}
 	
 	capital_modifier = {
-		local_manpower = 0.0025
+		local_manpower = 0.01
 		can_recruit_regiment_in_this_location = yes
 	}
 

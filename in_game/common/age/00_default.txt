@@ -11,7 +11,7 @@
 	
 	victory_card = 0
 	
-	months_for_exploration_spread = 1800
+	months_for_exploration_spread = 1500
 
 	# optimization - AI will regularly evaluate swapping privilege if not filled (expensive)
 	max_ai_privilege_per_estate = {
@@ -40,7 +40,7 @@ age_2_renaissance = {
 	price_stability = 0.1
 	max_price = 3
 	
-	months_for_exploration_spread = 1800
+	months_for_exploration_spread = 1200
 	modifier = {
 		expected_army_size_modifier = 1.0
 		levy_maintenance_modifier = 0.1
@@ -85,10 +85,10 @@ age_3_discovery = {
 	max_price = 4
 	hegemons_allowed = yes
 	
-	months_for_exploration_spread = 1800
+	months_for_exploration_spread = 900
 	modifier = {
 		expected_army_size_modifier = 2.0
-		levy_maintenance_modifier = 0.25
+		levy_maintenance_modifier = 0.2
 		
 		exploration_mission_speed = 0.25
 		colonial_maintenance_cost = -0.25
@@ -97,8 +97,6 @@ age_3_discovery = {
 		
 		global_navy_levy_size_modifier = -0.75
 		
-		levy_combat_efficiency_modifier = -0.1
-
 		antagonism_religion_influence = 0.15
 	}
 	
@@ -132,10 +130,10 @@ age_4_reformation = {
 	price_stability = 0.06
 	max_price = 5
 	hegemons_allowed = yes
-	months_for_exploration_spread = 1200
+	months_for_exploration_spread = 600
 	modifier = {
 		expected_army_size_modifier = 4.0
-		levy_maintenance_modifier = 0.5
+		levy_maintenance_modifier = 0.35
 		
 		global_pop_conversion_speed_modifier = 0.33
 		merchant_maintenance_cost = -0.25
@@ -143,8 +141,6 @@ age_4_reformation = {
 		
 		global_navy_levy_size_modifier = -1.0
 		
-		levy_combat_efficiency_modifier = -0.2
-
 		antagonism_religion_influence = 0.2
 		antagonism_culture_influence = 0.1
 		antagonism_government_type_influence = 0.1
@@ -181,10 +177,10 @@ age_5_absolutism = {
 	price_stability = 0.04
 	max_price = 5
 	hegemons_allowed = yes
-	months_for_exploration_spread = 600
+	months_for_exploration_spread = 300
 	modifier = {
 		expected_army_size_modifier = 8.0
-		levy_maintenance_modifier = 0.75
+		levy_maintenance_modifier = 0.5
 		
 		revoke_privilege_cost_modifier = -0.33
 		global_integration_speed_modifier = 0.25
@@ -199,7 +195,6 @@ age_5_absolutism = {
 		subject_loyalty = -10
 		
 		global_navy_levy_size_modifier = -2.0
-		levy_combat_efficiency_modifier = -0.3
 
 		antagonism_religion_influence = 0.1
 		antagonism_culture_influence = 0.2
@@ -241,7 +236,7 @@ age_6_revolutions = {
 	max_price = 5
 	hegemons_allowed = yes
 	
-	months_for_exploration_spread = 300
+	months_for_exploration_spread = 150
 	modifier = {
 		expected_army_size_modifier = 16.0
 		levy_maintenance_modifier = 1.0
@@ -253,9 +248,7 @@ age_6_revolutions = {
 		construction_center_max_level = 5
 		
 		global_navy_levy_size_modifier = -2.0
-		
-		levy_combat_efficiency_modifier = -0.4
-		
+				
 		subject_pays_colonial_cost_modifier = 2.0
 		
 		antagonism_culture_influence = 0.1
